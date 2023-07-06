@@ -298,6 +298,7 @@ footer a {
 			</div>
 			<span>or use your email for registration</span>
 			<input name="name" type="text" placeholder="Name" required/>
+      <input name="username" type="text" placeholder="Username" required="">
 			<input name="email" type="email" placeholder="Email" required />
 			<input name="password" type="password" placeholder="Password" required/>
 			<button>Sign Up</button>
@@ -359,7 +360,19 @@ signInButton.addEventListener('click', () => {
 //# sourceURL=pen.js
     </script>
 
-  
+      <script>
+        displayAlert();
+        // Function to display alert based on the query parameter
+        function displayAlert() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('msg');
+            if (message === 'email_registered') {
+                alert('The email is already registered. Please use a different email.') 
+                } else if (message) {
+              alert(message);
+            }
+        }
+    </script>
 </body>
 
 </html>
