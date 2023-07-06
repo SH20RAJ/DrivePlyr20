@@ -6,13 +6,13 @@
   <meta charset="UTF-8">
   
 
-    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <link rel="apple-touch-icon" type="image/png" href="https://cdn.jsdelivr.net/gh/SH20RAJ/DrivePlyr@main/drive-logo.png" />
 
     <meta name="apple-mobile-web-app-title" content="CodePen">
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/SH20RAJ/DrivePlyr@main/drive-logo.png" />
 
-    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+    <link rel="mask-icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/SH20RAJ/DrivePlyr@main/drive-logo.png" color="#111" />
 
 
 
@@ -289,7 +289,7 @@ footer a {
   <h2>DrivePlyr : Sign in/up Form</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="dashboard/signup.php">
+		<form method="post" action="dashboard/signup.php" enctype="multipart/form-data">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -297,14 +297,14 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" required/>
-			<input type="email" placeholder="Email" required />
-			<input type="password" placeholder="Password" required/>
+			<input name="name" type="text" placeholder="Name" required/>
+			<input name="email" type="email" placeholder="Email" required />
+			<input name="password" type="password" placeholder="Password" required/>
 			<button>Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="dashboard/signin.php">
+		<form method="post" action="dashboard/signin.php" enctype="multipart/form-data">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -312,8 +312,8 @@ footer a {
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" required/>
-			<input type="password" placeholder="Password" required/>
+			<input name="email" type="email" placeholder="Email" required/>
+			<input name="password" type="password" placeholder="Password" required/>
 			<a href="#">Forgot your password?</a>
 			<button>Sign In</button>
 		</form>
