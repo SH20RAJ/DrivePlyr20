@@ -292,7 +292,7 @@
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/Mb8kaPV.png" width="50">
                         <div class="text-center mg-text">
-                          <span class="mg-text">Account</span>
+                          <span class="mg-text">Google Drive</span>
                         </div>
                       </div>
                     </div>
@@ -300,7 +300,7 @@
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/ueLEPGq.png" width="50">
                         <div class="text-center mg-text">
-                          <span class="mg-text">Payments</span>
+                          <span class="mg-text">YouTube</span>
                         </div>
                       </div>
                     </div>
@@ -308,7 +308,7 @@
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
                         <div class="text-center mg-text">
-                          <span class="mg-text">Delivery</span>
+                          <span class="mg-text">Archive.org</span>
                         </div>
                       </div>
                     </div>
@@ -316,7 +316,7 @@
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/D0Sm15i.png" width="50">
                         <div class="text-center mg-text">
-                          <span class="mg-text">Product</span>
+                          <span class="mg-text">Mediafire</span>
                         </div>
                       </div>
                     </div>
@@ -324,7 +324,7 @@
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/Z7BJ8Po.png" width="50">
                         <div class="text-center mg-text">
-                          <span class="mg-text">Return</span>
+                          <span class="mg-text">Direct Link</span>
                         </div>
                       </div>
                     </div>
