@@ -43,6 +43,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="https://driveplyr.hashnode.dev/?ref=main" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Getting started</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
               <a class="nav-link" href="login.php">
                 <i class="ni ni-key-25 text-info"></i>
                 <span class="nav-link-text">Login</span>
@@ -54,7 +60,7 @@
                 <span class="nav-link-text">Register</span>
               </a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="upgrade.php">
                 <i class="ni ni-send text-dark"></i>
                 <span class="nav-link-text">Upgrade</span>
