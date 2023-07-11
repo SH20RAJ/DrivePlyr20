@@ -272,7 +272,6 @@
     <div class="container-fluid mt--6">
       <div class="row">
         <div class="col">
-          <div class="card border-0" hint="container">
               <div class="input-group">
                 <div class="form-outline">
                   <input type="search" id="form1" class="form-control" />
@@ -282,7 +281,6 @@
                   <i class="fas fa-search"></i>
                 </button>
               </div>
-        </div>
       </div>
       <!-- Footer -->
       <footer class="footer pt-0">
