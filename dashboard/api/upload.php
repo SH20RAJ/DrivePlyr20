@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../../conn.php';
-if(!isset($_SESSION)){
+if(!isset($_SESSION['username'])){
     echo "Not Allowed";
 } else {
     print_r($_SESSION);die();
