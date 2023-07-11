@@ -18,6 +18,12 @@
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="new.php">
+                <i class="ni ni-planet text-orange"></i>
+                <span class="nav-link-text">New</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="icons.php">
                 <i class="ni ni-planet text-orange"></i>
