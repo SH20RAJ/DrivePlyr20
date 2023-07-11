@@ -287,7 +287,7 @@
                       </a>
                     </div>
                   </div>
-                  <div class="row mt-4 g-1 px-4 mb-5">
+                  <!-- <div class="row mt-4 g-1 px-4 mb-5">
                     <div class="col-md-2">
                       <div class="card-inner p-3 d-flex flex-column align-items-center">
                         <img src="https://i.imgur.com/Mb8kaPV.png" width="50">
@@ -336,7 +336,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
