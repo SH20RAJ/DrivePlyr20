@@ -37,15 +37,15 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="profile.php">
+              <a class="nav-link" href="add.php">
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Profile</span>
+                <span class="nav-link-text">Add</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="videos.php">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Video</span>
+                <span class="nav-link-text">Videos</span>
               </a>
             </li>
             <!-- <li class="nav-item">
