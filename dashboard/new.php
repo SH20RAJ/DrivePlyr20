@@ -273,7 +273,7 @@
       <div class="row">
         <div class="col">
           <div class="card border-0" hint="container">
-                        <div class="input-group">
+              <div class="input-group">
                 <div class="form-outline">
                   <input type="search" id="form1" class="form-control" />
                   <label class="form-label" for="form1">Search</label>
@@ -282,7 +282,6 @@
                   <i class="fas fa-search"></i>
                 </button>
               </div>
-           </div>
         </div>
       </div>
       <!-- Footer -->
