@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
 
         // Redirect to the dashboard page
-        header('Location: ../dashboard');
+        header('Location: ../dashboard?msg=Account created succesfully');
         exit();
     } else {
         echo "Error: " . $insertStmt->error;

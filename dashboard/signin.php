@@ -21,14 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         $hashedPassword = $user['password'];
 
-        if ($password = $hashedPassword) {
+        if ($password === $hashedPassword) {
             // Password is correct
-            echo "Sign-in successful!";
+            //echo "Sign-in successful!";
 
             // Set session variables
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-          header('Location ../dashboard')
+
+            // Redirect to the dashboard page
+            header('Location: ../dashboard/');
+            exit();
         } else {
             // Invalid password
             echo "Invalid email or password";
