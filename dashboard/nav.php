@@ -13,49 +13,49 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">
+              <a class="nav-link" href="index.php">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="icons.html">
+              <a class="nav-link" href="icons.php">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Icons</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="map.html">
+              <a class="nav-link" href="map.php">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Google</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">
+              <a class="nav-link" href="profile.php">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Profile</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tables.html">
+              <a class="nav-link" href="tables.php">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Tables</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">
+              <a class="nav-link" href="login.php">
                 <i class="ni ni-key-25 text-info"></i>
                 <span class="nav-link-text">Login</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="register.html">
+              <a class="nav-link" href="register.php">
                 <i class="ni ni-circle-08 text-pink"></i>
                 <span class="nav-link-text">Register</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="upgrade.html">
+              <a class="nav-link" href="upgrade.php">
                 <i class="ni ni-send text-dark"></i>
                 <span class="nav-link-text">Upgrade</span>
               </a>
@@ -70,31 +70,31 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.php" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Getting started</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.php" target="_blank">
                 <i class="ni ni-palette"></i>
                 <span class="nav-link-text">Foundation</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.php" target="_blank">
                 <i class="ni ni-ui-04"></i>
                 <span class="nav-link-text">Components</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.php" target="_blank">
                 <i class="ni ni-chart-pie-35"></i>
                 <span class="nav-link-text">Plugins</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active active-pro" href="upgrade.html">
+              <a class="nav-link active active-pro" href="upgrade.php">
                 <i class="ni ni-send text-dark"></i>
                 <span class="nav-link-text">Upgrade to PRO</span>
               </a>
