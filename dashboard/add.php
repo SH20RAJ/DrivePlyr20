@@ -23,241 +23,8 @@
   <?php include 'nav.php' ?>
   <!-- Main content -->
   <div class="main-content" id="panel">
-    <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
-          <!-- Navbar links -->
-          <ul class="navbar-nav align-items-center  ml-md-auto ">
-            <li class="nav-item d-xl-none">
-              <!-- Sidenav toggler -->
-              <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item d-sm-none">
-              <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                <i class="ni ni-zoom-split-in"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-bell-55"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                <!-- Dropdown header -->
-                <div class="px-3 py-3">
-                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
-                </div>
-                <!-- List group -->
-                <div class="list-group list-group-flush">
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-1.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-2.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-3.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>5 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-4.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-5.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- View all -->
-                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-ungroup"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
-                <div class="row shortcuts px-4">
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-calendar-grid-58"></i>
-                    </span>
-                    <small>Calendar</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                      <i class="ni ni-email-83"></i>
-                    </span>
-                    <small>Email</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                      <i class="ni ni-credit-card"></i>
-                    </span>
-                    <small>Payments</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                    <small>Reports</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                    <small>Maps</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                    <small>Shop</small>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-            <li class="nav-item dropdown">
-              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-4.jpg">
-                  </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
-                  </div>
-                </div>
-              </a>
-              <div class="dropdown-menu  dropdown-menu-right ">
-                <div class="dropdown-header noti-title">
-                  <h6 class="text-overflow m-0">Welcome!</h6>
-                </div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-user-run"></i>
-                  <span>Logout</span>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <!-- Topnav -->
+    <?php include 'topnav.php' ?>
     <!-- Header -->
     <!-- Header -->
     <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
@@ -344,81 +111,57 @@
               </div>
             </div>
             <div class="card-body">
-              <form>
-                <h6 class="heading-small text-muted mb-4">User information</h6>
-                <div class="pl-lg-4">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control" placeholder="Username" value="lucky.jesse">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control" placeholder="jesse@example.com">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="Lucky">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="Jesse">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="my-4" />
-                <!-- Address -->
-                <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                <div class="pl-lg-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control" placeholder="City" value="New York">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control" placeholder="Country" value="United States">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-country">Postal code</label>
-                        <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="my-4" />
-                <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">About me</h6>
-                <div class="pl-lg-4">
-                  <div class="form-group">
-                    <label class="form-control-label">About Me</label>
-                    <textarea rows="4" class="form-control" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                  </div>
-                </div>
-              </form>
+            <form class="needs-validation" action="/upload-video" method="post" enctype="multipart/form-data">
+  <h6 class="heading-small text-muted mb-4">Video information</h6>
+  <div class="pl-lg-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-url">Video URL</label>
+          <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text">
+          <div class="invalid-feedback">
+            Please enter a valid video URL.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-hosting">Hosting</label>
+          <select id="input-hosting" class="form-control" name="hosting">
+            <option value="youtube">YouTube</option>
+            <option value="vimeo">Vimeo</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-title">Title</label>
+          <input type="text" id="input-title" class="form-control" placeholder="Title" name="title" value="">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-description">Description</label>
+          <textarea rows="4" class="form-control" placeholder="Description" name="description"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-allow-download">Allow download</label>
+          <input type="checkbox" id="input-allow-download" class="form-control" name="allow_download" value="1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Upload</button>
+</form>
+
             </div>
           </div>
         </div>
