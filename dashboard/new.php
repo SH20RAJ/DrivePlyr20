@@ -297,11 +297,30 @@
     }
 
     .search-box {
-      width: 300px;
+      width: 400px;
       padding: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: #80bdff;
+      background-color: #fff;
+    }
+
+    .search-btn {
+      border-radius: 5px;
     }
   </style>
         </div>
