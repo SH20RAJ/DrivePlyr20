@@ -42,12 +42,6 @@
                 <span class="nav-link-text">Video</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://driveplyr.hashnode.dev/?ref=main" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
-              </a>
-            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="login.php">
                 <i class="ni ni-key-25 text-info"></i>
@@ -68,12 +62,17 @@
             </li> -->
           </ul>
 
-          <!-- Divider 
-          <hr class="my-3">-->
-          <!-- Heading
+          <!-- Divider -->
+          <hr class="my-3">
+          <!-- Heading-->
           <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
-          </h6> -->
+            <span class="docs-normal"><li class="nav-item">
+              <a class="nav-link" href="https://driveplyr.hashnode.dev/?ref=main" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Documentations</span>
+              </a>
+            </li></span>
+          </h6> 
           <!-- Navigation 
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
