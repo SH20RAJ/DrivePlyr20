@@ -32,53 +32,11 @@
   <!-- Page plugins -->
   <!-- Argon CSS --> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/css/argon.css?v=1.2.0" type="text/css">
- <script>
-  function appendAfterBody(html) {
-    var tempElement = document.createElement('div');
-    tempElement.innerHTML = html;
-
-    var bodyElement = document.getElementsByTagName('body')[0];
-    bodyElement.insertAdjacentElement('afterbegin', tempElement.firstChild);
-  }
-
-  function loadContent(url, callback) {
-    fetch(url)
-      .then(function(response) {
-        if (response.ok) {
-          return response.text();
-        }
-        throw new Error('Network response was not OK.');
-      })
-      .then(function(data) {
-        if (typeof callback === 'function') {
-          callback(data);
-        } else {
-          var element = document.getElementById(callback);
-          if (element) {
-            element.innerHTML = data;
-          }
-        }
-      })
-      .catch(function(error) {
-        console.log('Error:', error.message);
-      });
-  }
-
-  window.onload = function() {
-    // Load header and append after body
-    loadContent('nav.html', function(data) {
-      appendAfterBody(data);
-    });
-  };
-</script>
-
-
-  
 </head>
 
 <body>
   
-<span id="nav"></span>
+<?php include 'nav.php' ?>
   
   <!-- Main content -->
   <div class="main-content" id="panel">
