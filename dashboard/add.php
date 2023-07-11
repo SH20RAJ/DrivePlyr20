@@ -23,7 +23,7 @@
   <?php include 'nav.php' ?>
   <!-- Main content -->
   <div class="main-content" id="panel">
-  <!-- Topnav -->
+    <!-- Topnav -->
     <?php include 'topnav.php' ?>
     <!-- Header -->
     <!-- Header -->
