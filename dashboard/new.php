@@ -272,16 +272,18 @@
     <div class="container-fluid mt--6">
       <div class="row">
         <div class="col">
-              <div class="input-group">
-                <div class="form-outline">
-                  <input type="search" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Search</label>
-                </div>
-                <button type="button" class="btn btn-primary">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-      </div>
+        <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+         </div>
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
