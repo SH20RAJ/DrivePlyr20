@@ -272,7 +272,9 @@
     <div class="container-fluid mt--6">
       <div class="row">
         <div class="col">
-        <form class="form-inline">
+        <div class="search-container">
+    <div class="search-box">
+      <form class="form-inline">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search">
           <div class="input-group-append">
@@ -282,24 +284,13 @@
           </div>
         </div>
       </form>
-      <style>
-    .search-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    </div>
+  </div>
 
-    .search-box {
-      width: 300px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  </style>4t
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
 
-         </div>
+        </div>
+      </div>
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
