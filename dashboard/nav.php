@@ -66,12 +66,12 @@
           <hr class="my-3">
           <!-- Heading-->
           <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal"><li class="nav-item">
+            <span class="docs-normal"><span class="nav-item">
               <a class="nav-link" href="https://driveplyr.hashnode.dev/?ref=main" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Documentations</span>
               </a>
-            </li></span>
+</span></span>
           </h6> 
           <!-- Navigation 
           <ul class="navbar-nav mb-md-3">
