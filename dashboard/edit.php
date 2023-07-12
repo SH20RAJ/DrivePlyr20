@@ -61,9 +61,7 @@ die();*/
     <div class="container-fluid mt-6">
         <div class="row">
             <div class="col-xl-4 order-xl-2">
-                <video width="100%" height="" controls>
-                    <source src="<?php echo $videoURL; ?>" type="video/mp4">
-                </video>
+            <iframe src="https://driveplyr.appspages.online/player.html?id=1&amp;player=videojs" height="600px" width="100%"></iframe>
             </div>
             <div class="col-xl-8 order-xl-1">
                 <div class="card">
