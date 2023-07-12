@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
 $id = 1;//$_GET['id'];
 
 // Fetch the video information from the database
-$sql = "SELECT * FROM videos WHERE id = $id and user = $_SESSION['id']";
+$sql = "SELECT * FROM videos WHERE id = $id";
 $result = $conn->query($sql);
 
 // Check if the video exists
