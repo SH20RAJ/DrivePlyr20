@@ -43,7 +43,7 @@
         <div class="col">
           <div class="card border-0">
             <div id="driveplyr1"></div>
-          <script src="https://driveplyr.appspages.online/player.js" data-id="1" player="videojs" data-height="400px" data-width="500px" data-type="driveplyr" defer></script>
+          <script src="https://driveplyr.appspages.online/player.js" data-id="1" player="videojs" data-height="600px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         </div>
       </div>
