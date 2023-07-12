@@ -133,13 +133,13 @@ die();*/
                                             <input type="checkbox" id="input-allow-download" class="form-control" name="allow_download" value="1" <?php if ($videoAllowDownload) echo 'checked'; ?>>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-poster">Poster URL</label>
                                             <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="<?php echo $videoPosterURL; ?>">
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="player">Player - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/search/label/Custom%20Video%20Player">See Examples</a></label>
                                             <select class="form-control" name="player" id="player">
