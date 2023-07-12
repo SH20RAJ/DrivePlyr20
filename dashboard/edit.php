@@ -141,9 +141,27 @@ die();*/
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="player">Player</label>
-                                            <input type="text" id="player" class="form-control" placeholder="Poster URL" name="poster_url" value="<?php echo $videoPosterURL; ?>">
-                                        </div>
+                                            <label class="form-control-label" for="player">Player - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/search/label/Custom%20Video%20Player">See Examples</a></label>
+                                            <select name="player" id="player">
+                                              <option value="volvo">Plyr</option>
+                                              <option value="saab">SopPlayer</option>
+                                              <option value="saab">vLiteJS</option>
+                                              <option value="mercedes">griffith</option>
+                                              <option value="audi">VideoJS</option>
+                                              <option value="volvo">JWPlayer</option>
+                                              <option value="saab">Mediaelements</option>
+                                              <option value="mercedes">Clapper</option>
+                                              <option value="audi">RainPlayer</option>
+                                              <option value="volvo">OpenPlayerJS</option>
+                                              <option value="saab">KWG Player</option>
+                                              <option value="mercedes">CuteSu</option>
+                                              <option value="audi">XgPlayer</option>
+                                              <option value="volvo">Flowplayer</option>
+                                              <option value="saab">Fluidplayer</option>
+                                              <option value="mercedes">Flamingo</option>
+                                              <option value="audi">RedRoseLite</option>
+                                            </select>
+                                          </div>
                                     </div>
                                 </div>
                             </div>
