@@ -89,7 +89,7 @@ die();*/
 <pre>
 <code id="code" class="language-html">
 &#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;script src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; player=&#x22;videojs&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; player=&#x22;<span id="plyr">videojs</span>&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
 </code>
 </pre>
                                         </div>
