@@ -84,6 +84,8 @@ die();*/
                             <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
+                                        <label class="form-control-label" for="code">Embed Code</label>
+
 <pre>
 <code id="code" class="language-javascript">
 &#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
