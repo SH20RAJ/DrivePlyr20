@@ -105,7 +105,7 @@ if ($result->num_rows > 0) {
                 </td>
                 <td>
                   <div class="d-flex align-items-center">
-                    <span class="completion mr-2">Downloads</span>
+                    <span class="completion mr-2">' . $videoProgress . '</span>
                     <div>
                       <div class="progress">
                         <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="' . $videoProgress . '" aria-valuemin="0" aria-valuemax="100" style="width: ' . $videoProgress . '%;"></div>
