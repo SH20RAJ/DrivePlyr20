@@ -132,10 +132,7 @@
       <div class="col-lg-4">
         <div class="form-group">
           <label class="form-control-label" for="input-hosting">Hosting</label>
-          <input id="input-hosting" class="form-control" name="hosting" readonly>
-            <option value="youtube">YouTube</option>
-            <option value="vimeo">Vimeo</option>
-            <option value="other">Other</option>
+          <input id="input-hosting" class="form-control" name="hosting" readonly placeholder="Do not edit">
           </input>
         </div>
       </div>
