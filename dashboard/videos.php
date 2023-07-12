@@ -56,8 +56,8 @@ include '../conn.php';
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col" class="sort" data-sort="name">Poster</th>
-                    <th scope="col" class="sort" data-sort="budget">Title</th>
+                    <th scope="col" class="sort" data-sort="name">Video</th>
+                    <th scope="col" class="sort" data-sort="budget">Downloads</th>
                     <th scope="col" class="sort" data-sort="status">Status</th>
                     <th scope="col">Views</th>
                     <th scope="col" class="sort" data-sort="completion">Downloads</th>
