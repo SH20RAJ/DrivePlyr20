@@ -78,7 +78,7 @@ if ($result->num_rows > 0) {
         $videoStatus = $row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
-        $videoProgress = $row['progress'];
+        $videoProgress = '100%';//$row['progress'];
 
         echo '<tr>
                 <th scope="row">
