@@ -71,7 +71,7 @@ die();*/
                                 <h3 class="mb-0">Edit profile</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="javascript:voide()" class="btn btn-sm btn-primary">Embed</a>
+                                <a href="javascript:voide()" onclick="embed()" class="btn btn-sm btn-primary">Embed</a>
                             </div>
                         </div>
                     </div>
@@ -79,6 +79,17 @@ die();*/
                         <form class="needs-validation" action="api/update-video.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                             <h6 class="heading-small text-muted mb-6">Video information</h6>
                             <div class="pl-lg-4">
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="code">Embed Code</label>
+                                            <code id="code" lang="html">
+                                            &#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;script src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; player=&#x22;videojs&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
