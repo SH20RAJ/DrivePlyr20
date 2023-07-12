@@ -13,13 +13,18 @@ dp_scriptTags.forEach((scriptTag) => {
   // Create the iframe element
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', `https://driveplyr.appspages.online/player.html?id=${dp_videoID}&player=${dp_playerType}`);
-  iframe.setAttribute('height', dp_height);
-  iframe.setAttribute('width', dp_width);
+  iframe.setAttribute('title', 'YouTube video player');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+  iframe.setAttribute('allowfullscreen', '');
+
+  // Set width and height attributes with default values if not provided
+  iframe.setAttribute('width', dp_width || '560');
+  iframe.setAttribute('height', dp_height || '315');
 
   // Get the parent element of the script tag
-  const parentElement = document.getElementById('driveplyr'+dp_playerid);
+  const parentElement = document.getElementById('driveplyr' + dp_playerid);
 
   // Append the iframe to the parent element
   parentElement.appendChild(iframe);
-
 });
