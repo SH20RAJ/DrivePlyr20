@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Get the video ID from the URL parameter
-$id = $_GET['id'];
+$id = 1;//$_GET['id'];
 
 // Fetch the video information from the database
 $sql = "SELECT * FROM videos WHERE id = $id and user = $_SESSION['id']";
