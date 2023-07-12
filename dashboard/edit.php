@@ -89,7 +89,7 @@ die();*/
 <pre>
 <code id="code" class="language-html">
 &#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;script src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; player=&#x22;<span id="plyr">videojs</span>&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+&#x3C;script player=&#x22;<span id="plyr">videojs</span>&#x22; src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
 </code>
 </pre>
                                         </div>
@@ -143,23 +143,23 @@ die();*/
                                         <div class="form-group">
                                             <label class="form-control-label" for="player">Player - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/search/label/Custom%20Video%20Player">See Examples</a></label>
                                             <select class="form-control" name="player" id="player">
-                                              <option value="volvo">Plyr</option>
-                                              <option value="saab">SopPlayer</option>
-                                              <option value="saab">vLiteJS</option>
-                                              <option value="mercedes">griffith</option>
-                                              <option value="audi">VideoJS</option>
-                                              <option value="volvo">JWPlayer</option>
-                                              <option value="saab">Mediaelements</option>
-                                              <option value="mercedes">Clapper</option>
-                                              <option value="audi">RainPlayer</option>
-                                              <option value="volvo">OpenPlayerJS</option>
-                                              <option value="saab">KWG Player</option>
-                                              <option value="mercedes">CuteSu</option>
-                                              <option value="audi">XgPlayer</option>
-                                              <option value="volvo">Flowplayer</option>
-                                              <option value="saab">Fluidplayer</option>
-                                              <option value="mercedes">Flamingo</option>
-                                              <option value="audi">RedRoseLite</option>
+                                              <option >vLiteJS</option>
+                                              <option >SopPlayer</option>
+                                              <option >griffith</option>
+                                              <option >VideoJS</option>
+                                              <option >JWPlayer</option>
+                                              <option >Mediaelements</option>
+                                              <option >Clapper</option>
+                                              <option >RainPlayer</option>
+                                              <option >OpenPlayerJS</option>
+                                              <option >KWGPlayer</option>
+                                              <option >Plyr</option>
+                                              <option >CuteSu</option>
+                                              <option >XgPlayer</option>
+                                              <option >Flowplayer</option>
+                                              <option >Fluidplayer</option>
+                                              <option >Flamingo</option>
+                                              <option >RedRoseLite</option>
                                             </select>
                                           </div>
                                     </div>
@@ -189,6 +189,9 @@ die();*/
     document.addEventListener('DOMContentLoaded', function() {
         checkVideoURL();
     });
+    let embed = () => {
+      document.getElementById('plyr').innerHTML = document.getElementById('player').value;
+    }
 </script>
 </body>
 </html>
