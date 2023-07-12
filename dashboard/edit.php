@@ -139,6 +139,12 @@ die();*/
                                             <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="<?php echo $videoPosterURL; ?>">
                                         </div>
                                     </div>
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="player">Player</label>
+                                            <input type="text" id="player" class="form-control" placeholder="Poster URL" name="poster_url" value="<?php echo $videoPosterURL; ?>">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <hr class="my-4"></hr>
