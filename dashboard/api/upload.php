@@ -4,7 +4,7 @@ include '../../conn.php';
 if(!isset($_SESSION['username'])){
     echo "Not Allowed";
 } else {
-    print_r($_SESSION);die();
+    print_r($_SESSION);
 // Get the form data
 $user = 2;//$_SESSION['user'];
 $url = $_POST['url'];
