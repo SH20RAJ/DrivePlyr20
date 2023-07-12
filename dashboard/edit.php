@@ -142,7 +142,7 @@ die();*/
                                     <div class="col-lg-8">
                                         <div class="form-group">
                                             <label class="form-control-label" for="player">Player - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/search/label/Custom%20Video%20Player">See Examples</a></label>
-                                            <select name="player" id="player">
+                                            <select class="form-control" name="player" id="player">
                                               <option value="volvo">Plyr</option>
                                               <option value="saab">SopPlayer</option>
                                               <option value="saab">vLiteJS</option>
