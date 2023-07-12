@@ -61,9 +61,7 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
         //return 'vimeo';
     } elseif (strpos($url, 'archive.org') !== false) {
         //return 'archive.org';
-    } else {
-        //return 'unknown';
-    }   
+    } 
 
 header('Location: '.$url.'');
         exit();
