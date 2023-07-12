@@ -17,7 +17,8 @@ if ($result->num_rows === 0) {
 // Get the video details
 $video = $result->fetch_assoc();
 
-header('Location: '.$video['url'].'');
-exit();
 
+// Return the video as a JSON response
+header('Content-Type: application/json');
+echo json_encode($video);
 ?>
