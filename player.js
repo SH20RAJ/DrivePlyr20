@@ -13,7 +13,7 @@ dp_scriptTags.forEach((scriptTag) => {
   // Create the iframe element
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', `https://driveplyr.appspages.online/player.html?id=${dp_videoID}&player=${dp_playerType}`);
-  iframe.setAttribute('title', 'YouTube video player');
+  iframe.setAttribute('title', 'SopPlayer video player');
   iframe.setAttribute('frameborder', '0');
   iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
   iframe.setAttribute('allowfullscreen', '');
