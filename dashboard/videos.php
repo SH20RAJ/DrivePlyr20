@@ -83,13 +83,14 @@ if ($result->num_rows > 0) {
 
         echo '<tr>
                 <th scope="row">
-                  <a href="edit.php?id='.$videoId.'" class="mr-3">
                   <div class="media align-items-center">
+                    <a href="edit.php?id='.$videoId.'" class="mr-3">
                       <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
+                    
                     <div class="media-body">
-                      <span class="name mb-0 text-sm">' . $videoTitle . '</span>
+                      <span class="name mb-0 text-sm">' . $videoTitle . '</span></a>
                     </div>
-                  </div></a>
+                  </div>
                 </th>
                 <td class="budget">
                   '.$videoDownloads.'
