@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Get the video ID from the URL parameter
-echo $id = $_GET['id'];
+$id = $_GET['id'];
 
 // Fetch the video information from the database
 $sql = "SELECT * FROM videos WHERE id = $id";
@@ -29,8 +29,8 @@ $videoTitle = $row['title'];
 $videoDescription = $row['description'];
 $videoAllowDownload = $row['allow_download'];
 $videoPosterURL = $row['poster_url'];
-print_r($row);
-die();
+/*print_r($row);
+die();*/
 ?>
 
 <!DOCTYPE html>
