@@ -6,7 +6,7 @@ if(!isset($_SESSION['username'])){
 } else {
     print_r($_SESSION);
 // Get the form data
-$user = 2;//$_SESSION['user'];
+$user = $_SESSION['user'];
 $url = $_POST['url'];
 $hosting = $_POST['hosting'];
 $title = $_POST['title'];
