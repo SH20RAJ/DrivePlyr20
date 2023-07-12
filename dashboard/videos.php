@@ -78,7 +78,7 @@ if ($result->num_rows > 0) {
         $videoStatus = $row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
-        $videoProgress = '100%';//$row['progress'];
+        $videoScore = '100%';//$row['progress'];
 
         echo '<tr>
                 <th scope="row">
@@ -104,14 +104,14 @@ if ($result->num_rows > 0) {
                   ' . $videoViews . ' Views
                 </td>
                 <td>
-                  <div class="d-flex align-items-center">
-                    <span class="completion mr-2">' . $videoProgress . '</span>
-                    <div>
-                      <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="' . $videoProgress . '" aria-valuemin="0" aria-valuemax="100" style="width: ' . $videoProgress . '%;"></div>
+                      <div class="d-flex align-items-center">
+                        <span class="completion mr-2">' . $videoScore . '</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
                 </td>
                 <td class="text-right">
                   <div class="dropdown">
