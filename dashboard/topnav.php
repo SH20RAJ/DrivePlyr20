@@ -105,12 +105,12 @@
                       <div class="col-auto">
                         <!-- Avatar -->
                         <img alt="Image placeholder" 
-                        src="" class="avatar rounded-circle">
+                        src="https://i.imgur.com/n5MBy0m.jpg" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
                           <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
+                            <h4 class="mb-0 text-sm">Shade</h4>
                           </div>
                           <div class="text-right text-muted">
                             <small>2 hrs ago</small>
