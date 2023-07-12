@@ -1,7 +1,6 @@
 <?php
+session_start();
 include '../conn.php';
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +66,6 @@ include '../conn.php';
                 <tbody class="list">
                 <?php
 // Retrieve the video list from the database
-session_start();
 $user = $_SESSION['id'];
 $sql = "SELECT * FROM videos where user = ".$user."";
 $result = $conn->query($sql);
