@@ -37,7 +37,7 @@ echo $updateSql = "UPDATE videos SET url = '$url', title = '$title', description
 
 if ($conn->query($updateSql) === TRUE) {
     // Video details updated successfully
-   // header('Location: ../edit.php?id=' . $id);
+    header('Location: ../edit.php?id=' . $id);
 } else {
     echo "Error updating video details: " . $conn->error;
 }
