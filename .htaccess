@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteRule ^player\.php$ player.html [L]
+RewriteRule ^player\.html$ player.php [L]
 RewriteRule ^player/([0-9]+)$ player.php?id=$1 [L]
