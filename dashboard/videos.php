@@ -92,13 +92,13 @@ if ($result->num_rows > 0) {
                   </div>
                 </th>
                 <td class="budget">
-                  $2500 USD
+                  '.$videoDownloads.'
                 </td>
                 <td>
-                  <span class="badge badge-dot mr-4">
-                    <i class="bg-warning"></i>
-                    <span class="status">' . $videoStatus . '</span>
-                  </span>
+                      <span class="badge badge-dot mr-4">
+                        <i class="bg-success"></i>
+                        <span class="status">Public</span>
+                      </span>
                 </td>
                 <td>
                   ' . $videoViews . ' Views
