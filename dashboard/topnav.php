@@ -41,12 +41,12 @@
                 <div class="px-3 py-3">
                   <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
                 </div>
-                <!-- List group -->
+                <!-- List group 
                 <div class="list-group list-group-flush">
                   <a href="#!" class="list-group-item list-group-item-action">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <!-- Avatar -->
+                        
                         <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-1.jpg" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
@@ -65,7 +65,7 @@
                   <a href="#!" class="list-group-item list-group-item-action">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <!-- Avatar -->
+                        
                         <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-2.jpg" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
@@ -84,7 +84,7 @@
                   <a href="#!" class="list-group-item list-group-item-action">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <!-- Avatar -->
+                        
                         <img alt="Image placeholder" src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/team-3.jpg" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
@@ -103,7 +103,7 @@
                   <a href="#!" class="list-group-item list-group-item-action">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <!-- Avatar -->
+                        
                         <img alt="Image placeholder" 
                         src="https://i.imgur.com/n5MBy0m.jpg" class="avatar rounded-circle">
                       </div>
@@ -123,7 +123,7 @@
                   <a href="#!" class="list-group-item list-group-item-action">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        <!-- Avatar -->
+                        
                         <img alt="Image placeholder" src="https://i.imgur.com/n5MBy0m.jpg" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
@@ -139,7 +139,7 @@
                       </div>
                     </div>
                   </a>
-                </div>
+                </div>-->
                 <!-- View all -->
                 <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
               </div>
@@ -199,7 +199,7 @@
                     src="https://i.imgur.com/n5MBy0m.jpg">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold">Shade</span>
                   </div>
                 </div>
               </a>
