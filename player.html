@@ -13,7 +13,8 @@
     const urlParams = new URLSearchParams(window.location.search);
     const videoID = urlParams.get('id');
     const playerType = urlParams.get('player');
-    
+    const videoURL = `https://driveplyr.appspages.online/dashboard/api/getvideo.php?id=${videoID}`;
+
     // Create the video player based on the player type
     if (playerType === 'videojs') {
       // Create a Video.js player
@@ -21,14 +22,14 @@
         controls: true,
         autoplay: true,
         sources: [{
-          src: `https://driveplyr.appspages.online/dashboard/api/getvideo.php?id=${videoID}`,
+          src: videoURL,
           type: 'video/mp4'
         }]
       });
     } else if (playerType === 'vimeo') {
       // Create a Vimeo player
       const vimeoPlayer = new Vimeo.Player('player', {
-        id: videoID,
+        url: videoURL,
         autoplay: true,
         controls: true
       });
