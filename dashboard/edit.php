@@ -49,6 +49,8 @@ die();*/
             }
         }
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
 </head>
 <body>
 <!-- Sidenav -->
@@ -82,11 +84,12 @@ die();*/
                             <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="code">Embed Code</label>
-                                            <code id="code" lang="html">
-                                            &#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
+<pre>
+<code id="code" class="language-javascript">
+&#x3C;div id=&#x22;driveplyr1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;script src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;1&#x22; player=&#x22;videojs&#x22; data-height=&#x22;400px&#x22; data-width=&#x22;500px&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
-                                            </code>
+</code>
+</pre>
                                         </div>
                                     </div>
                                 </div>
