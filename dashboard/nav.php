@@ -21,7 +21,7 @@
             <li class="nav-item">
               <a class="nav-link" href="new.php">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">New</span>
+                <span class="nav-link-text">FAQs</span>
               </a>
             </li>
             <!-- <li class="nav-item">
