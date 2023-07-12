@@ -60,7 +60,7 @@ include '../conn.php';
                     <th scope="col" class="sort" data-sort="budget">Downloads</th>
                     <th scope="col" class="sort" data-sort="status">Status</th>
                     <th scope="col">Views</th>
-                    <th scope="col" class="sort" data-sort="completion">Downloads</th>
+                    <th scope="col" class="sort" data-sort="completion">Performance</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
