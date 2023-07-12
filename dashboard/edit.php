@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conn.php';
+include '../conn.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
@@ -23,7 +23,7 @@ if ($result->num_rows === 0) {
 
 // Get the video data
 $row = $result->fetch_assoc();
-$videoURL = $row['url'];
+echo $videoURL = $row['url'];
 $videoHosting = $row['hosting'];
 $videoTitle = $row['title'];
 $videoDescription = $row['description'];
