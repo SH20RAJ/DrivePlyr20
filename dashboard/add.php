@@ -118,7 +118,7 @@
       <div class="col-md-12">
         <div class="form-group">
           <label class="form-control-label" for="input-url">Video URL</label>
-          <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text">
+          <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
           <div class="invalid-feedback">
             Please enter a valid video URL.
           </div>
@@ -139,13 +139,13 @@
       <div class="col-lg-4">
         <div class="form-group">
           <label class="form-control-label" for="input-title">Title</label>
-          <input type="text" id="input-title" class="form-control" placeholder="Title" name="title" value="">
+          <input type="text" id="input-title" class="form-control" placeholder="Title" name="title" value="" required>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="form-group">
           <label class="form-control-label" for="input-description">Description</label>
-          <textarea rows="4" class="form-control" placeholder="Description" name="description"></textarea>
+          <textarea rows="4" class="form-control" placeholder="Description" name="description" required></textarea>
         </div>
       </div>
     </div>
@@ -156,11 +156,20 @@
           <input type="checkbox" id="input-allow-download" class="form-control" name="allow_download" value="1">
         </div>
       </div>
+      <div class="col-lg-8">
+        <div class="form-group">
+          <label class="form-control-label" for="input-poster">Poster URL</label>
+          <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="">
+        </div>
+      </div>
     </div>
   </div>
-  <hr class="my-4">
+  <hr class="my-4"></hr>
   <button class="btn btn-primary btn-lg btn-block" type="submit">Upload</button>
 </form>
+
+            <div>
+
 
             </div>
           </div>
