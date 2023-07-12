@@ -83,8 +83,8 @@ if ($result->num_rows > 0) {
         echo '<tr>
                 <th scope="row">
                   <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Video Poster" src="' . $videoPosterURL . '">
+                    <a href="#" class=" mr-3">
+                      <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
                     </a>
                     <div class="media-body">
                       <span class="name mb-0 text-sm">' . $videoTitle . '</span>
