@@ -29,7 +29,7 @@ $allowDownload = isset($_POST['allow_download']) ? 1 : 0;
 $posterURL = $_POST['poster_url'];
 
 // Update the video details in the database
-$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, poster_url = '$posterURL' WHERE id = $id";
+$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, poster_url = '$posterURL' WHERE id = $id and user = $_SESSION['id']";
 if ($conn->query($updateSql) === TRUE) {
     // Video details updated successfully
     header('Location: ../edit.php?id=' . $id);
