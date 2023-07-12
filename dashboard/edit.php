@@ -23,7 +23,7 @@ if ($result->num_rows === 0) {
 
 // Get the video data
 $row = $result->fetch_assoc();
-echo $videoURL = $row['url'];
+$videoURL = $row['url'];
 $videoHosting = $row['hosting'];
 $videoTitle = $row['title'];
 $videoDescription = $row['description'];
