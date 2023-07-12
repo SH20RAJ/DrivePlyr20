@@ -37,11 +37,11 @@
     <!-- Topnav -->
     <?php include 'topnav.php' ?>
     <!-- Header -->
-    <!-- Header -->
+    <!-- Header 
     <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
-      <!-- Mask -->
+       Mask 
       <span class="mask bg-gradient-default opacity-8"></span>
-      <!-- Header container -->
+      Header container 
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
