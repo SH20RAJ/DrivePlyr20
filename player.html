@@ -9,33 +9,20 @@
 
   <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
   <script>
-    // Get the video ID and player type from the URL parameters
+    // Get the video ID from the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const videoID = urlParams.get('id');
-    const playerType = urlParams.get('player');
     const videoURL = `https://driveplyr.appspages.online/dashboard/api/getvideo.php?id=${videoID}`;
 
-    // Create the video player based on the player type
-    if (playerType === 'videojs') {
-      // Create a Video.js player
-      const videoPlayer = videojs('player', {
-        controls: true,
-        autoplay: true,
-        sources: [{
-          src: videoURL,
-          type: 'video/mp4'
-        }]
-      });
-    } else if (playerType === 'vimeo') {
-      // Create a Vimeo player
-      const vimeoPlayer = new Vimeo.Player('player', {
-        url: videoURL,
-        autoplay: true,
-        controls: true
-      });
-    } else {
-      console.error('Invalid player type');
-    }
+    // Create a Video.js player
+    const videoPlayer = videojs('player', {
+      controls: true,
+      autoplay: true,
+      sources: [{
+        src: videoURL,
+        type: 'video/mp4'
+      }]
+    });
   </script>
 </body>
 </html>
