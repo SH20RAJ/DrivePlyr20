@@ -20,7 +20,7 @@ if ($result->num_rows === 0) {
     echo "Video not found";
     exit;
 }
-
+die();
 // Get the video data
 $row = $result->fetch_assoc();
 $videoURL = $row['url'];
