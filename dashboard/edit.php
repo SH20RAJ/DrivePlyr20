@@ -62,10 +62,10 @@ die();*/
     <!-- Page content -->
     <div class="container-fluid mt-6">
         <div class="row">
-            <div class="col-xl-4 order-xl-2">
+            <div class="col-xl-12 order-xl-1">
             <iframe src="https://driveplyr.appspages.online/player.html?id=1&amp;player=videojs" height="600px" width="100%"></iframe>
             </div>
-            <div class="col-xl-8 order-xl-1">
+            <div class="col-xl-12 order-xl-2">
                 <div class="card">
                     <div class="card-header">
                         <div class="row align-items-center">
