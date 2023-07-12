@@ -67,7 +67,8 @@ include '../conn.php';
                 <tbody class="list">
                 <?php
 // Retrieve the video list from the database
-$user = 4;
+session_start();
+$user = $_SESSION['id'];
 $sql = "SELECT * FROM videos where user = ".$user."";
 $result = $conn->query($sql);
 
