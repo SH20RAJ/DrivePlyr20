@@ -145,7 +145,7 @@
       <div class="col-lg-4">
         <div class="form-group">
           <label class="form-control-label" for="input-description">Description</label>
-          <textarea rows="4" class="form-control" placeholder="Description" name="description" required></textarea>
+          <textarea rows="1" class="form-control" placeholder="Description" name="description" required></textarea>
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@
         </div>
       </div>
       <!-- Footer -->
-      <?php include('footer.php') ?>
+      <?php //include('footer.php') ?>
     </div>
   </div>
   <!-- Argon Scripts -->
