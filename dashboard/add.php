@@ -108,7 +108,7 @@
               </div>
             </div>
           </div> -->
-              <video width="100vh" height="" controls>
+              <video width="100%" height="" controls>
       <source src="https://bit.ly/bbsamplevideo" type="video/mp4">
     </video>
         </div>
