@@ -16,6 +16,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/css/argon.css?v=1.2.0" type="text/css">
+<script>
+  function checkVideoURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoURL = urlParams.get('video');
+
+  if (videoURL) {
+    alert('Video URL: ' + videoURL);
+  }
+}
+
+</script>
 </head>
 
 <body>
