@@ -120,9 +120,9 @@ if ($result->num_rows > 0) {
                       <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="embed.php?id='.$videoId.'">Embed</a>
+                      <a class="dropdown-item" href="edit.php?id='.$videoId.'">Edit</a>
+                      <a class="dropdown-item" href="api/delete.php?id='.$videoId.'">Delete</a>
                     </div>
                   </div>
                 </td>
