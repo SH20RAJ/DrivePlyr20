@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     echo "Not Allowed";
 } else {
     // Get the form data
-    $user = $_SESSION['username'];
+    $user = $_SESSION['id'];
     $url = $_POST['url'];
     $hosting = $_POST['hosting'];
     $title = $_POST['title'];
