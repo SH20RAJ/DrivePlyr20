@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Get the video ID from the URL parameter
-$id = 1;//$_GET['id'];
+$id = $_GET['id'];
 
 // Fetch the video information from the database
 $sql = "SELECT * FROM videos WHERE id = $id";
@@ -28,8 +28,13 @@ $description = $_POST['description'];
 $allowDownload = isset($_POST['allow_download']) ? 1 : 0;
 $posterURL = $_POST['poster_url'];
 
+
+// Extract the user ID from the session
+$userID = $_SESSION['id'];
+
 // Update the video details in the database
-$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, poster_url = '$posterURL' WHERE id = $id and user = $_SESSION['id']";
+$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, poster_url = '$posterURL' WHERE id = $id AND user = $userID";
+
 if ($conn->query($updateSql) === TRUE) {
     // Video details updated successfully
     header('Location: ../edit.php?id=' . $id);
