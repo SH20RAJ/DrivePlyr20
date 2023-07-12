@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../conn.php';
 
 
@@ -68,9 +67,9 @@ include '../conn.php';
                 <tbody class="list">
                 <?php
 // Retrieve the video list from the database
-
+session_start();
 $user = $_SESSION['id'];
-echo $sql = "SELECT * FROM videos where user = ".$user."";
+$sql = "SELECT * FROM videos where user = ".$user."";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
