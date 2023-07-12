@@ -73,6 +73,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Loop through each video and generate the table rows
     while ($row = $result->fetch_assoc()) {
+        $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'];
         $videoStatus = $row['status'];
@@ -83,11 +84,11 @@ if ($result->num_rows > 0) {
         echo '<tr>
                 <th scope="row">
                   <div class="media align-items-center">
-                    <a href="#" class=" mr-3">
+                    <a href="edit.php?id='.$videoId.'" class="mr-3">
                       <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
-                    </a>
+                    
                     <div class="media-body">
-                      <span class="name mb-0 text-sm">' . $videoTitle . '</span>
+                      <span class="name mb-0 text-sm">' . $videoTitle . '</span></a>
                     </div>
                   </div>
                 </th>
