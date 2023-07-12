@@ -16,8 +16,27 @@ if ($result->num_rows === 0) {
 
 // Get the video details
 $video = $result->fetch_assoc();
+$url = $video['url'];
+if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
 
-header('Location: '.$video['url'].'');
-exit();
+ if (strpos($url, 'drive.google.com') !== false) {
+        //return 'drive';
+    } elseif (strpos($url, 'mediafire.com') !== false) {
+       // return 'mediafire';
+    } elseif (strpos($url, 'youtube.com') !== false || strpos($url, 'youtu.be') !== false) {
+       // return 'youtube';
+    } elseif (strpos($url, 'vimeo.com') !== false) {
+        //return 'vimeo';
+    } elseif (strpos($url, 'archive.org') !== false) {
+        //return 'archive.org';
+    } else {
+        //return 'unknown';
+        header('Location: '.$url.'');
+        exit();
+    }   
+
+
+
+
 
 ?>
