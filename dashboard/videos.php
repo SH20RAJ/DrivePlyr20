@@ -75,7 +75,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
-        $videoPosterURL = $row['poster_url'] ?: 'api/Image_not_available.png';
+        $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
         $videoStatus = $row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
