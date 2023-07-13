@@ -37,18 +37,15 @@
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
-    <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" class="img-thumbnail" alt="Drive Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" class="img-thumbnail rounded" alt="Drive Logo">
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6">
-      <img src="https://media.trustradius.com/product-logos/5K/wF/DF9PQ3FHDUKB.PNG" class="img-thumbnail" alt="Mediafire Logo">
+      <img src="https://media.trustradius.com/product-logos/5K/wF/DF9PQ3FHDUKB.PNG" class="img-thumbnail rounded" alt="Mediafire Logo">
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6">
-      <img src="https://logowik.com/content/uploads/images/internet-archive9734.logowik.com.webp" class="img-thumbnail" alt="Archive.org Logo">
+      <img src="https://logowik.com/content/uploads/images/internet-archive9734.logowik.com.webp" class="img-thumbnail rounded" alt="Archive.org Logo">
     </div>
-    <!-- Add more logo images as needed -->
-  </div>
       <div class="row">
         <div class="col">
         <div class="search-container">
