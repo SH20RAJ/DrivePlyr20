@@ -49,7 +49,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-url">Video URL</label>
+                        <label class="form-control-label" for="input-url">Video URL <a href="https://driveplyr.hashnode.dev/supported-links">Supported Links</a></label>
                         <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
                         <div class="invalid-feedback">
                           Please enter a valid video URL.
