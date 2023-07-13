@@ -6,8 +6,6 @@
 </head>
 
 <body class="bg-default">
-  <!-- Navbar -->
-  <?php include 'nav.php' ?>
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
