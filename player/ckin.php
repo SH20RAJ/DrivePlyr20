@@ -30,7 +30,7 @@ html, body {
 
 <body>
 
-    <video poster="<?php echo $poster_url ?>" src="<?php echo $videourl ?>" data-ckin="default"></video>
+    <video poster="<?php echo $poster_url ?>" src="<?php echo $videourl ?>" data-ckin="minimal"></video>
        
     <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@main/ckin/ckin.js"></script>
   
