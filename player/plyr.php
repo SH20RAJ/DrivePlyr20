@@ -73,7 +73,7 @@ html, body {
     let json = JSON.parse(atob(getparam('id'))) ;
     let driveid = json.id;
     video.src = `<?php echo $videourl ?>`;
-    video.poster = 'https://lh3.googleusercontent.com/d/'+driveid;
+    video.poster = '<?php echo $poster_url ?>';
   }
 </script>
 
