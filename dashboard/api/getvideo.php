@@ -25,7 +25,8 @@ function extractMediaFireFileId($url) {
     return $fileId;
 }
 
-// Get the video ID from the URL parameter
+if(isset($_GET['id'])){
+    // Get the video ID from the URL parameter
 $id = $_GET['id'];
 
 // Fetch the video information from the database
@@ -37,11 +38,11 @@ if ($result->num_rows === 0) {
     echo "Video not found";
     exit;
 }
-
 // Get the video details
 $video = $result->fetch_assoc();
 $url = $video['url'];
 
+}   
 if(isset($_GET['url'])){$url=$_GET['url'];}
 
 if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
