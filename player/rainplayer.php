@@ -20,7 +20,7 @@
       <div class="player-overlay" data-fullscreen="false">
         <div class="container">
           <div class="information-container">
-            <h1 id="title" class="title"></h1>
+            <h2 id="title" class="title"><?php echo $title ?></h2>
             <p id="description" class="description">
               <?php echo $description ?>
             </p>
