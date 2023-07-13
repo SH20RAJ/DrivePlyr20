@@ -63,7 +63,7 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
         //return 'archive.org';
     } 
 
-$query = 'UPDATE `videos` SET `views` = `views` + 1 WHERE `videos`.`id` = 1;';
+$query = 'UPDATE videos SET views = views + 1 WHERE id = ' $id .'';
 $result = $connection->query($query);
 
 header('Location: '.$url.'');
