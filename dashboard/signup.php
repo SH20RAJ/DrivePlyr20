@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Set session variables
         $_SESSION['user_id'] = $insertStmt->insert_id;
         $_SESSION['username'] = $username;
+        $_SESSION['name'] = $name;
 
         // Redirect to the dashboard page
         header('Location: ../dashboard?msg=Account created succesfully');
