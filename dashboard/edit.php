@@ -155,6 +155,7 @@ die();*/
                                               <option value="rainplayer">RainPlayer</option>
                                               <option value="openplayerjs">OpenPlayerJS</option>
                                               <option value="kwgplayer">KWGPlayer</option>
+                                              <option value="ckin">Ckin</option>
                                               <option value="cutesu">CuteSu</option>
                                               <option value="xgplayer">XgPlayer</option>
                                               <option value="flowplayer">Flowplayer</option>
