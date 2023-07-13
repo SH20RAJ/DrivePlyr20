@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session_start();
 
         // Set session variables
-        $_SESSION['user_id'] = $insertStmt->insert_id;
+        $_SESSION['id'] = $insertStmt->insert_id;
         $_SESSION['username'] = $username;
         $_SESSION['name'] = $name;
 

@@ -33,12 +33,12 @@
         </div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">
+            <a href="../dashboard" class="nav-link">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link">
+            <a href="login.php" class="nav-link">
               <span class="nav-link-inner--text">Login</span>
             </a>
           </li>
