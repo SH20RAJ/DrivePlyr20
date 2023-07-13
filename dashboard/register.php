@@ -114,10 +114,10 @@
                   <span class="btn-inner--icon"><img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/icons/common/github.svg"></span>
                   <span class="btn-inner--text">Github</span>
                 </a>
-                <a href="#" class="btn btn-neutral btn-icon">
+                <!-- <a href="#" class="btn btn-neutral btn-icon">
                   <span class="btn-inner--icon"><img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/icons/common/google.svg"></span>
                   <span class="btn-inner--text">Google</span>
-                </a>
+                </a> -->
               </div>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
