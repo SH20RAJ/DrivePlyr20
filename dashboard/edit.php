@@ -143,7 +143,7 @@ die();*/
                                         <div class="form-group">
                                             <label class="form-control-label" for="player">Player - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/search/label/Custom%20Video%20Player">See Examples</a></label>
                                             <select class="form-control" name="player" id="player">
-                                              <option >Plyr</option>
+                                              <option value="plyr">Plyr</option>
                                               <option >SopPlayer</option>
                                               <option >vLiteJS</option>
                                               <option >griffith</option>
