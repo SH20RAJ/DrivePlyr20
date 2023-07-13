@@ -104,10 +104,10 @@ if ($result->num_rows > 0) {
                       <div class="d-flex align-items-center">
                         <span class="completion mr-2">' . $row['date'] . '</span>
                         <div>
-                          <div class="progress">
+                          <!--<div class="progress">
                             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                           </div>
-                        </div>
+                        </div>-->
                       </div>
                 </td>
                 <td class="text-right">
