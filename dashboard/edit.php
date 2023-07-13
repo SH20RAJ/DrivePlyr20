@@ -142,7 +142,7 @@ die();*/
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="player">Player - 
-                                                <a target="_blank" rel="nofollow" href="https://dev.to/sh20raj/top-html5-custom-video-players-with-documentation-video-5142">See Examples</a></label>
+                                                <a target="_blank" rel="nofollow" href="https://driveplyr.hashnode.dev/top-html5-custom-video-players-with-documentation-video">See Examples</a></label>
                                             <select class="form-control" name="player" id="player">
                                               <option value="plyr">Plyr</option>
                                               <option >SopPlayer</option>
