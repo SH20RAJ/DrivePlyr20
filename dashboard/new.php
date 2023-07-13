@@ -270,6 +270,18 @@
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
+    <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <img src="../logo.png" class="img-thumbnail" alt="Logo 1">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <img src="../logo.png" class="img-thumbnail" alt="Logo 2">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <img src="../logo.png" class="img-thumbnail" alt="Logo 3">
+    </div>
+    <!-- Add more logo images as needed -->
+  </div>
       <div class="row">
         <div class="col">
         <div class="search-container">
