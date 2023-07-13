@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_GET['player'])){
+  $player = $_GET['player'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
