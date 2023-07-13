@@ -45,7 +45,7 @@
       <img src="https://media.trustradius.com/product-logos/5K/wF/DF9PQ3FHDUKB.PNG" class="img-thumbnail" alt="Mediafire Logo">
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6">
-      <img src="https://ia801204.us.archive.org/14/items/InternetArchiveLogo/Internet%20Archive%20Logo.png" class="img-thumbnail" alt="Archive.org Logo">
+      <img src="https://logowik.com/content/uploads/images/internet-archive9734.logowik.com.webp" class="img-thumbnail" alt="Archive.org Logo">
     </div>
     <!-- Add more logo images as needed -->
   </div>
