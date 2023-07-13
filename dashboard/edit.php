@@ -98,7 +98,7 @@ die();*/
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-url">Video URL</label>
+                                            <label class="form-control-label" for="input-url" data-toggle="tooltip" data-original-title="Direct Link, Archive.org Link, Google Drive, Mediafire and others">Video URL</label>
                                             <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="<?php echo $videoURL; ?>" type="text" required>
                                             <div class="invalid-feedback">
                                                 Please enter a valid video URL.
