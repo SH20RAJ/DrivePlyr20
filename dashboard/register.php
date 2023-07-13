@@ -2,7 +2,15 @@
 <html>
 
 <head>
-  <?php include 'head.php' ?>
+  <?php 
+  session_start();
+  if(isset($_SESSION['id'])){
+    header('Location: ../dashboard/');
+    exit;
+  }
+  include 'head.php' 
+  
+  ?>
 </head>
 
 <body class="bg-default">
