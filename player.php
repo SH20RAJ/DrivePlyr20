@@ -2,7 +2,7 @@
 
 $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashboard/api/video.php?id='.$_GET['id']));
 
-print_r($video);
+//print_r($video);
 $poster_url = $video['poster_url'];
 $title = $video['title'];
 $views = $video['views'];
