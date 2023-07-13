@@ -42,7 +42,7 @@ if ($result->num_rows === 0) {
 $video = $result->fetch_assoc();
 $url = $video['url'];
 
-//if(isset($_GET['url'])){$url=$_GET['url'];}
+if(isset($_GET['url'])){$url=$_GET['url'];}
 
 if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
 
