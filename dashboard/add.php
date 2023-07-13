@@ -12,7 +12,7 @@
 
       if (videoURL) {
         document.getElementById('preview').src = videoURL2;
-        document.getElementById('input-url').value = videoURL2;
+        document.getElementById('input-url').value = videoURL;
       }
     }
   </script>
