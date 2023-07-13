@@ -75,7 +75,7 @@ if ($result->num_rows > 0) {
         $videoStatus = $row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
-        $videoScore = '100%';//$row['progress'];
+        $videoScore = '80%';//$row['progress'];
 
         echo '<tr>
                 <th scope="row">
@@ -89,7 +89,7 @@ if ($result->num_rows > 0) {
                   </div>
                 </th>
                 <td class="budget">
-                  '.$videoDownloads.'
+                 <a href="user/'.$row['user'].'" > '.$row['user'].'</a>
                 </td>
                 <td>
                       <span class="badge badge-dot mr-4">
