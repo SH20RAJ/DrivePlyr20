@@ -11,6 +11,7 @@
   include 'head.php' 
   
   ?>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdVlx0nAAAAADK-GzZf-wC3NDc1HEpb5mTrVoth"></script>
 
 </head>
 
