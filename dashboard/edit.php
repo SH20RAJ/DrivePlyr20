@@ -161,6 +161,7 @@ die();*/
                                               <option value="fluid">Fluidplayer</option>
                                               <option value="flamingo">Flamingo</option>
                                               <option value="redroselite">RedRoseLite</option>
+                                              <option value="none">NONE</option>
                                             </select>
                                           </div>
                                     </div>
