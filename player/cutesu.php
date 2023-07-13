@@ -1,9 +1,10 @@
 
 <title><?php echo $title ?></title>
-<link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
-  <!--Here is the Css Library-->
+
 <link rel="icon" href="../logo.png">
-<script src="https://rebrand.ly/SopPlayerJS" defer></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sh20raj/SopPlayer@main/CatSu/catsu.min.css"/> <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
 
 <style>
   html, body {
@@ -26,10 +27,11 @@
 
 </style>
 
-    <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" 
-    width= "100%" poster="<?php echo $poster_url ?>">
-      <!--Use class="sopplayer" and data-setup="{}" -->
-      <source src="<?php echo $videourl ?>" type="video/mp4" />
-    </video>
+<video
+id="my-video" class="video-js"
+controls  poster="<?php echo $poster_url ?>" data-setup='' loop>
 
-    <!--Here is the JavaScript Library-->
+<source src="<?php echo $videourl ?>" type='video/mp4'/>
+
+</video>
+<script src="https://cdn.jsdelivr.net/gh/sh20raj/SopPlayer@main/CatSu/catsu.min.js"><script/>
