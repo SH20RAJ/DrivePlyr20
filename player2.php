@@ -9,8 +9,11 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  $description = $video->description;
  $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
 
- if(isset($_GET['player'])){$player = $_GET['player'];}
- include 'player/'.$player.'.php';
- 
+ if(isset($_GET['player'])){
+    $player = $_GET['player'];
+    include 'player/'.$player.'.php';
+} else {
+    include 'player/plyr.php';
+}
 
 ?>
