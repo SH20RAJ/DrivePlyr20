@@ -5,9 +5,27 @@
   include 'head.php';
   ?>
   <script>
+    function extractDriveId(url) {
+      // Regular expression pattern to extract Google Drive ID from URL
+      var pattern = /\/d\/([a-zA-Z0-9_-]+)\//;
+      var matches = url.match(pattern);
+      if (matches && matches.length >= 2) {
+        return matches[1];
+      }
+      return null;
+}
+function isDriveLink(url) {
+  return /^https?:\/\/drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+\/view($|\?|\#)/.test(url);
+}
+
     function checkVideoURL() {
       const urlParams = new URLSearchParams(window.location.search);
       let videoURL = urlParams.get('url');
+      
+      if (isDriveLink(videoURL)) {
+          document.getElementById('preview').poster = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
+          document.getElementById('input-poster').value = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
+        }
       videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?url='+videoURL;
 
       if (videoURL) {
@@ -46,7 +64,7 @@
             </div>
             <div class="card-body">
               <form class="needs-validation" action="api/upload.php" method="post" enctype="multipart/form-data">
-                <h6 class="heading-small text-muted mb-6">Video information</h6>
+                <h6 class="heading-small text-muted mb-6">Video information <a href="" target="_blank">How to Upload</a> </h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-md-12">
