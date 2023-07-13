@@ -4,7 +4,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="https://assets.stickpng.com/images/62a6335703a870b920cbfd3c.png" class="navbar-brand-img" alt="DrivePlyr Logo">
+          <img src="../dp.png" class="navbar-brand-img" alt="DrivePlyr Logo">
         </a>
       </div>
       <div class="navbar-inner">
