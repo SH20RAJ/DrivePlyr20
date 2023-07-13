@@ -4,6 +4,7 @@
 <link rel="icon" href="../logo.png">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sh20raj/SopPlayer@main/CatSu/catsu.min.css"/>
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
 
 <style>
