@@ -25,12 +25,6 @@ function extractMediaFireFileId($url) {
     return $fileId;
 }
 
-// Example usage:
-$url = 'https://www.mediafire.com/file/ABC123/Example_File.txt/file';
-$fileId = extractMediaFireFileId($url);
-echo $fileId; // Output: ABC123
-
-
 // Get the video ID from the URL parameter
 $id = $_GET['id'];
 
@@ -66,7 +60,7 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
         //return 'archive.org';
     } 
 
- if(isset($_GET'id'])){
+ if(isset($_GET['id'])){
      $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
      $result = $conn->query($query);   
  }   
