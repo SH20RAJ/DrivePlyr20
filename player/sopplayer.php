@@ -3,7 +3,7 @@
 <link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
   <!--Here is the Css Library-->
 <link rel="icon" href="../logo.png">
-   <script src="https://rebrand.ly/SopPlayerJS" defer></script>
+<script src="https://rebrand.ly/SopPlayerJS" defer></script>
 
 <style>
   html, body {
@@ -18,6 +18,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.vjs-poster {
+  background-color: transparent;
 }
 
 </style>
