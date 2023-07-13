@@ -19,6 +19,18 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="videos.php">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Videos</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Add</span>
+              </a>
+            </li>  
+            <li class="nav-item">
               <a class="nav-link" href="new.php">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">FAQs</span>
@@ -35,20 +47,8 @@
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Google</span>
               </a>
-            </li> -->
+            </li> 
             <li class="nav-item">
-              <a class="nav-link" href="add.php">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Add</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="videos.php">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Videos</span>
-              </a>
-            </li>
-            <!-- <li class="nav-item">
               <a class="nav-link" href="login.php">
                 <i class="ni ni-key-25 text-info"></i>
                 <span class="nav-link-text">Login</span>
