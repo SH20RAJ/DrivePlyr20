@@ -1,3 +1,7 @@
+<?php
+
+$username = $_SESSION['username'];
+?>
 <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -199,7 +203,7 @@
                     src="https://i.imgur.com/n5MBy0m.jpg">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">Shade</span>
+                    <span class="mb-0 text-sm  font-weight-bold"><?php echo $username ?></span>
                   </div>
                 </div>
               </a>
