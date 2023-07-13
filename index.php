@@ -1,5 +1,5 @@
 <?php
 
-header('Location: dashboard/registor.php');
+header('Location: dashboard/register.php');
 
 ?>
