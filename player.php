@@ -8,7 +8,7 @@ $title = $video['title'];
 $views = $video['views'];
 $downloads = $video['downloads'];
 $description = $video['description'];
-
+die();
 
 //
 
