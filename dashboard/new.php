@@ -38,6 +38,8 @@
     <!-- Page content -->
     <div class="container-fluid mt--6">
     <div class="row">
+    <a target="_blank href="https://driveplyr.hashnode.dev/?ref=main"><button type="button" class="btn btn-primary">Documentaion</button></a>
+
     <div class="col-lg-3 col-md-4 col-sm-6">
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" class="img-thumbnail rounded" alt="Drive Logo">
     </div>
