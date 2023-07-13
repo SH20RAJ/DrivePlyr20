@@ -1,6 +1,6 @@
 <?php
 
-$username = $_SESSION['username'];
+$username = $_SESSION['name'];
 ?>
 <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
       <div class="container-fluid">
