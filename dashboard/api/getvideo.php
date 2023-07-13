@@ -47,6 +47,8 @@ if ($result->num_rows === 0) {
 // Get the video details
 $video = $result->fetch_assoc();
 $url = $video['url'];
+if(isset($_GET['url'])){$url=$_GET['url'];}
+
 if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
 
  if (strpos($url, 'drive.google.com') !== false) {
@@ -63,8 +65,11 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
         //return 'archive.org';
     } 
 
-$query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
-$result = $conn->query($query);
+ if(isset($_GET'id'])){
+     $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
+     $result = $conn->query($query);   
+ }   
+
 
 header('Location: '.$url.'');
         exit();
