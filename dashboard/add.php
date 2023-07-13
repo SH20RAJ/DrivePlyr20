@@ -7,10 +7,12 @@
   <script>
     function checkVideoURL() {
       const urlParams = new URLSearchParams(window.location.search);
-      const videoURL = urlParams.get('video');
+      let videoURL = urlParams.get('url');
+      videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/video.php?url='+videoURL;
 
       if (videoURL) {
-        alert('Video URL: ' + videoURL);
+        document.getElementById('preview').src = videoURL2;
+        document.getElementById('input-url').value = videoURL2;
       }
     }
   </script>
@@ -26,8 +28,8 @@
     <div class="container-fluid mt-6">
       <div class="row">
         <div class="col-xl-4 order-xl-2">
-          <video width="100%" height="" controls>
-            <source src="https://bit.ly/bbsamplevideo" type="video/mp4">
+          <video id="preview" width="100%" height="" controls>
+            <source src="https://driveplyr.appspages.online/dashboard/api/video.php?url=" type="video/mp4">
           </video>
         </div>
         <div class="col-xl-8 order-xl-1">
