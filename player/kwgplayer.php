@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-.kwg-video-player-container {
+#video1 ,.kwg-video-player-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,9 +21,8 @@
 </style>
 
 
-<video id="video1" poster="<?php echo $poster_url ?>">
+<video width="100%" height="100%" id="video1" poster="<?php echo $poster_url ?>">
     <source src="<?php echo $videourl ?>" type="video/mp4">
-    Your browser does not support HTML5 video.
 </video>
 
 
