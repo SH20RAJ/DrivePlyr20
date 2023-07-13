@@ -64,7 +64,8 @@ function isDriveLink(url) {
             </div>
             <div class="card-body">
               <form class="needs-validation" action="api/upload.php" method="post" enctype="multipart/form-data">
-                <h6 class="heading-small text-muted mb-6">Video information <a href="" target="_blank">How to Upload</a> </h6>
+                <h6 class="heading-small text-muted mb-6">Video information <a 
+                href="https://driveplyr.hashnode.dev/upload-new-video" target="_blank">How to Upload</a> </h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-md-12">
