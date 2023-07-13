@@ -8,7 +8,24 @@
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="https://hunzaboy.github.io/Ckin-Video-Player/dist/css/ckin.css">
     <link rel="icon" type="image/png" href="../logo.png" sizes="32x32">
-  
+    
+    <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#player, .ckin__player  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;
+  z-index: -1;*/
+}
+</style>
 </head>
 
 <body>
