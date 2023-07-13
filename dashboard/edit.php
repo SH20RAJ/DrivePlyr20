@@ -73,7 +73,7 @@ die();*/
                                 <h3 class="mb-0">Edit profile</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="javascript:voide()" onclick="embed()" class="btn btn-sm btn-primary">Embed</a>
+                                <a href="javascript:voide()" onclick="embed()" class="btn btn btn-primary">Embed</a>
                             </div>
                         </div>
                     </div>
