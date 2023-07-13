@@ -2,8 +2,8 @@
 
 include '../conn.php';
 session_start();
-if(!isset($_SESSION['id'])){
-  header('Location: ../');
+if(!isset($_SESSION['name'])){
+  die();
 }
 $user = $_SESSION['id'];
 // Query to calculate the sum of views
