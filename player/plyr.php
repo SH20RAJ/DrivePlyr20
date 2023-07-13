@@ -23,9 +23,9 @@ html, body {
 
 <!--Add a Simple HTML5 Video tag-->
 <div id="container">
-  <video controls poster="<?php echo $videourl ?>" id="vid1">
+  <video controls poster="<?php echo $poster_url ?>" id="vid1">
     <!-- Video files -->
-    <source src="<?php echo $poster_url ?>" type="video/mp4" size="576" />
+    <source src="<?php echo $videourl ?>" type="video/mp4" size="576" />
 
   </video>
 </div>
