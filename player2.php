@@ -10,7 +10,7 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
 
  if(isset($_GET['player'])){$player = $_GET['player'];}
- include 'player/'.$player.'.php';
+ echo 'player/'.$player.'.php';
   
 
 ?>
