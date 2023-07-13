@@ -157,17 +157,15 @@
                       <label class="custom-control-label" for="customCheckRegister">
                         <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
                       </label>
+                      <div class="col-6 text-right">
+                      <a href="login.php" class="text-light"><small>Login</small></a>
+                    </div>
                     </div>
                   </div>
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary mt-4">Create account</button>
                 </div>
-                  <div class="row mt-3">
-                    <div class="col-6 text-right">
-                      <a href="login.php" class="text-light"><small>Login</small></a>
-                    </div>
-                  </div>
               </form>
           
             </div>
