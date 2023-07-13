@@ -2,6 +2,9 @@
 
 include '../conn.php';
 session_start();
+if(!isset($_SESSION['id'])){
+  header('Location: ../');
+}
 $user = $_SESSION['id'];
 // Query to calculate the sum of views
 $query = "SELECT SUM(views) AS totalViews FROM videos WHERE user = ". $user;

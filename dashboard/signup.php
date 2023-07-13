@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($checkEmailResult->num_rows > 0) {
         // Email is already registered
-        header('Location: ../?msg=email_registered');
+        header('Location: ../dashboard/register.php?msg=email_registered');
         exit();
     }
 
