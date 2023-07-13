@@ -116,9 +116,9 @@ if ($result->num_rows > 0) {
                       <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="edit.php?id='.$videoId.'">Embed</a>
-                      <a class="dropdown-item" href="edit.php?id='.$videoId.'">Edit</a>
-                      <a class="dropdown-item" href="api/delete.php?id='.$videoId.'">Delete</a>
+                      <a class="dropdown-item" href="#'.$videoId.'">Embed</a>
+                      <a class="dropdown-item" href="#'.$videoId.'">Edit</a>
+                      <a class="dropdown-item" href="#'.$videoId.'">Delete</a>
                     </div>
                   </div>
                 </td>
@@ -162,7 +162,7 @@ if ($result->num_rows > 0) {
         </div>
       </div>
       <!-- Dark table -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col">
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
@@ -481,7 +481,7 @@ if ($result->num_rows > 0) {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Footer -->
       <?php include 'footer.php' ?>
     </div>
