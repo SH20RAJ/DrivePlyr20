@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video Player</title>
+  <title><?php echo $title ?></title>
   <style>
     #player {
   position: fixed;
