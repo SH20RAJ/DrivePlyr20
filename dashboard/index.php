@@ -1,23 +1,27 @@
+<?php
+
+include '../conn.php';
+session_start();
+$user = $_SESSION['id'];
+// Query to calculate the sum of views
+$query = "SELECT SUM(views) AS totalViews FROM videos WHERE user = ". $user;
+
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $row = mysqli_fetch_assoc($result);
+    $totalviews = $row['totalViews'];
+} else {
+    echo "Error executing query: " . mysqli_error($connection);
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/brand/favicon.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <!-- Page plugins -->
-  <!-- Argon CSS --> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/css/argon.css?v=1.2.0" type="text/css">
+  <?php include 'head.php' ?>
 </head>
 
 <body>
@@ -58,7 +62,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
-                      <span class="h2 font-weight-bold mb-0">350,897</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $totalviews ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
