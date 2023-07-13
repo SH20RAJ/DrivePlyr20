@@ -67,7 +67,7 @@ include '../conn.php';
                 <?php
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
-$sql = "SELECT * FROM videos where user = ".$user."";
+$sql = "SELECT * FROM videos where user = ".$user." order by id desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
