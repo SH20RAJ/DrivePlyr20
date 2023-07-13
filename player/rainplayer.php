@@ -57,8 +57,7 @@
       <video id="video" class="video" poster="<?php echo $poster_url ?>" src="<?php echo $videourl ?>"></video>
     </div>
   </main>
-  <script src="./js/script.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="https://sh20raj.github.io/Sopplayer/rainplayer/js/index.js"></script>
 
 </body>
 
