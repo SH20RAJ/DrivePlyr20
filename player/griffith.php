@@ -26,7 +26,7 @@
             // Get the video ID from the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const videoID = urlParams.get('id');
-    const videoURL = `https://driveplyr.appspages.online/dashboard/api/getvideo.php?id=${videoID}`;
+    const videoURL = '<?php echo $videourl ?>';
     const target = document.getElementById('player')
     
       const sources = {
