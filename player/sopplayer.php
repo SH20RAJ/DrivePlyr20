@@ -3,7 +3,7 @@
 <link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
   <!--Here is the Css Library-->
 <link rel="icon" href="../logo.png">
-   <script src="https://rebrand.ly/SopPlayerJS" ></script>
+   <script src="https://rebrand.ly/SopPlayerJS" defer></script>
 
 <style>
   html, body {
