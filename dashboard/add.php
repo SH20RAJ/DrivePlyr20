@@ -70,7 +70,7 @@ function isDriveLink(url) {
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-url">Video URL <a target="_blank" href="https://driveplyr.hashnode.dev/supported-links">Supported Links</a></label>
+                        <label class="form-control-label" for="input-url" data-toggle="tooltip" data-original-title="Direct Link, Archive.org Link, Google Drive, Mediafire and others">Video URL <a target="_blank" href="https://driveplyr.hashnode.dev/supported-links">Supported Links</a></label>
                         <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
                         <div class="invalid-feedback">
                           Please enter a valid video URL.
