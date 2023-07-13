@@ -8,7 +8,7 @@
     function checkVideoURL() {
       const urlParams = new URLSearchParams(window.location.search);
       let videoURL = urlParams.get('url');
-      videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/video.php?url='+videoURL;
+      videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?url='+videoURL;
 
       if (videoURL) {
         document.getElementById('preview').src = videoURL2;
