@@ -52,10 +52,10 @@ include 'conn.php';
                 <thead class="thead-light">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">Video</th>
-                    <th scope="col" class="sort" data-sort="budget">Downloads</th>
+                    <th scope="col" class="sort" data-sort="budget">User</th>
                     <th scope="col" class="sort" data-sort="status">Status</th>
                     <th scope="col">Views</th>
-                    <th scope="col" class="sort" data-sort="completion">Performance</th>
+                    <th scope="col" class="sort" data-sort="completion">Date</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -102,7 +102,7 @@ if ($result->num_rows > 0) {
                 </td>
                 <td>
                       <div class="d-flex align-items-center">
-                        <span class="completion mr-2">' . $videoScore . '</span>
+                        <span class="completion mr-2">' . $row['date'] . '</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
