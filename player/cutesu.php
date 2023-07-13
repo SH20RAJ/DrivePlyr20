@@ -30,7 +30,7 @@
 
 <video
 id="my-video" class="video-js"
-controls  poster="<?php echo $poster_url ?>" data-setup='' loop>
+controls  poster="<?php echo $poster_url ?>" data-setup='{}' loop>
 
 <source src="<?php echo $videourl ?>" type='video/mp4'/>
 
