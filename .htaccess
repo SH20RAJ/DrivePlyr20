@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteRule ^player\.html$ player.php [L]
 RewriteRule ^player/([0-9]+)$ player.php?id=$1 [L]
-RewriteRule index.php join.php 
+RewriteRule / join.php 
