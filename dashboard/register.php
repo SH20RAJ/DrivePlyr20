@@ -163,15 +163,16 @@
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary mt-4">Create account</button>
                 </div>
+                  <div class="row mt-3">
+                    <div class="col-6 text-right">
+                      <a href="login.php" class="text-light"><small>Login</small></a>
+                    </div>
+                  </div>
               </form>
           
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-6 text-right">
-              <a href="login.php" class="text-light"><small>Login</small></a>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
