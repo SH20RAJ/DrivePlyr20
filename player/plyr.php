@@ -1,5 +1,6 @@
 
 <link rel="icon" href="drive-logo.png">
+<title><?php echo $title ?></title>
 <style>
 html, body {
   height: 100%;
@@ -22,9 +23,9 @@ html, body {
 
 <!--Add a Simple HTML5 Video tag-->
 <div id="container">
-  <video controls poster="https://bit.ly/bbsampleposter" id="vid1">
+  <video controls poster="<?php echo $videourl ?>" id="vid1">
     <!-- Video files -->
-    <source src="https://rebrand.ly/sample-video" type="video/mp4" size="576" />
+    <source src="<?php echo $poster_url ?>" type="video/mp4" size="576" />
 
   </video>
 </div>
