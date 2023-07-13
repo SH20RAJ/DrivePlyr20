@@ -8,7 +8,6 @@ $title = $video['title'];
 $views = $video['views'];
 $downloads = $video['downloads'];
 $description = $video['description'];
-die();
 
 //
 
@@ -17,6 +16,6 @@ if(isset($_GET['player'])){
 }
 $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
 
-include 'player/griffith.php';
+//include 'player/griffith.php';
 
 ?>
