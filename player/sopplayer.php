@@ -26,7 +26,8 @@
 
 </style>
 
-    <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" width= "100%" poster="<?php echo $poster_url ?>">
+    <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" 
+    width= "100%" poster="<?php echo $poster_url ?>">
       <!--Use class="sopplayer" and data-setup="{}" -->
       <source src="<?php echo $videourl ?>" type="video/mp4" />
     </video>
