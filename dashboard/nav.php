@@ -4,7 +4,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="https://assets.stickpng.com/images/62a6335703a870b920cbfd3c.png" class="navbar-brand-img" alt="DrivePlyr Logo">
         </a>
       </div>
       <div class="navbar-inner">
