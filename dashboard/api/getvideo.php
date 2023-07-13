@@ -50,7 +50,7 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
  if (strpos($url, 'drive.google.com') !== false) {
         $apikey = ['AIzaSyCt3DULzE2trDJhfFUosWZT-3GEObbMqVU', 'AIzaSyCsbx8BSyLwkw6XX6Lg5OF1U0HNtI9VmCY', 'AIzaSyBLMJAT6oqTZxAMsCsMjXzoo4lkJL4MmfM', 'AIzaSyCIY6fomcJxOt0XQ_naa1rzfd5wlOMGKDY'];
         $driveapikey = $apikey[array_rand($apikey)];
-        $url = 'https://www.googleapis.com/drive/v3/files/'.extractDriveFileId($url).'?alt=media&key='.$driveapikey.'';
+        $url = 'https://drive.google.com/u/0/uc?id='.extractDriveFileId($url).'&export=download';
     } elseif (strpos($url, 'mediafire.com') !== false) {
        $url = 'https://wholly-api.sh20raj.repl.co/websites/mediafire.com/direct_download.php?id='.extractMediaFireFileId($url);
     } elseif (strpos($url, 'youtube.com') !== false || strpos($url, 'youtu.be') !== false) {
