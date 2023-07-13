@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-#video1 {
+.kwg-video-player-container {
   position: absolute;
   top: 0;
   left: 0;
