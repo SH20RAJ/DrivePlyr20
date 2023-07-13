@@ -164,6 +164,14 @@
                   <button type="submit" class="btn btn-primary mt-4">Create account</button>
                 </div>
               </form>
+              <div class="row mt-3">
+            <div class="col-6">
+              <a href="#" class="text-light"><small>Forgot password?</small></a>
+            </div>
+            <div class="col-6 text-right">
+              <a href="register.php" class="text-light"><small>Create new account</small></a>
+            </div>
+          </div>
             </div>
           </div>
         </div>
