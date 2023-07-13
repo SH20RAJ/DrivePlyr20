@@ -158,7 +158,7 @@
                         <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
                       </label>
 
-                      <span style="color:blue" ><a  href="login.php" class="text-light">Login</a></span>
+                      <span style="color:blue" >      <a  href="login.php" class="text-light">Login</a></span>
 
                     </div>
                   </div>
