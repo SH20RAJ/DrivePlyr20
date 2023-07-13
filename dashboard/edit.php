@@ -145,23 +145,22 @@ die();*/
                                                 <a target="_blank" rel="nofollow" href="https://driveplyr.hashnode.dev/top-html5-custom-video-players-with-documentation-video">See Examples</a></label>
                                             <select class="form-control" name="player" id="player">
                                               <option value="plyr">Plyr</option>
-                                              <option >SopPlayer</option>
-                                              <option >vLiteJS</option>
-                                              <option >griffith</option>
-                                              <option >VideoJS</option>
-                                              <option >JWPlayer</option>
-                                              <option >Mediaelements</option>
-                                              <option >Clapper</option>
-                                              <option >RainPlayer</option>
-                                              <option >OpenPlayerJS</option>
-                                              <option >KWGPlayer</option>
-                                              <option >Plyr</option>
-                                              <option >CuteSu</option>
-                                              <option >XgPlayer</option>
-                                              <option >Flowplayer</option>
-                                              <option >Fluidplayer</option>
-                                              <option >Flamingo</option>
-                                              <option >RedRoseLite</option>
+                                              <option value="sopplayer">SopPlayer</option>
+                                              <option value="vlitejs">vLiteJS</option>
+                                              <option value="griffith">griffith</option>
+                                              <option value="videojs">VideoJS</option>
+                                              <option value="jwplayer">JWPlayer</option>
+                                              <option value="mediaelements">Mediaelements</option>
+                                              <option value="clapper">Clapper</option>
+                                              <option value="rainplayer">RainPlayer</option>
+                                              <option value="openplayerjs">OpenPlayerJS</option>
+                                              <option value="kwgplayer">KWGPlayer</option>
+                                              <option value="cutesu">CuteSu</option>
+                                              <option value="xgplayer">XgPlayer</option>
+                                              <option value="flowplayer">Flowplayer</option>
+                                              <option value="fluid">Fluidplayer</option>
+                                              <option value="flamingo">Flamingo</option>
+                                              <option value="redroselite">RedRoseLite</option>
                                             </select>
                                           </div>
                                     </div>
