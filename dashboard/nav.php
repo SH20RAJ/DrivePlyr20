@@ -81,15 +81,15 @@
                 </span>
               </span>
             </h6> 
-          <!-- Navigation 
+          Navigation 
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.php" target="_blank">
+              <a class="nav-link" href="https://driveplyr.appspages.online/sitemaps.php" target="_blank">
                 <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
+                <span class="nav-link-text">Public Videos</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.php" target="_blank">
                 <i class="ni ni-palette"></i>
                 <span class="nav-link-text">Foundation</span>
