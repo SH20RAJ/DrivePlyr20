@@ -1,7 +1,7 @@
 <?php
 
 
- $url = $_GET['x']);
+ $url = $_GET['x'];
 
 
 // Fetch the HTML content
