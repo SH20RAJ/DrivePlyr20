@@ -43,17 +43,17 @@ $currentURL = $_SERVER['REQUEST_URI'];
 $userSessionID = getUserSessionID();
 
 // Prepare the SQL statement
-$sql = "INSERT INTO tracker (ip_address, timestamp, user_agent, referring_page, current_url, session_id) VALUES (?, ?, ?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ssssss", $userIP, $timestamp, $userAgent, $referringPage, $currentURL, $userSessionID);
+$sql = "INSERT INTO tracker (ip_address, timestamp, user_agent, referring_page, current_url, session_id) 
+        VALUES ('$userIP', '$timestamp', '$userAgent', '$referringPage', '$currentURL', '$userSessionID')";
 
-// Execute the prepared statement
-if ($stmt->execute()) {
+// Execute the SQL statement
+if ($conn->query($sql) === TRUE) {
     // Activity recorded successfully
     echo "Activity recorded.";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $conn->error;
 }
 
-
+// Close the database connection
+$conn->close();
 ?>

@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
-        $videoStatus = $row['status'];
+        $videoStatus = 'Public';//$row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
         $videoScore = '100%';//$row['progress'];

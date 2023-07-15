@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = uniqid();
     
     // Get the user's IP address
-    $ipAddress = $_SERVER['REMOTE_ADDR'];
+    $ipAddress = 'dewd';//$_SERVER['REMOTE_ADDR'];
 
     // Check if email is already registered
     $checkEmailStmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert the user into the database with IP address
-    $insertStmt = $conn->prepare("INSERT INTO users (name, email, password, username, ip) VALUES (?, ?, ?, ?, ?)");
-    $insertStmt->bind_param("sssss", $name, $email, $password, $username, $ipAddress);
+    $insertStmt = $conn->prepare("INSERT INTO users (name, email, password, username) VALUES (?, ?, ?, ?)");
+    $insertStmt->bind_param("ssss", $name, $email, $password, $username);
 
     if ($insertStmt->execute()) {
         // Start the session
