@@ -2,21 +2,13 @@
 function getGoogleDriveVideoUrl($url)
 {
     $matches = [];
-    $pattern = '/https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)\/view/';
+    $pattern = '/https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/';
     preg_match($pattern, $url, $matches);
 
     if (count($matches) >= 2) {
         $fileId = $matches[1];
-        $apiUrl = "https://www.googleapis.com/drive/v3/files/{$fileId}?fields=webViewLink";
-        $response = file_get_contents($apiUrl);
-
-        if ($response !== false) {
-            $data = json_decode($response, true);
-
-            if (isset($data['webViewLink'])) {
-                return $data['webViewLink'];
-            }
-        }
+        $videoUrl = "https://drive.google.com/uc?export=download&id={$fileId}";
+        return $videoUrl;
     }
 
     return null;
@@ -36,6 +28,6 @@ if (!empty($url)) {
         echo "Invalid Google Drive URL or unable to retrieve video URL.";
     }
 } else {
-    echo "Please provide a Google Drive URL as a parameter (e.g., ?URL=https://drive.google.com/file/d/VIDEO_ID/view).";
+    echo "Please provide a Google Drive URL as a parameter (e.g., ?URL=https://drive.google.com/file/d/VIDEO_ID/).";
 }
 ?>
