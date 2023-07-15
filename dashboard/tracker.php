@@ -55,7 +55,5 @@ if ($stmt->execute()) {
     echo "Error: " . $stmt->error;
 }
 
-// Close the prepared statement and database connection
-$stmt->close();
-$conn->close();
+
 ?>

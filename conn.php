@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Set the character set to UTF-8 (optional)
-$conn->set_charset("utf8");
+//$conn->set_charset("utf8");
 
 // Close the connection (optional - usually not needed as PHP automatically closes the connection)
 // $conn->close();
