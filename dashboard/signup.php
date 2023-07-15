@@ -9,6 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $username = uniqid();
+    
+    // Get the user's IP address
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
 
     // Check if email is already registered
     $checkEmailStmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
@@ -22,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Insert the user into the database
-    $insertStmt = $conn->prepare("INSERT INTO users (name, email, password, username) VALUES (?, ?, ?, ?)");
-    $insertStmt->bind_param("ssss", $name, $email, $password, $username);
+    // Insert the user into the database with IP address
+    $insertStmt = $conn->prepare("INSERT INTO users (name, email, password, username, ip) VALUES (?, ?, ?, ?, ?)");
+    $insertStmt->bind_param("sssss", $name, $email, $password, $username, $ipAddress);
 
     if ($insertStmt->execute()) {
         // Start the session
@@ -36,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['name'] = $name;
 
         // Redirect to the dashboard page
-        header('Location: ../dashboard?msg=Account created succesfully');
+        header('Location: ../dashboard?msg=Account created successfully');
         exit();
     } else {
         echo "Error: " . $insertStmt->error;
