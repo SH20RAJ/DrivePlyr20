@@ -1,7 +1,7 @@
 <?php
 
 // URL to scrape
-$url = 'https://www.4shared.com/video/eNwlkXoqge/SpacePowerFancom_Detective_con.html';
+$url = $_GET['url'];
 
 // Fetch the HTML content
 $html = file_get_contents($url);
