@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-require_once '../conn.php';
+include '../conn.php';
 
 // Function to get user IP address
 function getIPAddress() {
@@ -28,7 +28,7 @@ function getUserSessionID() {
 }
 
 // Retrieve user IP address and timestamp
-$userIP = getIPAddress();
+echo $userIP = getIPAddress();
 $timestamp = getCurrentTimestamp();
 
 // Retrieve additional tracking information
