@@ -51,7 +51,7 @@ $timestamp = getCurrentTimestamp();
 
 // Retrieve additional tracking information
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
-echo $referringPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+echo $referringPage = 'r4fhfi'; //isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
 $currentURL = $_SERVER['REQUEST_URI'];
 
 // Retrieve user session ID
