@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include '../conn.php';
+require_once '../conn.php';
 
 // Function to get user IP address
 function getIPAddress() {
@@ -21,6 +21,9 @@ function getCurrentTimestamp() {
 
 // Function to get user session ID
 function getUserSessionID() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
     if (!isset($_SESSION['id'])) {
         $_SESSION['id'] = session_id();
     }
