@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-<head>
   <?php 
   session_start();
   if(isset($_SESSION['id'])){
@@ -11,6 +8,10 @@
   include 'head.php' 
   
   ?>
+  <!DOCTYPE html>
+<html>
+
+<head>
   <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdVlx0nAAAAADK-GzZf-wC3NDc1HEpb5mTrVoth"></script>
 
 </head>
