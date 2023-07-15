@@ -28,7 +28,7 @@ function getUserSessionID() {
 }
 
 // Retrieve user IP address and timestamp
-echo $userIP = getIPAddress();
+$userIP = getIPAddress();
 $timestamp = getCurrentTimestamp();
 
 // Retrieve additional tracking information
