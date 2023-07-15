@@ -1,10 +1,6 @@
 
-<title><?php echo $title ?></title>
-<link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
-  <!--Here is the Css Library-->
-<link rel="icon" href="../logo.png">
-<script src="https://rebrand.ly/SopPlayerJS" defer></script>
-
+<title><?php echo $$title ; ?></title>
+<link href="https://cdn.jsdelivr.net/npm/vlitejs@4/dist/vlite.css" rel="stylesheet" />
 <style>
   html, body {
   height: 100%;
@@ -12,7 +8,7 @@
   padding: 0;
 }
 
-#my-video {
+.v-vlite {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,16 +16,11 @@
   height: 100%;
 }
 
-.vjs-poster {
-  background-color: transparent;
-}
-
 </style>
 
-    <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" 
-    width= "100%" poster="<?php echo $poster_url ?>">
-      <!--Use class="sopplayer" and data-setup="{}" -->
-      <source src="<?php echo $videourl ?>" type="video/mp4" />
-    </video>
+<video poster="<?php echo $poster_url ?>" height="100%" width="100%" id="player" class="vlite-js" src="<?php echo $videourl ?>"></video>
 
-    <!--Here is the JavaScript Library-->
+<script src="https://cdn.jsdelivr.net/npm/vlitejs@4" ></script>
+<script>
+  new Vlitejs('#player');
+</script>
