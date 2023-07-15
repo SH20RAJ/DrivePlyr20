@@ -46,7 +46,7 @@ function getUserSessionID() {
 }
 
 // Retrieve user IP address and timestamp
-$userIP = getIPAddress();
+echo $userIP = getIPAddress();
 $timestamp = getCurrentTimestamp();
 
 // Retrieve additional tracking information
@@ -55,7 +55,7 @@ $referringPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : ''
 $currentURL = $_SERVER['REQUEST_URI'];
 
 // Retrieve user session ID
-$userSessionID = getUserSessionID();
+echo $userSessionID = getUserSessionID();
 
 // Insert user activity into the database
 $insertStmt = $conn->prepare("INSERT INTO user_activity (ip_address, timestamp, user_agent, referring_page, current_url, session_id) VALUES (?, ?, ?, ?, ?, ?)");
