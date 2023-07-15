@@ -1,6 +1,21 @@
 <?php
-// Include the database connection file
-require_once '../conn.php';
+// Database configuration
+$host = "srv1020.hstgr.io"; // Hostname
+$username = "u212553073_driveplyr"; // Username
+$password = "3[!9LW0BHr"; // Password
+$database = "u212553073_driveplyr"; // Database name
+
+// Create a database connection
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Set the character set to UTF-8 (optional)
+$conn->set_charset("utf8");
+
 
 // Function to get user IP address
 function getIPAddress() {
