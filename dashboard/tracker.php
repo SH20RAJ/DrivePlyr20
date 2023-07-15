@@ -1,21 +1,6 @@
 <?php
-// Database configuration
-$host = "srv1020.hstgr.io"; // Hostname
-$username = "u212553073_driveplyr"; // Username
-$password = "3[!9LW0BHr"; // Password
-$database = "u212553073_driveplyr"; // Database name
-
-// Create a database connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Set the character set to UTF-8 (optional)
-$conn->set_charset("utf8");
-
+// Include the database connection file
+require_once '../conn.php';
 
 // Function to get user IP address
 function getIPAddress() {
@@ -46,30 +31,27 @@ function getUserSessionID() {
 }
 
 // Retrieve user IP address and timestamp
-echo $userIP = getIPAddress();
+$userIP = getIPAddress();
 $timestamp = getCurrentTimestamp();
 
 // Retrieve additional tracking information
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
-echo $referringPage = 'r4fhfi'; //isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+$referringPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
 $currentURL = $_SERVER['REQUEST_URI'];
 
 // Retrieve user session ID
-echo $userSessionID = getUserSessionID();
+$userSessionID = getUserSessionID();
 
 // Insert user activity into the database
-$insertStmt = $conn->prepare("INSERT INTO user_activity (ip_address, timestamp, user_agent, referring_page, current_url, session_id) VALUES (?, ?, ?, ?, ?, ?)");
-$insertStmt->bind_param("ssssss", $userIP, $timestamp, $userAgent, $referringPage, $currentURL, $userSessionID);
+$sql = "INSERT INTO user_activity (ip_address, timestamp, user_agent, referring_page, current_url, session_id)
+        VALUES ('$userIP', '$timestamp', '$userAgent', '$referringPage', '$currentURL', '$userSessionID')";
 
-if ($insertStmt->execute()) {
+if ($conn->query($sql) === TRUE) {
     // Activity recorded successfully
     echo "Activity recorded.";
 } else {
-    echo "Error: " . $insertStmt->error;
+    echo "Error: " . $conn->error;
 }
-
-// Close the prepared statement
-$insertStmt->close();
 
 // Close the database connection
 $conn->close();
