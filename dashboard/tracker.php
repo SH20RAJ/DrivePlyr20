@@ -21,10 +21,10 @@ function getCurrentTimestamp() {
 
 // Function to get user session ID
 function getUserSessionID() {
-    if (!isset($_SESSION['session_id'])) {
-        $_SESSION['session_id'] = session_id();
+    if (!isset($_SESSION['id'])) {
+        $_SESSION['id'] = session_id();
     }
-    return $_SESSION['session_id'];
+    return $_SESSION['id'];
 }
 
 // Retrieve user IP address and timestamp
