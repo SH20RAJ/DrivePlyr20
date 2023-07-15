@@ -43,7 +43,7 @@ $currentURL = $_SERVER['REQUEST_URI'];
 $userSessionID = getUserSessionID();
 
 // Insert user activity into the database
-$sql = "INSERT INTO user_activity (ip_address, timestamp, user_agent, referring_page, current_url, session_id)
+$sql = "INSERT INTO tracker (ip_address, timestamp, user_agent, referring_page, current_url, session_id)
         VALUES ('$userIP', '$timestamp', '$userAgent', '$referringPage', '$currentURL', '$userSessionID')";
 
 if ($conn->query($sql) === TRUE) {
