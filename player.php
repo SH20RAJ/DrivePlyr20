@@ -16,4 +16,5 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
     include 'player/plyr.php';
 }
 
+include 'dashboard/tracker.php';
 ?>
