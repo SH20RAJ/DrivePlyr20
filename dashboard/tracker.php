@@ -49,11 +49,10 @@ $sql = "INSERT INTO tracker (ip_address, timestamp, user_agent, referring_page, 
 // Execute the SQL statement
 if ($conn->query($sql) === TRUE) {
     // Activity recorded successfully
-    echo "Activity recorded.";
+    //;
 } else {
     echo "Error: " . $conn->error;
 }
-
-// Close the database connection
+echo '<img src="https://iplogger.com/driveplyr20" />';// Close the database connection
 $conn->close();
 ?>
