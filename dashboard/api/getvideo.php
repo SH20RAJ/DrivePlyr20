@@ -68,9 +68,8 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
  }   
 
 
-header('Location: '.$url.'');
-        exit();
+//header('Location: '.$url.'');  exit();
 
-
+include 'download.php';
 
 ?>
