@@ -23,3 +23,4 @@
           </div>
         </div>
       </footer>
+<?php include 'tracker.php' ; ?>
