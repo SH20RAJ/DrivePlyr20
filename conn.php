@@ -1,7 +1,7 @@
 <?php
 
 // Database configuration
-$host = "srv1020.hstgr.io"; // Hostname
+$host = "localhost"; // Hostname
 $username = "u212553073_driveplyr"; // Username
 $password = "3[!9LW0BHr"; // Password
 $database = "u212553073_driveplyr"; // Database name
