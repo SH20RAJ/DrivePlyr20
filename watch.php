@@ -18,7 +18,7 @@ $id = $_GET['id'];
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Video Watch Page</a>
+      <a class="navbar-brand" href="../../">Video Watch Page</a>
 
       <!-- Responsive Search Bar -->
       <form class="form-inline ml-auto">
