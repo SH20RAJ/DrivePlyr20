@@ -539,7 +539,17 @@
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script>
+        const menu = document.querySelector('#menu');
+console.log(menu);
+const sidebar = document.querySelector('.sidebar');
+console.log(sidebar);
+
+menu.addEventListener('click', function () {
+  sidebar.classList.toggle('show-sidebar');
+});
+
+    </script>
     <!-- Main Body Ends -->
   </body>
 </html>
