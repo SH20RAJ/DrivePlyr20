@@ -87,7 +87,7 @@ if ($result->num_rows > 0) {
                     <a href="edit.php?id='.$videoId.'" class="mr-3">
                       <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
                     </a>
-                    <div style="max-width:100%;overflow:auto;" class="media-body">
+                    <div style="max-width:300px;overflow:auto;" class="media-body">
                       <a target="_blank" href="../watch/'.$videoId.'"><span class="name mb-0 text-sm">' . $videoTitle . '</span></a>
                     </div>
                   </div>
