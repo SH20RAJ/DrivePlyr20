@@ -13,6 +13,5 @@ function getUser($id) {
 
 // Call the getUser function with the ID '1'
  $result = getUser('1');
-print_r($result);
-
+echo    $resulr['name']
 ?>
