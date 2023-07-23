@@ -121,7 +121,9 @@ if ($result->num_rows > 0) {
         echo '          <!-- Single Video starts -->
         <div class="video">
           <div class="video__thumbnail">
-            <img src="'.$videoPosterURL.'" alt="" />
+          <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
+          <img src="'.$videoPosterURL.'" alt="" />
+          </a>
           </div>
           <div class="video__details">
             <div class="author">
@@ -129,7 +131,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="title">
               <h3>
-              <a href="watch/'.$videoId.generateSlug($videoTitle).'">
+              <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
                 '.$videoTitle.'
               </a>
                 </h3>
