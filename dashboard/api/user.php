@@ -1,7 +1,12 @@
 <?php
 include '../../conn.php';
 // Query to fetch all users from the 'users' table
-$sql = "SELECT * FROM users";
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+$sql = "SELECT * FROM users where id = $id ";
+} else {
+    $sql = "SELECT * FROM users";
+}
 $result = $conn->query($sql);
 
 // Check if any users were found
