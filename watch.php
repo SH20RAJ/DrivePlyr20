@@ -40,7 +40,6 @@ die();*/
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
-  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 </head>
 <body>
@@ -79,7 +78,8 @@ die();*/
                   <!-- <button class="btn btn-success">Like</button>
                   <button class="btn btn-danger">Dislike</button>
                   <button class="btn btn-info">Download</button> -->
-                  <button class="btn btn-info">Embed</button>
+                  <!-- Button to trigger the modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Embed</button>
                   <button class="btn btn-warning">Report</button>
                 </div>
 
@@ -160,6 +160,35 @@ if ($result->num_rows > 0) {
   <footer class="bg-dark text-white text-center py-3 mt-4">
     &copy; 2023 DrivePlyr
   </footer>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Copy Code</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+<pre>
+  <code class="lanuage-html">
+  &#x3C;div id=&#x22;driveplyr&#x3C;?php echo $id ?&#x3E;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;script player=&#x22;plyr&#x22; src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;&#x3C;?php echo $id ?&#x3E;&#x22; data-height=&#x22;500px&#x22; data-width=&#x22;100%&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+  </code>
+</pre>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
   <style>
         @media (max-width: 600px) {
             #search {
@@ -167,6 +196,10 @@ if ($result->num_rows > 0) {
             }
         }
     </style>
+    <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
 </body>
 </html>
