@@ -41,6 +41,8 @@ die();*/
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
+
 </head>
 <body>
   <style>
@@ -202,6 +204,5 @@ if ($result->num_rows > 0) {
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
 </body>
 </html>
