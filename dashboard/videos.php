@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
                 <td>
                   ' . $videoViews . ' Views
                 </td>
-                <td>
+                <!--<td>
                       <div class="d-flex align-items-center">
                         <span class="completion mr-2">' . $videoScore . '</span>
                         <div>
@@ -113,7 +113,7 @@ if ($result->num_rows > 0) {
                           </div>
                         </div>
                       </div>
-                </td>
+                </td>-->
                 <td class="text-right">
                   <div class="dropdown">
                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
