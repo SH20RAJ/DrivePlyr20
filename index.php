@@ -11,6 +11,7 @@ include 'func.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <!-- Material Icons -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
