@@ -138,7 +138,7 @@ if ($result->num_rows > 0) {
 
         echo '
         <!-- Sample related video thumbnails -->
-        <a href="../../watch/'.$videoId.'/'.generateSlug($videoTitle).' class="list-group-item">
+        <a href="../../watch/'.$videoId.'/'.generateSlug($videoTitle).'" class="list-group-item">
           <img src="'.$videoPosterURL.'" class="img-fluid rounded" alt="Sample Video 1">
           <p class="mt-2">'.$videoTitle.'</p>
         </a>';
