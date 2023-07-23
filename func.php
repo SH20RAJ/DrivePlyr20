@@ -1,4 +1,4 @@
-function convertToRelativeTime($dateString) {
+<?php function convertToRelativeTime($dateString) {
             // Convert the date string to a Unix timestamp
             $timestamp = strtotime($dateString);
         
