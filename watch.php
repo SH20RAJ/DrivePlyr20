@@ -119,7 +119,7 @@ die();*/
   <?php
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
-$sql = "SELECT * FROM videos where user = ".$user." order by id desc";
+$sql = "SELECT * FROM videos where order by id desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
