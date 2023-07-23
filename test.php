@@ -13,5 +13,5 @@ function getUser($id) {
 
 // Call the getUser function with the ID '1'
  $result = getUser('1');
-echo    $resulr['name']
+echo    $result['name']
 ?>
