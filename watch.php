@@ -116,15 +116,37 @@ die();*/
 <div class="col-md-4">
   <h3>Related Videos</h3>
   <div class="list-group">
-    <!-- Sample related video thumbnails -->
-    <a href="#" class="list-group-item">
-      <img src="https://via.placeholder.com/350x200" class="img-fluid rounded" alt="Sample Video 1">
-      <p class="mt-2">Perfect Nature Scene</p>
-    </a>
-    <a href="#" class="list-group-item">
-      <img src="https://via.placeholder.com/350x200" class="img-fluid rounded" alt="Sample Video 2">
-      <p class="mt-2">Stunning Wildlife Footage</p>
-    </a>
+  <?php
+// Retrieve the video list from the database
+$user = $_SESSION['id'];
+$sql = "SELECT * FROM videos where user = ".$user." order by id desc";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Loop through each video and generate the table rows
+    while ($row = $result->fetch_assoc()) {
+        $videoId = $row['id'];
+        $videoTitle = $row['title'];
+        $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
+        $videoStatus = 'Public';//$row['status'];
+        $videoViews = $row['views'];
+        $videoDownloads = $row['downloads'];
+        $videoScore = '100%';//$row['progress'];
+
+        echo '
+        <!-- Sample related video thumbnails -->
+        <a href="#" class="list-group-item">
+          <img src="'.$videoPosterURL.'" class="img-fluid rounded" alt="Sample Video 1">
+          <p class="mt-2">'.$videoTitle.'</p>
+        </a>';
+    }
+} else {
+    echo '<tr><td colspan="6">No videos found.</td></tr>';
+}
+?>
+
+
+    
     <!-- Add more related videos here -->
   </div>
 </div>
