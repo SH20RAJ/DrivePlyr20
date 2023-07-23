@@ -211,7 +211,7 @@ if ($result) {
               </div>
             </div>
             <div class="card-body">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fqBG4j9mXN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fqBG4j9mXN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
         </div>
