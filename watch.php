@@ -41,8 +41,7 @@ die();*/
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
-  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f5b71afd40013e96b96&product=sop' async='async'></script>
-
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
 </head>
 <body>
   <style>

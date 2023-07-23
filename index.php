@@ -1,8 +1,6 @@
 <?php
 
 include 'func.php';
-
-
 ?>
 <html lang="en">
   <head>
