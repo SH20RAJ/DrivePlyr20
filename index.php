@@ -15,7 +15,7 @@ include 'func.php';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
-    <title>Final - Youtube UI Clone</title>
+    <title>DrivePlyr</title>
   </head>
   <body>
     <!-- Header Starts -->
