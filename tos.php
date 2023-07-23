@@ -125,8 +125,10 @@ a. If you have any questions or concerns about our Privacy Policy or data practi
 </ol>
 <p>By using DrivePlyr, you consent to</p>
 <p> the practices described in this Privacy Policy.</p>
-<hr>
-<p>Please note that the provided templates are for informational purposes only and may need to be reviewed and adapted to comply with the specific laws and regulations of your jurisdiction. It is strongly advised to consult with legal professionals to ensure your Terms of Service, DMCA policy, and Privacy Policy accurately and comprehensively reflect the legal requirements applicable to your video sharing website, DrivePlyr.</p>
 
+ <!-- Footer -->
+ <footer class="bg-dark text-white text-center py-3 mt-4">
+    &copy; 2023 DrivePlyr
+  </footer>
 </body>
 </html>
