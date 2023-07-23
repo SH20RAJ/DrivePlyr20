@@ -65,7 +65,9 @@ function convertToRelativeTime($dateString) {
                 return $years . " year" . ($years > 1 ? "s" : "") . " ago";
             }
         }
-        function formatViewsCount($views) {
+
+
+   function formatViewsCount($views) {
             $suffixes = array('', 'k', 'M', 'B', 'T');
             $suffixIndex = 0;
             
@@ -82,3 +84,9 @@ function convertToRelativeTime($dateString) {
         
             return $formattedViews;
         }
+
+function getUserName(id){
+    $data = json_decode(file_get_contents('https://driveplyr.appspages.online/dashboard/api/user.php?id='.id))
+return data->name ;
+}
+        ?>
