@@ -1,6 +1,7 @@
 <?php 
 
 
+
 function generateSlug($string) {
     // Remove any special characters except alphanumeric, spaces, and dashes
     $string = preg_replace('/[^a-zA-Z0-9\s-]/', '', $string);
