@@ -129,7 +129,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="title">
               <h3>
-              <a href="watch/'.$videoId.'">
+              <a href="watch/'.$videoId.generateSlug($videoTitle).'">
                 '.$videoTitle.'
               </a>
                 </h3>
