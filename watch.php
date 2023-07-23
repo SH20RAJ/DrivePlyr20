@@ -1,16 +1,44 @@
-<?php 
-
+<?php
+session_start();
 include 'conn.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    echo "Not Allowed";
+    exit;
+}
+
+// Get the video ID from the URL parameter
 $id = $_GET['id'];
 
+// Fetch the video information from the database
+$sql = "SELECT * FROM videos WHERE id = $id";
+$result = $conn->query($sql);
 
+// Check if the video exists
+if ($result->num_rows === 0) {
+    echo "Video not found";
+    exit;
+}
+
+// Get the video data
+$row = $result->fetch_assoc();
+$videoURL = $row['url'];
+$videoHosting = $row['hosting'];
+$videoTitle = $row['title'];
+$videoDescription = $row['description'];
+$videoAllowDownload = $row['allow_download'];
+$videoPosterURL = $row['poster_url'];
+/*print_r($row);
+die();*/
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Watch Page</title>
+  <title>DrivePlyr</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 </head>
 <body>
@@ -18,7 +46,7 @@ $id = $_GET['id'];
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="../../">Video Watch Page</a>
+      <a class="navbar-brand" href="../../">DrivePlyr</a>
 
       <!-- Responsive Search Bar -->
       <form class="form-inline ml-auto">
@@ -38,8 +66,8 @@ $id = $_GET['id'];
           <div id="driveplyr<?php echo $id ?>"></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
-        <h2 class="mt-3">Sample Video Title</h2>
-        <p>Description of the sample video goes here.</p>
+        <h2 class="mt-3"><?php echo $title ?></h2>
+        <p><?php echo $description ?></p>
                 <!-- Additional Features -->
                 <div class="mt-4">
                   <button class="btn btn-success">Like</button>
