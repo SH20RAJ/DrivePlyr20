@@ -10,5 +10,5 @@ RewriteRule ^watch/([0-9]+)/([\w-]+)-([\w-]+)-([\w-]+)$ watch.php?id=$1&title=$2
   # Redirect from /watch.php?id=37&title=MyTitle to /watch/37/MyTitle
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^watch/(\d+)/([^/]+)/?$ watch.php?id=$1&title=$2 [QSA,NC,L]
+  RewriteRule ^watch/(\d+)/?$ watch.php?id=$1 [QSA,NC,L]
 </IfModule>
