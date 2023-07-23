@@ -195,10 +195,10 @@ if ($result) {
               <div class="row align-items-center">
                 <div class="col">
                   <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
-                  <h5 class="h3 text-white mb-0">Sales value</h5>
+                  <h5 class="h3 text-white mb-0">Full Documentation/Usage</h5>
                 </div>
                 <div class="col">
-                      <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
+                      <!-- <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
                         <span class="d-none d-md-block">Month</span>
                         <span class="d-md-none">M</span>
                       </a>
@@ -206,12 +206,12 @@ if ($result) {
                       <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
                         <span class="d-none d-md-block">Week</span>
                         <span class="d-md-none">W</span>
-                      </a>
+                      </a> -->
                 </div>
               </div>
             </div>
             <div class="card-body">
-            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fqBG4j9mXN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/fqBG4j9mXN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
         </div>
