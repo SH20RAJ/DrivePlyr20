@@ -114,7 +114,7 @@ die();*/
       <!-- Related Videos and Additional Features Column -->
     <!-- Related Videos and Additional Features Column -->
 <div class="col-md-4">
-  <h3>Related Videos</h3>
+  <h3>Popular Videos</h3>
   <div class="list-group">
   <?php
 // Retrieve the video list from the database
