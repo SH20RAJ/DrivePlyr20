@@ -174,8 +174,8 @@ if ($result->num_rows > 0) {
         <div class="modal-body">
 <pre>
   <code class="lanuage-html">
-  &#x3C;div id=&#x22;driveplyr&#x3C;?php echo $id ?&#x3E;&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;script player=&#x22;plyr&#x22; src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;&#x3C;?php echo $id ?&#x3E;&#x22; data-height=&#x22;500px&#x22; data-width=&#x22;100%&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+&#x3C;div id=&#x22;driveplyr<?php echo $id ?>&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;script player=&#x22;plyr&#x22; src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;<?php echo $id ?>&#x22; data-height=&#x22;500px&#x22; data-width=&#x22;100%&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
   </code>
 </pre>
         </div>
