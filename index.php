@@ -123,7 +123,7 @@ if ($result->num_rows > 0) {
               </a>
                 </h3>
               <a href="">FutureCoders</a>
-              <span>$videoViews Views • 3 Months Ago</span>
+              <span>'.$videoViews.' Views • '.$row['date'].'</span>
             </div>
           </div>
         </div>
