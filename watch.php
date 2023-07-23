@@ -82,10 +82,10 @@ die();*/
                   <button class="btn btn-info">Embed</button>
                   <button class="btn btn-warning">Report</button>
                 </div>
-                <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
 
         <!-- Comment Section -->
-        <div class="mt-4">
+        <div class="mt-4">                <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
+
           <h4>Comments</h4>
           <!-- Sample comment -->
           <div class="media">
