@@ -34,7 +34,7 @@
         <i class="material-icons">videocam</i>
         <i class="material-icons">apps</i>
         <i class="material-icons">notifications</i>
-        <i class="material-icons display-this">account_circle</i>
+       <a href="./dashboard/"><i class="material-icons display-this">account_circle</i></a>
       </div>
     </div>
     <!-- Header Ends -->
