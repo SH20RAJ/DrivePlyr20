@@ -1,6 +1,14 @@
-Options +FollowSymLinks
 RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^player\.html$ player.php [L]
+RewriteRule ^player/([0-9]+)$ player.php?id=$1 [L]
 RewriteRule ^watch/([0-9]+)/([\w-]+)-([\w-]+)-([\w-]+)$ watch.php?id=$1&title=$2%20$3%20$4 [L,QSA]
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect from /watch.php?id=37&title=MyTitle to /watch/37/MyTitle
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^watch/(\d+)/([^/]+)/?$ watch.php?id=$1&title=$2 [QSA,NC,L]
+</IfModule>
