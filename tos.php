@@ -58,10 +58,10 @@ a. DrivePlyr reserves the right to modify these Terms of Service at any time. An
 a. DrivePlyr may terminate or suspend your account and access to the website if you violate these Terms of Service or engage in any activities that are harmful to the platform or its users.</p>
 </li>
 <li><p><strong>Governing Law:</strong>
-a. These Terms of Service shall be governed by and construed in accordance with the laws of [Your country or state].</p>
+a. These Terms of Service shall be governed by and construed in accordance with the laws of Country.</p>
 </li>
 </ol>
-<p>If you have any questions or concerns about these Terms of Service, please contact us at [contact@email.com].</p>
+<p>If you have any questions or concerns about these Terms of Service, please contact us at [contact@appspages.online].</p>
 <hr>
 <p><strong>DMCA (Digital Millennium Copyright Act) Policy:</strong></p>
 <p>DrivePlyr respects the intellectual property rights of others and expects its users to do the same. As part of our commitment to copyright protection, we have implemented a DMCA policy. If you believe that any content on DrivePlyr infringes your copyright, please follow the procedure outlined below:</p>
@@ -79,7 +79,7 @@ e. A statement that you have a good faith belief that the use of the material in
 f. A statement that the information in the notification is accurate, and under penalty of perjury, you are authorized to act on behalf of the copyright owner.</p>
 </li>
 <li><p><strong>Submit the Notification:</strong>
-You can send your DMCA notification to our designated Copyright Agent at [copyright@email.com].</p>
+You can send your DMCA notification to our designated Copyright Agent at [copyright@appspages.online].</p>
 </li>
 <li><p><strong>Counter-Notification:</strong>
 If you believe that the content you uploaded to DrivePlyr was removed in error or misidentification, you may submit a counter-notification to our designated Copyright Agent.</p>
@@ -88,7 +88,7 @@ If you believe that the content you uploaded to DrivePlyr was removed in error o
 DrivePlyr reserves the right to terminate user accounts that are found to be repeat infringers of copyrights.</p>
 </li>
 <li><p><strong>Contact Information:</strong>
-If you have any questions or concerns about our DMCA policy, please contact our designated Copyright Agent at [copyright@email.com].</p>
+If you have any questions or concerns about our DMCA policy, please contact our designated Copyright Agent at [copyright@appspages.online].</p>
 </li>
 </ol>
 <hr>
@@ -120,7 +120,7 @@ a. DrivePlyr is not intended for use by children under the age of 13. If we beco
 a. DrivePlyr may update this Privacy Policy from time to time. We will notify you of any significant changes via email or by posting a notice on the website.</p>
 </li>
 <li><p><strong>Contact Us:</strong>
-a. If you have any questions or concerns about our Privacy Policy or data practices, please contact us at [privacy@email.com].</p>
+a. If you have any questions or concerns about our Privacy Policy or data practices, please contact us at [privacy@appspages.online].</p>
 </li>
 </ol>
 <p>By using DrivePlyr, you consent to</p>
