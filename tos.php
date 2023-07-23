@@ -4,9 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DrivePlyr | Legal</title>
+    <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 </head>
-  <body>
+  <body class="container">
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../../">DrivePlyr</a>
+
+      <!-- Add your navigation links here if needed -->
+    </div>
+  </nav>
 
 
 <p><strong>Terms of Service (TOS) for DrivePlyr:</strong></p>
