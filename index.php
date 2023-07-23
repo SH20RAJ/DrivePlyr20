@@ -90,6 +90,48 @@
 
         <div class="videos__container">
         <?php
+        function convertToRelativeTime($dateString) {
+            // Convert the date string to a Unix timestamp
+            $timestamp = strtotime($dateString);
+        
+            // Get the current timestamp
+            $now = time();
+        
+            // Calculate the time difference in seconds
+            $diff = $now - $timestamp;
+        
+            // Define time intervals in seconds
+            $minute = 60;
+            $hour = 60 * $minute;
+            $day = 24 * $hour;
+            $week = 7 * $day;
+            $month = 30 * $day;
+            $year = 365 * $day;
+        
+            // Format the relative time string based on the time difference
+            if ($diff < $minute) {
+                return "Just now";
+            } elseif ($diff < $hour) {
+                $minutes = floor($diff / $minute);
+                return $minutes . " minute" . ($minutes > 1 ? "s" : "") . " ago";
+            } elseif ($diff < $day) {
+                $hours = floor($diff / $hour);
+                return $hours . " hour" . ($hours > 1 ? "s" : "") . " ago";
+            } elseif ($diff < $week) {
+                $days = floor($diff / $day);
+                return $days . " day" . ($days > 1 ? "s" : "") . " ago";
+            } elseif ($diff < $month) {
+                $weeks = floor($diff / $week);
+                return $weeks . " week" . ($weeks > 1 ? "s" : "") . " ago";
+            } elseif ($diff < $year) {
+                $months = floor($diff / $month);
+                return $months . " month" . ($months > 1 ? "s" : "") . " ago";
+            } else {
+                $years = floor($diff / $year);
+                return $years . " year" . ($years > 1 ? "s" : "") . " ago";
+            }
+        }
+        
         include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
@@ -123,7 +165,7 @@ if ($result->num_rows > 0) {
               </a>
                 </h3>
               <a href="">FutureCoders</a>
-              <span>'.$videoViews.' Views • '.$row['date'].'</span>
+              <span>'.$videoViews.' Views • '.convertToRelativeTime($row['date']).'</span>
             </div>
           </div>
         </div>
