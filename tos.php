@@ -1,4 +1,12 @@
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DrivePlyr | Legal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+</head>
+  <body>
 
 
 <p><strong>Terms of Service (TOS) for DrivePlyr:</strong></p>
@@ -110,3 +118,6 @@ a. If you have any questions or concerns about our Privacy Policy or data practi
 <p> the practices described in this Privacy Policy.</p>
 <hr>
 <p>Please note that the provided templates are for informational purposes only and may need to be reviewed and adapted to comply with the specific laws and regulations of your jurisdiction. It is strongly advised to consult with legal professionals to ensure your Terms of Service, DMCA policy, and Privacy Policy accurately and comprehensively reflect the legal requirements applicable to your video sharing website, DrivePlyr.</p>
+
+</body>
+</html>
