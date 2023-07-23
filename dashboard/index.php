@@ -211,11 +211,7 @@ if ($result) {
               </div>
             </div>
             <div class="card-body">
-              <!-- Chart -->
-              <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                <!-- Chart wrapper -->
-                <canvas id="chart-sales-dark" class="chart-canvas chartjs-render-monitor" width="668" height="350" style="display: block; width: 668px; height: 350px;"></canvas>
-              </div>
+              
             </div>
           </div>
         </div>
