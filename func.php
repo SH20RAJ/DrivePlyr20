@@ -1,4 +1,29 @@
-<?php function convertToRelativeTime($dateString) {
+<?php 
+
+
+function generateSlug($string) {
+    // Remove any special characters except alphanumeric, spaces, and dashes
+    $string = preg_replace('/[^a-zA-Z0-9\s-]/', '', $string);
+
+    // Replace multiple spaces with a single space
+    $string = preg_replace('/\s+/', ' ', $string);
+
+    // Trim spaces from the beginning and end of the string
+    $string = trim($string);
+
+    // Convert spaces to dashes
+    $string = str_replace(' ', '-', $string);
+
+    // Convert the string to lowercase
+    $slug = strtolower($string);
+
+    return $slug;
+}
+
+
+
+
+function convertToRelativeTime($dateString) {
             // Convert the date string to a Unix timestamp
             $timestamp = strtotime($dateString);
         
