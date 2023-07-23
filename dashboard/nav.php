@@ -84,7 +84,7 @@
           Navigation 
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://driveplyr.appspages.online/sitemaps.php" target="_blank">
+              <a class="nav-link" href="https://driveplyr.appspages.online/" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Public Videos</span>
               </a>
