@@ -161,7 +161,6 @@ if ($result->num_rows > 0) {
     &copy; 2023 DrivePlyr
   </footer>
   <style>
-    #serach {
         @media (max-width: 600px) {
             #search {
                 display: none;
