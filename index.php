@@ -131,6 +131,23 @@
                 return $years . " year" . ($years > 1 ? "s" : "") . " ago";
             }
         }
+        function formatViewsCount($views) {
+            $suffixes = array('k', 'M', 'B', 'T');
+            $suffixIndex = 0;
+            
+            while ($views >= 1000 && $suffixIndex < count($suffixes) - 1) {
+                $views /= 1000;
+                $suffixIndex++;
+            }
+        
+            // Format the views count to have at most one decimal point
+            $formattedViews = number_format($views, $suffixIndex > 0 ? 1 : 0);
+        
+            // Append the appropriate suffix
+            $formattedViews .= $suffixes[$suffixIndex];
+        
+            return $formattedViews;
+        }
         
         include 'conn.php';
 // Retrieve the video list from the database
@@ -165,7 +182,7 @@ if ($result->num_rows > 0) {
               </a>
                 </h3>
               <a href="">FutureCoders</a>
-              <span>'.$videoViews.' Views • '.convertToRelativeTime($row['date']).'</span>
+              <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
             </div>
           </div>
         </div>
