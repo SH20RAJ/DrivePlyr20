@@ -3,10 +3,7 @@ session_start();
 include 'conn.php';
 include 'func.php';
 // Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    echo "Not Allowed";
-    exit;
-}
+
 
 // Get the video ID from the URL parameter
 $id = $_GET['id'];
