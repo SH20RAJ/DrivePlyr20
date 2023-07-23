@@ -12,7 +12,7 @@ function getUser($id) {
 }
 
 // Call the getUser function with the ID '1'
-echo $result = getUser('1');
+echo $result = getUser('1').name;
 
 
 ?>
