@@ -83,6 +83,10 @@ include 'func.php';
             <i class="material-icons">thumb_up</i>
             <span>Liked Videos</span>
           </div>
+          <div class="sidebar__category">
+            <!-- <i class="material-icons">thumb_up</i> -->
+           <a href="tos.php"><span>Terms of Service</span></a> 
+          </div>
         </div>
         <hr />
       </div>
