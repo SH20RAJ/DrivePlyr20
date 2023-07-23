@@ -153,7 +153,7 @@ if ($result) {
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
-        <div class="col-xl-8">
+        <!-- <div class="col-xl-8">
           <div class="card bg-default">
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
@@ -180,10 +180,41 @@ if ($result) {
               </div>
             </div>
             <div class="card-body">
-              <!-- Chart -->
+             
               <div class="chart">
-                <!-- Chart wrapper -->
+                 
                 <canvas id="chart-sales-dark" class="chart-canvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="col-xl-8">
+          <div class="card bg-default">
+            <div class="card-header bg-transparent">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+                  <h5 class="h3 text-white mb-0">Sales value</h5>
+                </div>
+                <div class="col">
+                      <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
+                        <span class="d-none d-md-block">Month</span>
+                        <span class="d-md-none">M</span>
+                      </a>
+                    
+                      <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
+                        <span class="d-none d-md-block">Week</span>
+                        <span class="d-md-none">W</span>
+                      </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- Chart -->
+              <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                <!-- Chart wrapper -->
+                <canvas id="chart-sales-dark" class="chart-canvas chartjs-render-monitor" width="668" height="350" style="display: block; width: 668px; height: 350px;"></canvas>
               </div>
             </div>
           </div>
