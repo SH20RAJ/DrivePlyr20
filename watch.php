@@ -75,7 +75,7 @@ die();*/
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
         <p><?php echo $videoDescription ?></p>
                 <!-- Additional Features -->
-                <div class="mt-4">
+                 <div class="mt-4">
                   <!-- <button class="btn btn-success">Like</button>
                   <button class="btn btn-danger">Dislike</button>
                   <button class="btn btn-info">Download</button> -->
