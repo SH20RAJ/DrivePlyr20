@@ -90,6 +90,7 @@
 
         <div class="videos__container">
         <?php
+        include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
 $sql = "SELECT * FROM videos";
