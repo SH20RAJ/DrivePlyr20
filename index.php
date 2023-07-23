@@ -115,7 +115,7 @@ if ($result->num_rows > 0) {
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
         $videoScore = '100%';//$row['progress'];
-        $userid = $row['uploader_id'];
+        $userid = $row['user'];
 
         echo '          <!-- Single Video starts -->
         <div class="video">
