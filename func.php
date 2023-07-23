@@ -85,8 +85,8 @@ function convertToRelativeTime($dateString) {
             return $formattedViews;
         }
 
-function getUserName(id){
+function getUser(id){
     $data = json_decode(file_get_contents('https://driveplyr.appspages.online/dashboard/api/user.php?id='.id))
-return data['name'] ;
+return data ;
 }
         ?>
