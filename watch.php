@@ -55,7 +55,7 @@ die();*/
       <a class="navbar-brand" href="../../">DrivePlyr</a>
 
       <!-- Responsive Search Bar -->
-      <form class="form-inline ml-auto">
+      <form id="search" class="form-inline ml-auto">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
@@ -160,7 +160,13 @@ if ($result->num_rows > 0) {
   <footer class="bg-dark text-white text-center py-3 mt-4">
     &copy; 2023 DrivePlyr
   </footer>
-
+  <style>
+        @media (max-width: 600px) {
+            #search {
+                display: none;
+            }
+        }
+    </style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
