@@ -134,7 +134,7 @@ if ($result->num_rows > 0) {
                 '.$videoTitle.'
               </a>
                 </h3>
-              <a href="channel/'.$userid.'">'.$userid.'</a>
+              <a href="channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
               <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
             </div>
           </div>
