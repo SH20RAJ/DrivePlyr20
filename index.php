@@ -151,14 +151,7 @@
         
         // Example usage:
         $viewsCount = 1000;
-        $formattedViews = formatViewsCount($viewsCount);
-        echo $formattedViews; // Output: 1k
-        
-        $viewsCount = 1500000;
-        $formattedViews = formatViewsCount($viewsCount);
-        echo $formattedViews; // Output: 1.5M
-        
-        
+
         include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
