@@ -81,7 +81,7 @@ die();*/
                   <button class="btn btn-info">Download</button> -->
                   <!-- Button to trigger the modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
-                  <button class="btn btn-warning">Report</button>
+                 <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
                 </div>
 
         <!-- Comment Section -->
