@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
 $id = $_GET['id'];
 
 // Fetch the video information from the database
-$sql = "SELECT * FROM videos WHERE id = $id";
+$sql = "SELECT * FROM videos order by views desc";
 $result = $conn->query($sql);
 
 // Check if the video exists
