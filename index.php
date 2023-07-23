@@ -115,6 +115,7 @@ if ($result->num_rows > 0) {
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
         $videoScore = '100%';//$row['progress'];
+        $userid = $row['uploader_id'];
 
         echo '          <!-- Single Video starts -->
         <div class="video">
@@ -133,7 +134,7 @@ if ($result->num_rows > 0) {
                 '.$videoTitle.'
               </a>
                 </h3>
-              <a href="">FutureCoders</a>
+              <a href="channel/'.$userid.'">'.$userid.'</a>
               <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
             </div>
           </div>
