@@ -79,7 +79,7 @@ die();*/
                   <button class="btn btn-danger">Dislike</button>
                   <button class="btn btn-info">Download</button> -->
                   <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Embed</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
                   <button class="btn btn-warning">Report</button>
                 </div>
 
@@ -166,12 +166,13 @@ if ($result->num_rows > 0) {
       <div class="modal-content">
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Copy Code</h4>
+          <h4 class="modal-title">Share</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <!-- Modal body -->
         <div class="modal-body">
+          <h4>Copy Code to Embed This Video</h4>
 <pre>
   <code class="lanuage-html">
 &#x3C;div id=&#x22;driveplyr<?php echo $id ?>&#x22;&#x3E;&#x3C;/div&#x3E;
