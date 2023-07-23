@@ -3,7 +3,7 @@ session_start();
 include '../conn.php';
 
 if(!isset($_SESSION['name'])){
-  header('Location: ../');
+  header('Location: login.php');
 }
 $user = $_SESSION['id'];
 // Query to calculate the sum of views
