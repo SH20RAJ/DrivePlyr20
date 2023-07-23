@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'conn.php';
-
+include 'func.php';
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     echo "Not Allowed";
@@ -135,7 +135,7 @@ if ($result->num_rows > 0) {
 
         echo '
         <!-- Sample related video thumbnails -->
-        <a href="#" class="list-group-item">
+        <a href="../../watch/'.$videoId.'/'.generateSlug($videoTitle).' class="list-group-item">
           <img src="'.$videoPosterURL.'" class="img-fluid rounded" alt="Sample Video 1">
           <p class="mt-2">'.$videoTitle.'</p>
         </a>';
