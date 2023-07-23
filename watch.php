@@ -66,8 +66,8 @@ die();*/
           <div id="driveplyr<?php echo $id ?>"></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
-        <h2 class="mt-3"><?php echo $title ?></h2>
-        <p><?php echo $description ?></p>
+        <h2 class="mt-3"><?php echo $videoTitle ?></h2>
+        <p><?php echo $videoDescription ?></p>
                 <!-- Additional Features -->
                 <div class="mt-4">
                   <button class="btn btn-success">Like</button>
