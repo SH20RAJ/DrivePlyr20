@@ -42,7 +42,11 @@ die();*/
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 </head>
 <body>
-
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+    </style>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
