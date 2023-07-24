@@ -166,6 +166,14 @@ menu.addEventListener('click', function () {
 });
 
     </script>
+    <style>
+      /* Media query for max-width 450px */
+@media (max-width: 450px) {
+  .video {
+    width: 100%;
+  }
+}
+    </style>
     <!-- Main Body Ends -->
   </body>
 </html>
