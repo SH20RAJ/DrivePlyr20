@@ -1,0 +1,24 @@
+{
+  "background_color": "#ffffff",
+  "description": "Custom Video Players",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "DrivePlyr",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "DrivePlyr",
+  "start_url": "/?utm_source=pwa",
+  "theme_color": "#ffffff",
+  "categories": [
+    "social"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "shortcuts": []
+}
