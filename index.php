@@ -14,6 +14,13 @@ include 'func.php';
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
     <title>DrivePlyr</title>
+    <link rel="manifest" href="manifest.json">
+  
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+    </script>
   </head>
   <body>
     <!-- Header Starts -->
