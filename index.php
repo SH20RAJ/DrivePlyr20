@@ -14,8 +14,10 @@ include 'func.php';
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
     <title>DrivePlyr</title>
-    <link rel="manifest" href="manifest.json">
-  
+    
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#007bff">
+
     <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
