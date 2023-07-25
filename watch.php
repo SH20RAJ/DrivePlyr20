@@ -72,7 +72,7 @@ die();*/
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
         <p><?php echo $videoDescription ?></p>
-<?php echo $views ?>
+<?php echo $views ?> Views
                 <!-- Additional Features -->
                  <div class="mt-4">
                   <!-- <button class="btn btn-success">Like</button>
