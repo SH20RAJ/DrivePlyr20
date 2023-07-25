@@ -39,6 +39,7 @@ die();*/
 <meta name="title" content="<?php echo $videoTitle ?> - DrivePlyr ">
 <meta name="description" content="<?php echo $videoDescription ?> - DrivePlyr :- Custom Video Player for You">
 <meta name="keywords" content="DrivePlyr, Video Player, Custom HTML5 Video Player, Video Player, Plyr, YouTube Alternatives,Drive">
+<meta property="og:image" content="<?php echo $videoPosterURL ?>" />
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
