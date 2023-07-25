@@ -36,6 +36,14 @@ die();*/
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content="<?php echo $videoTitle ?> - DrivePlyr ">
+<meta name="description" content="<?php echo $videoDescription ?> - DrivePlyr :- Custom Video Player for You">
+<meta name="keywords" content="DrivePlyr, Video Player, Custom HTML5 Video Player, Video Player, Plyr, YouTube Alternatives,Drive">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="Shade">
+    
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
