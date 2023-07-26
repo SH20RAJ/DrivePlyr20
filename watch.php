@@ -27,6 +27,7 @@ $videoDescription = $row['description'];
 $videoAllowDownload = $row['allow_download'];
 $videoPosterURL = $row['poster_url'];
 $views = $row['views'];
+$userId = $row['user'];
 /*print_r($row);
 die();*/
 ?>
