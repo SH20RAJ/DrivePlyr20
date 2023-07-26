@@ -207,50 +207,27 @@ $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 </pre>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
 <!-- Facebook -->
-<a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"
-  ><i class="fab fa-facebook-f"></i
+<a style="color: #3b5998;" href="#!" role="button"
+  ><i class="fab fa-facebook-f fa-lg"></i
 ></a>
 
 <!-- Twitter -->
-<a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"
-  ><i class="fab fa-twitter"></i
+<a style="color: #55acee;" href="#!" role="button"
+  ><i class="fab fa-twitter fa-lg"></i
 ></a>
 
 <!-- Google -->
-<a class="btn btn-primary" style="background-color: #dd4b39;" href="#!" role="button"
-  ><i class="fab fa-google"></i
+<a style="color: #dd4b39;" href="#!" role="button"
+  ><i class="fab fa-google fa-lg"></i
 ></a>
 
 <!-- Instagram -->
-<a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button"
-  ><i class="fab fa-instagram"></i
+<a style="color: #ac2bac;" href="#!" role="button"
+  ><i class="fab fa-instagram fa-lg"></i
 ></a>
 
-<!-- Linkedin -->
-<a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button"
-  ><i class="fab fa-linkedin-in"></i
-></a>
-
-<!-- Pinterest -->
-<a class="btn btn-primary" style="background-color: #c61118;" href="#!" role="button"
-  ><i class="fab fa-pinterest"></i
-></a>
-
-<!-- Reddit -->
-<a class="btn btn-primary" style="background-color: #ff4500;" href="#!" role="button"
-  ><i class="fab fa-reddit-alien">ef</i
-></a>
-
-<!-- Whatsapp -->
-<a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"
-  ><i class="fab fa-whatsapp"></i
-></a>
-
-<!-- Telegram -->
-<a class="btn btn-primary" style="background-color: #blue;" href="#!" role="button"
-  ><i class="fab fa-telegram"></i
-></a>
 
         </div>
 
