@@ -64,7 +64,7 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
 
  if(isset($_GET['id'])){
      $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
-     $result = $conn->query($query);   
+    // $result = $conn->query($query);   
  }   
 
 
