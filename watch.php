@@ -207,7 +207,7 @@ $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 </pre>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-
+<center>
 <!-- Facebook -->
 <a style="color: #3b5998;" href="#!" role="button"
   ><i class="fab fa-facebook-f fa-lg"></i
@@ -227,7 +227,7 @@ $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 <a style="color: #ac2bac;" href="#!" role="button"
   ><i class="fab fa-instagram fa-lg"></i
 ></a>
-
+</center>
 
         </div>
 
