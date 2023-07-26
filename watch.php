@@ -85,7 +85,7 @@ die();*/
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
         <!-- Sample comment -->
         <div class="media">
-            <img src="https://imgur.com/n5MBy0m.png" class="mr-3 rounded-circle" alt="User 1">
+            <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
               <p>Subscribe</p>
