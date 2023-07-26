@@ -124,7 +124,8 @@ include 'func.php';
         include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
-$sql = "SELECT * FROM videos ORDER BY RAND() LIMIT 200";
+$uploader = $_GET['id'];
+$sql = "SELECT * FROM videos where user = $uploader";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
