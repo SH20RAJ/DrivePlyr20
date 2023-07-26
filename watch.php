@@ -237,36 +237,6 @@ $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
   ><i class="fab fa-pinterest"></i
 ></a>
 
-<!-- Vkontakte -->
-<a class="btn btn-primary" style="background-color: #4c75a3;" href="#!" role="button"
-  ><i class="fab fa-vk"></i
-></a>
-
-<!-- Stack overflow -->
-<a class="btn btn-primary" style="background-color: #ffac44;" href="#!" role="button"
-  ><i class="fab fa-stack-overflow"></i
-></a>
-
-<!-- Youtube -->
-<a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button"
-  ><i class="fab fa-youtube"></i
-></a>
-
-<!-- Slack -->
-<a class="btn btn-primary" style="background-color: #481449;" href="#!" role="button"
-  ><i class="fab fa-slack-hash"></i
-></a>
-
-<!-- Github -->
-<a class="btn btn-primary" style="background-color: #333333;" href="#!" role="button"
-  ><i class="fab fa-github"></i
-></a>
-
-<!-- Dribbble -->
-<a class="btn btn-primary" style="background-color: #ec4a89;" href="#!" role="button"
-  ><i class="fab fa-dribbble"></i
-></a>
-
 <!-- Reddit -->
 <a class="btn btn-primary" style="background-color: #ff4500;" href="#!" role="button"
   ><i class="fab fa-reddit-alien">ef</i
@@ -275,6 +245,11 @@ $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 <!-- Whatsapp -->
 <a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"
   ><i class="fab fa-whatsapp"></i
+></a>
+
+<!-- Telegram -->
+<a class="btn btn-primary" style="background-color: #blue;" href="#!" role="button"
+  ><i class="fab fa-telegram"></i
 ></a>
 
         </div>
