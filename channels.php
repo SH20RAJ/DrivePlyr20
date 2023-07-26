@@ -60,6 +60,9 @@ include 'func.php';
        <a href="../../dashboard/"><i class="material-icons display-this">account_circle</i></a>
       </div>
     </div>
+    <div class="hi">
+        Hii Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, deserunt! Quo omnis sequi dolorem harum quam veritatis eum in. Neque rem deserunt nisi similique asperiores quod voluptates voluptate facere vero?
+    </div>
     <!-- Header Ends -->
 
     <!-- Main Body Starts -->
@@ -110,9 +113,6 @@ include 'func.php';
         <hr />
       </div>
       <!-- Sidebar Ends -->
-      <section>
-        Hii
-      </section>
       <!-- Videos Section -->
       <div class="videos">
         <h1>Recommended</h1>
