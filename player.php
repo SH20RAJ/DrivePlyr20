@@ -16,7 +16,7 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
     include 'player/plyr.php';
 }
 include 'conn.php';
-$query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
-     $result = $conn->query($query);   
+$query = 'UPDATE videos SET views = views + 1 WHERE id = '. $_GET['id'] .'';
+$result = $conn->query($query);   
 include 'dashboard/tracker.php';
 ?>
