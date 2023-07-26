@@ -154,6 +154,10 @@ if ($result->num_rows > 0) {
 } else {
     echo '<tr><td colspan="6">No videos found.</td></tr>';
 }
+
+$query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
+$result = $conn->query($query);   
+
 ?>
 
 
