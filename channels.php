@@ -113,7 +113,7 @@ include 'func.php';
       <!-- Sidebar Ends -->
       <!-- Videos Section -->
       <div class="videos">
-        <h1>Videos From <?php echo getUser($_GET['id']).name ?></h1>
+        <h1>Videos From <?php echo getUser($_GET['id'])['name'] ; ?></h1>
 
         <div class="videos__container">
         <?php
