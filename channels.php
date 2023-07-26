@@ -109,9 +109,7 @@ include 'func.php';
           </div>
         </div>
         <hr />
-      </div><div class="header">
-        Hii Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, deserunt! Quo omnis sequi dolorem harum quam veritatis eum in. Neque rem deserunt nisi similique asperiores quod voluptates voluptate facere vero?
-    </div>
+      </div>
       <!-- Sidebar Ends -->
       <!-- Videos Section -->
       <div class="videos">
