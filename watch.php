@@ -86,8 +86,8 @@ die();*/
             <div class="media-body">
               <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
               <p>Subscribe</p>
-              <button class="btn btn-sm btn-outline-success mr-2">Like</button>
-              <button class="btn btn-sm btn-outline-danger">Dislike</button>
+              <button class="btn btn-sm btn-outline-success mr-2">Follow</button>
+              <button class="btn btn-sm btn-outline-danger">Messege</button>
             </div>
           </div>
         <p><?php echo $videoDescription ?></p>
