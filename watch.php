@@ -87,7 +87,7 @@ die();*/
         <div class="media">
             <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
-              <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
+              <a href="../../channels/<?php echo $userid ?>"><h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5></a>
               <p>Subscribe</p>
               <button class="btn btn-sm btn-outline-success mr-2">Follow</button>
               <button class="btn btn-sm btn-outline-danger">Messege</button>
