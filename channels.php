@@ -144,7 +144,7 @@ if ($result->num_rows > 0) {
         echo '          <!-- Single Video starts -->
         <div class="video">
           <div class="video__thumbnail">
-          <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
+          <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
           <img src="'.$videoPosterURL.'" alt="" />
           </a>
           </div>
@@ -154,11 +154,11 @@ if ($result->num_rows > 0) {
             </div>
             <div class="title">
               <h3>
-              <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
+              <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
                 '.$videoTitle.'
               </a>
                 </h3>
-              <a href="channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
+              <a href="../channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
               <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
             </div>
           </div>
