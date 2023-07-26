@@ -301,6 +301,7 @@ include 'func.php';
 </section>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/lux/bootstrap.min.css');
 /* This pen */
 body {
   font-family: "Baloo 2", cursive;
