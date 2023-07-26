@@ -155,7 +155,7 @@ if ($result->num_rows > 0) {
             <div class="title">
               <h3>
               <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-                '.$videoTitle.'
+                '.$videoTitle.' 
               </a>
                 </h3>
               <a href="../channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
