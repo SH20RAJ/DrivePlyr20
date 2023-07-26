@@ -111,7 +111,7 @@ die();*/
           <h4>Comments</h4>
           <!-- Sample comment -->
           <div class="media">
-            <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User 1">
+            <img src="http://aninex.com/images/srvc/web_de_icon.png" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
               <p>Sample comment 1 goes here.</p>
