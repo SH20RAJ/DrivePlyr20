@@ -7,21 +7,21 @@ include 'func.php';
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <!-- Material Icons -->
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
-    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>DrivePlyr</title>
     
-<link rel="manifest" href="../../manifest.json">
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#007bff">
 
     <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('../../sw.js')
+      navigator.serviceWorker.register('./sw.js')
         .then((registration) => {
           console.log('ServiceWorker registration successful with scope:', registration.scope);
         })
@@ -56,7 +56,7 @@ include 'func.php';
         <i class="material-icons">videocam</i>
         <i class="material-icons">apps</i>
         <i class="material-icons">notifications</i>
-       <a href="../../dashboard/"><i class="material-icons display-this">account_circle</i></a>
+       <a href="./dashboard/"><i class="material-icons display-this">account_circle</i></a>
       </div>
     </div>
     <!-- Header Ends -->
