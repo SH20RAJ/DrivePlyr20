@@ -111,7 +111,7 @@ include 'func.php';
       </div>
       <!-- Sidebar Ends -->
       <section>
-        
+        Hii
       </section>
       <!-- Videos Section -->
       <div class="videos">
