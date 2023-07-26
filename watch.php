@@ -156,7 +156,7 @@ if ($result->num_rows > 0) {
 }
 
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
-$result = $conn->query($query);   
+//$result = $conn->query($query);   
 
 ?>
 
