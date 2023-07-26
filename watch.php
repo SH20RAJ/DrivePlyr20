@@ -80,6 +80,16 @@ die();*/
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
+        <!-- Sample comment -->
+        <div class="media">
+            <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User 1">
+            <div class="media-body">
+              <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
+              <p>Subscribe</p>
+              <button class="btn btn-sm btn-outline-success mr-2">Like</button>
+              <button class="btn btn-sm btn-outline-danger">Dislike</button>
+            </div>
+          </div>
         <p><?php echo $videoDescription ?></p>
 <?php echo $views ?> Views
                 <!-- Additional Features -->
@@ -100,7 +110,7 @@ die();*/
           <div class="media">
             <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
-              <h5 class="mt-0">User 1</h5>
+              <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
               <p>Sample comment 1 goes here.</p>
               <button class="btn btn-sm btn-outline-success mr-2">Like</button>
               <button class="btn btn-sm btn-outline-danger">Dislike</button>
