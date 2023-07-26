@@ -85,7 +85,7 @@ die();*/
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
         <!-- Sample comment -->
         <div class="media">
-            <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User 1">
+            <img src="https://imgur.com/n5MBy0m.png" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
               <p>Subscribe</p>
@@ -114,7 +114,7 @@ die();*/
             <img src="http://aninex.com/images/srvc/web_de_icon.png" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5>
-              <p>Sample comment 1 goes here.</p>
+              <p>Currently Comment Section isn't working... </p>
               <button class="btn btn-sm btn-outline-success mr-2">Like</button>
               <button class="btn btn-sm btn-outline-danger">Dislike</button>
             </div>
