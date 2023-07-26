@@ -1,6 +1,8 @@
 RewriteEngine On
 RewriteRule ^player\.html$ player.php [L]
 RewriteRule ^player/([0-9]+)$ player.php?id=$1 [L]
+RewriteRule ^channel/([0-9]+)$ channels.php?id=$1 [L]
+
 # RewriteRule ^watch/([0-9]+)/([\w-]+)-([\w-]+)-([\w-]+)$ watch.php?id=$1&title=$2%20$3%20$4 [L,QSA]
 
 <IfModule mod_rewrite.c>
