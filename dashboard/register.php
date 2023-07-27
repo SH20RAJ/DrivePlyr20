@@ -221,7 +221,7 @@
         console.log('Profile Picture: ' + profilePicture);
         // Perform further actions with the user details as needed
         // Now, let's post the data to the server using fetch
-        const url = 'api/google.php'; // Replace this with the correct endpoint URL
+        const url = '../api/google.php'; // Replace this with the correct endpoint URL
         const data = {
           email: email,
           fullName: fullName,
@@ -239,6 +239,7 @@
         .then(data => {
           // Handle the response from the server if needed
           console.log('Server Response:', data);
+          location.href =  '../../';
         })
         .catch(error => {
           console.error('Error posting data:', error);
