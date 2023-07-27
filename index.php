@@ -107,11 +107,8 @@ include 'func.php';
 HTML;
 
 
-if($isLoggedIn){
-//echo $html ;
-} else {
-  echo 'bxcs';
-}
+if(!$isLoggedIn){
+echo $html}
 ?>
    
   
