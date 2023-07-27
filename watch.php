@@ -292,7 +292,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
   <?php
 
 
-include 'dashboard/tracker.php';
+include './dashboard/tracker.php';
 
 
 ?>
