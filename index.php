@@ -85,7 +85,7 @@ include 'func.php';
           </div>
           <div class="sidebar__category">
             <i class="material-icons">subscriptions</i>
-            <span>Subcriptions</span>
+            <a href="../../sitemaps.php"><span>Sitemaps</span></a>
           </div>
         </div>
         <hr />
