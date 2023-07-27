@@ -183,9 +183,9 @@ $relatedVideos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $result = $relatedVideos;
 
-if ($result->num_rows > 0) {
+if (true) {
     // Loop through each video and generate the table rows
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $result) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
