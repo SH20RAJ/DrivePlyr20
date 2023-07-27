@@ -1,6 +1,30 @@
 <?php
 
 include 'func.php';
+
+include 'conn.php';
+// User ID for which you want to count videos and views
+$userID = $_GET['id'];
+
+// Prepare the SQL query to count videos and total views for the specified user
+$sql = "SELECT COUNT(*) AS videoCount, SUM(views) AS totalViews FROM videos WHERE user = $userID";
+
+// Execute the query and get the result
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result === false) {
+    die("Error: " . $conn->error);
+}
+
+// Fetch the row from the result
+$row = $result->fetch_assoc();
+
+// Get the number of videos and total views for the specified user
+$videoCount = $row['videoCount'];
+$totalViews = $row['totalViews'];
+
+
 ?>
 <html lang="en">
   <head>
@@ -162,11 +186,11 @@ include 'func.php';
           <p>Followers</p>
         </div>
         <div class="col">
-          <h5><?php echo getUser($_GET['id'])[0]->name ; ?></h5>
+          <h5><?php echo $videoCount ?></h5>
           <p>Views</p>
         </div>
         <div class="col">
-          <h5><?php echo getUser($_GET['id'])[0]->name ; ?></h5>
+          <h5><?php echo $totalViews ?></h5>
           <p>Videos</p>
         </div>
       </div>
@@ -181,11 +205,7 @@ include 'func.php';
         <div class="videos__container">
         <?php
         
-        
-        // Example usage:
-        $viewsCount = 1000;
 
-        include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
 $uploader = $_GET['id'];
