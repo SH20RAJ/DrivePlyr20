@@ -179,6 +179,7 @@ $relatedVideos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $result = $relatedVideos;
 
+print_r($result);
 if (count($result) > 0) {
     // Loop through each video and generate the HTML for related video thumbnails
     foreach ($result as $row) {

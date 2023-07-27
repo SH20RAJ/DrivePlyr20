@@ -1,0 +1,14 @@
+videos table 
+
+id	
+user	
+url	
+poster_url	
+hosting	
+date	
+views	
+downloads	
+title	
+description	
+allow_download
+
