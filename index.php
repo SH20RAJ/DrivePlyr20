@@ -108,7 +108,7 @@ HTML;
 
 
 if(!$isLoggedIn){
-echo $html}
+echo $html;}
 ?>
    
   
