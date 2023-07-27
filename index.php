@@ -14,7 +14,9 @@ include 'func.php';
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
     <title>DrivePlyr</title>
-    
+    <style>
+
+    </style>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#007bff">
 
@@ -184,14 +186,7 @@ menu.addEventListener('click', function () {
 });
 
     </script>
-    <style>
-      /* Media query for max-width 450px */
-@media (max-width: 450px) {
-  .video {
-    width: 100%;
-  }
-}
-    </style>
+
     <!-- Main Body Ends -->
   </body>
 </html>

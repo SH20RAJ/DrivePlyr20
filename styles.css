@@ -224,3 +224,9 @@ h1 {
     width: 300px;
   }
 }
+      /* Media query for max-width 450px */
+      @media (max-width: 450px) {
+        .video {
+          width: 100%;
+        }
+      }
