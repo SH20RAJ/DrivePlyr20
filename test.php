@@ -20,6 +20,7 @@
         // Decode and parse the JWT token to access user details
         const userTokenData = JSON.parse(atob(jwtToken.split('.')[1]));
 
+        console.log(userTokenData)
         // Check if the required user details are available
         if (userTokenData.email && userTokenData.name) {
           const email = userTokenData.email;
