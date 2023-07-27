@@ -289,5 +289,12 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <?php
+
+
+include 'dashboard/tracker.php';
+
+
+?>
 </body>
 </html>

@@ -264,6 +264,9 @@ HTML;
 if(!$isLoggedIn){
 echo $html;
 }
+
+
+include 'dashboard/tracker.php';
 ?>
     <!-- Main Body Ends -->
   </body>
