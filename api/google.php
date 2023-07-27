@@ -3,7 +3,7 @@ session_start();
 require_once '../conn.php'; // Adjust the path to conn.php based on its location
 
 // Sample data for testing
-$email = 'test@example.com';
+$email = 'test@gmail.com';
 $fullName = 'John Doe';
 $profilePicture = 'https://example.com/avatar.jpg';
 
