@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $profilePicture = preg_replace('/=s\d+-c$/', '', $profilePicture);
 
         // Insert the data into the 'users' table
-        $insertQuery = "INSERT INTO users (name, username, email, avatar, date, last_online_date, ip) VALUES (?, ?, ?, ?, NOW(), NOW(), ?)";
+        $insertQuery = "INSERT INTO users (name, username, email, avatar, ip) VALUES (?, ?, ?, ? , ?)";
         $stmt = $conn->prepare($insertQuery);
         $stmt->bind_param('sssss', '$fullName', '$username', '$email', '$profilePicture', $ip);
 
