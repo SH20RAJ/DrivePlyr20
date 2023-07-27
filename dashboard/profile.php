@@ -46,7 +46,7 @@ function isDriveLink(url) {
     <?php include 'topnav.php' ?>
     <!-- Page content -->
     <div class="container-fluid mt-6">
-        <div class="col-xl-4 order-xl-2">
+          <div class="col-xl-4 order-xl-2">
                   <div class="card">
                     <div class="card-body text-center">
                       <!-- Circular logo with background image -->
