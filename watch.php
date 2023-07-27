@@ -160,7 +160,6 @@ $sql = "SELECT *
             title LIKE CONCAT('%', :video_title, '%')
             OR description LIKE CONCAT('%', :video_description, '%')
         )
-        AND user = :video_user
         LIMIT 10";
 
 // Prepare the statement
