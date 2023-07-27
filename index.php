@@ -77,7 +77,7 @@ include 'func.php';
         <div class="sidebar__categories">
           <div class="sidebar__category">
             <i class="material-icons">home</i>
-            <span>Home</span>
+            <a href="../../"><span>Home</span></a>
           </div>
           <div class="sidebar__category">
             <i class="material-icons">local_fire_department</i>
