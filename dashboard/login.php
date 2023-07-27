@@ -10,7 +10,7 @@
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="../">
-        <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/brand/white.png">
+        <img src="https://driveplyr.appspages.online/dp.png">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="../">
-                <img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/brand/blue.png">
+                <img src="https://driveplyr.appspages.online/dp.png">
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -121,6 +121,7 @@
      data-client_id="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com"
      data-callback="handleCredentialResponse">
 </div>
+<br><br>
 <center><div class="g_id_signin" data-type="standard"></div>
 </center>
 
