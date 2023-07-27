@@ -158,15 +158,29 @@ $video_description = $videoDescription; // Replace with the actual video descrip
 $video_user = $userid; // Replace with the actual video user
 
 // Prepare the SQL query with placeholders for the variables
-$sql = "SELECT *
-        FROM videos
-        WHERE id <> $video_id
-        AND (
-            title LIKE CONCAT('%', '$video_title', '%')
-            OR description LIKE CONCAT('%', '$video_description', '%')
-        )
-        ORDER BY (user = '$video_user') DESC
+// Prepare the SQL query with placeholders for the variables
+$sql = "(SELECT *, 1 as priority
+         FROM videos
+         WHERE id <> $video_id
+         AND user = '$video_user'
+         AND (
+             title LIKE CONCAT('%', '$video_title', '%')
+             OR description LIKE CONCAT('%', '$video_description', '%')
+         )
+         LIMIT 10)
+        UNION
+        (SELECT *, 0 as priority
+         FROM videos
+         WHERE id <> $video_id
+         AND user <> '$video_user'
+         AND (
+             title LIKE CONCAT('%', '$video_title', '%')
+             OR description LIKE CONCAT('%', '$video_description', '%')
+         )
+         LIMIT 10)
+        ORDER BY priority DESC, RAND()
         LIMIT 10";
+
 
 // Execute the query
 $result = $conn->query($sql);
