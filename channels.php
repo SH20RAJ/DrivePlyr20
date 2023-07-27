@@ -24,6 +24,8 @@ $row = $result->fetch_assoc();
 $videoCount = $row['videoCount'];
 $totalViews = $row['totalViews'];
 
+$logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar : 'https://i.imgur.com/n5MBy0m.jpg';
+
 
 ?>
 <html lang="en">
@@ -167,7 +169,7 @@ $totalViews = $row['totalViews'];
       <!-- Circular logo with background image -->
       <div class="user-logo mx-auto mb-4">
         <!-- Replace 'logo.png' with the actual logo image URL -->
-        <img src="https://i.imgur.com/n5MBy0m.jpg" alt="Logo">
+        <img src="<?php echo $logo ?>" alt="Logo">
       </div>
 
       <!-- User Name -->
