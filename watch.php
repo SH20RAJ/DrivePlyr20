@@ -160,8 +160,7 @@ $video_user = $userid; // Replace with the actual video user
 // Prepare the SQL query with placeholders for the variables
 $sql = "SELECT *
         FROM videos
-        WHERE id <> $video_id
-        AND (
+        WHERE (
             title LIKE CONCAT('%', '$video_title', '%')
             OR description LIKE CONCAT('%', '$video_description', '%')
         )
