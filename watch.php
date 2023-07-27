@@ -266,12 +266,38 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
         <!-- Modal body -->
         <div class="modal-body">
           <h4>Copy Code to Embed This Video</h4>
+          <center>
+  <!-- Telegram -->
+  <!-- ... (previous social media icons) ... -->
+
+  <!-- Copy Code Button -->
+  <button onclick="copyCodeToClipboard()">Copy Code</button>
+</center>
+
 <pre>
-  <code class="lanuage-html">
-&#x3C;div id=&#x22;driveplyr<?php echo $id ?>&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;script player=&#x22;plyr&#x22; src=&#x22;https://driveplyr.appspages.online/player.js&#x22; data-id=&#x22;<?php echo $id ?>&#x22; data-height=&#x22;500px&#x22; data-width=&#x22;100%&#x22; data-type=&#x22;driveplyr&#x22; defer&#x3E;&#x3C;/script&#x3E;
+  <code class="language-html">
+    &lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
+    &lt;script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
   </code>
 </pre>
+
+<script>
+  function copyCodeToClipboard() {
+    const codeBlock = document.querySelector("pre code");
+    const codeText = codeBlock.innerText;
+
+    const textArea = document.createElement("textarea");
+    textArea.value = codeText;
+    document.body.appendChild(textArea);
+
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+
+    alert("Code copied to clipboard!");
+  }
+</script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 
