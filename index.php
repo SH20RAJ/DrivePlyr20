@@ -104,7 +104,10 @@ include 'func.php';
   </script>
 HTML;
 
+if($isLoggedIn){
+  
 echo $html ;
+}
 ?>
    
   
