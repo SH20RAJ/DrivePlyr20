@@ -183,28 +183,28 @@ $relatedVideos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $result = $relatedVideos;
 
-if (true) {
-    // Loop through each video and generate the table rows
-    while ($row = $result) {
+if (count($result) > 0) {
+    // Loop through each video and generate the HTML for related video thumbnails
+    foreach ($result as $row) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
-        $videoStatus = 'Public';//$row['status'];
+        $videoStatus = 'Public'; //$row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
-        $videoScore = '100%';//$row['progress'];
+        $videoScore = '100%'; //$row['progress'];
 
         echo '
         <!-- Sample related video thumbnails -->
-        <a href="../../watch/'.$videoId.'/'.generateSlug($videoTitle).'" class="list-group-item">
-          <img src="'.$videoPosterURL.'" class="img-fluid rounded" alt="Sample Video 1">
-          <p class="mt-2">'.$videoTitle.'</p>
+        <a href="../../watch/' . $videoId . '/' . generateSlug($videoTitle) . '" class="list-group-item">
+          <img src="' . $videoPosterURL . '" class="img-fluid rounded" alt="Sample Video 1">
+          <p class="mt-2">' . $videoTitle . '</p>
         </a>';
     }
 } else {
-    echo '<tr><td colspan="6">No videos found.</td></tr>';
+    echo '<p>No videos found.</p>';
 }
-
+?>
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 //$result = $conn->query($query);   
 
