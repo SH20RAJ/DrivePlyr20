@@ -97,6 +97,7 @@ function isDriveLink(url) {
                 </div>
               </div>
             </div>
+          </div>
             <div class="card-body">
             <form class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
   <h6 class="heading-small text-muted mb-6">Update User Information</h6>
