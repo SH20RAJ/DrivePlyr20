@@ -1,3 +1,7 @@
+ <?php 
+  session_start();
+  
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +13,8 @@
 include '../conn.php'; // Replace with the file containing your database connection code
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+    if (isset($_SESSION['id'])) {
+        $id = $_SESSION['id'];
 
         // Validate and sanitize the ID (you should implement this)
 
@@ -31,14 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $name = $userDetails['name'];
             $username = $userDetails['username'] ;
             $email = $userDetails['email'];
-            $avatar = $userDetails['avatar'] || 'https://i.imgur.com/n5MBy0m.jpg';
+            $avatar = 'https://i.imgur.com/n5MBy0m.jpg';
         } else {
             echo "User not found.";
         }
 
-        // Close the statement and database connection
-        $stmt->close();
-        $conn->close();
     } else {
         echo "Invalid request: No user ID provided.";
     }
