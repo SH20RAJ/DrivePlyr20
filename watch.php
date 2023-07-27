@@ -182,8 +182,6 @@ $sql = "(SELECT *, 1 as priority
         UNION
         (SELECT *, 2 as priority
          FROM videos
-         WHERE id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user = '$video_user')
-         AND id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user <> '$video_user')
          ORDER BY RAND()
          LIMIT 10)
         ORDER BY priority DESC, RAND()
