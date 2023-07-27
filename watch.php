@@ -143,8 +143,45 @@ die();*/
   <?php
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
-$sql = "SELECT * FROM videos order by RAND() desc limit 20";
-$result = $conn->query($sql);
+// Assuming you have already established a database connection
+// Replace 'your_table_name' with the actual table name
+
+// Your PHP variables containing the video information
+$video_id = $id; // Replace with the actual video ID
+$video_title = $videoTitle; // Replace with the actual video title
+$video_description = $videoDescription; // Replace with the actual video description
+$video_user = $userid; // Replace with the actual video user
+
+// Prepare the SQL query with placeholders for the variables
+$sql = "SELECT id, user, url, poster_url, hosting, date, views, downloads, title, description, allow_download
+        FROM your_table_name
+        WHERE id <> :video_id
+        AND (
+            title LIKE CONCAT('%', :video_title, '%')
+            OR description LIKE CONCAT('%', :video_description, '%')
+        )
+        AND user = :video_user
+        LIMIT 10";
+
+// Prepare the statement
+$stmt = $pdo->prepare($sql);
+
+// Bind the PHP variables to the placeholders in the query
+$stmt->bindParam(':video_id', $video_id, PDO::PARAM_INT);
+$stmt->bindParam(':video_title', $video_title, PDO::PARAM_STR);
+$stmt->bindParam(':video_description', $video_description, PDO::PARAM_STR);
+$stmt->bindParam(':video_user', $video_user, PDO::PARAM_STR);
+
+// Execute the query
+$stmt->execute();
+
+// Fetch the results into an array
+$relatedVideos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Now you have the related videos in the $relatedVideos array
+// You can use this data to display the related videos on your website
+
+$result = $relatedVideos;
 
 if ($result->num_rows > 0) {
     // Loop through each video and generate the table rows
