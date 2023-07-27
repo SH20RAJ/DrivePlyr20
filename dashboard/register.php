@@ -130,7 +130,8 @@
      data-client_id="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com"
      data-callback="handleCredentialResponse">
 </div>
-<div class="g_id_signin" data-type="standard"></div>
+<center><div class="g_id_signin" data-type="standard"></div></center>
+
 
                 <!-- <a href="#" class="btn btn-neutral btn-icon">
                   <span class="btn-inner--icon"><img src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/img/icons/common/google.svg"></span>
