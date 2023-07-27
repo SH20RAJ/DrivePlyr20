@@ -163,7 +163,7 @@ $sql = "SELECT *
         LIMIT 10";
 
 // Prepare the statement
-$stmt = $pdo->prepare($sql);
+$stmt = $conn->prepare($sql);
 
 // Bind the PHP variables to the placeholders in the query
 $stmt->bindParam(':video_id', $video_id, PDO::PARAM_INT);
