@@ -40,9 +40,8 @@ include 'func.php';
   </script>
   </head>
   <body>
-  <?php if (!isset($isLoggedIn): ?>
-
-
+  <?php 
+  $html = <<<HTML
       <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"
        data-client_id="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com"
@@ -103,8 +102,10 @@ include 'func.php';
       }
     }
   </script>
+HTML;
 
-<?php endif; ?>
+echo $html ;
+?>
    
   
     <!-- Header Starts -->
