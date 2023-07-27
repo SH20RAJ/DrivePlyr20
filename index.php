@@ -266,7 +266,7 @@ echo $html;
 }
 
 
-include 'dashboard/tracker.php';
+include 'tracker.php';
 ?>
     <!-- Main Body Ends -->
   </body>
