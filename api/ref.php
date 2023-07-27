@@ -1,10 +1,12 @@
 <?php
 // ref.php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include '../conn.php';
 // Check if the "ref" parameter is provided in the URL
 if (isset($_GET['ref'])) {
     // Retrieve the "ref" parameter value
-    echo $refValue = $_GET['ref'];
+    $refValue = $_GET['ref'];
 
     // Get user IP address
     $userIP = $_SERVER['REMOTE_ADDR'];
@@ -18,6 +20,6 @@ if (isset($_GET['ref'])) {
     // SQL query to insert data into the 'ref' table
     echo $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
 
-    //$conn->query($sql)
+    $conn->query($sql)
 }
 ?>
