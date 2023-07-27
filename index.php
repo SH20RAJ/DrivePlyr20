@@ -273,6 +273,26 @@ include 'api/ref.php';
 
 ?>
 
+<script>
+    // Function to remove query strings from the URL
+    function removeQueryStrings() {
+      // Get the current URL
+      var currentURL = window.location.href;
+
+      // Check if the URL contains any query strings (i.e., '?')
+      if (currentURL.includes('?')) {
+        // Remove the query strings by taking the URL before the '?'
+        var newURL = currentURL.split('?')[0];
+
+        // Update the browser URL without reloading the page
+        window.history.replaceState({}, document.title, newURL);
+      }
+    }
+
+    // Call the function to remove query strings when the page loads
+    window.onload = removeQueryStrings;
+  </script>
+
     <!-- Main Body Ends -->
   </body>
 </html>
