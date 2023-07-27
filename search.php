@@ -127,7 +127,7 @@ include 'func.php';
         <?php
 include 'conn.php';
 // Sanitize the search query to prevent SQL injection
-$searchQuery = $_GET['q'];
+echo $searchQuery = $_GET['q'];
 $searchQuery = '%' . $searchQuery . '%';
 
 // Prepare the SQL query with placeholders for the search query
