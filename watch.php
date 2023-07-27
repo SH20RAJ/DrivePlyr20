@@ -180,7 +180,7 @@ $sql = "(SELECT *, 1 as priority
          )
          LIMIT 10)
         UNION
-        (SELECT *, 2 as priority
+        (SELECT *, -1 as priority
          FROM videos
          ORDER BY RAND()
          LIMIT 10)
