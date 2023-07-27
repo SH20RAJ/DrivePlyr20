@@ -187,11 +187,11 @@ $totalViews = $row['totalViews'];
         </div>
         <div class="col">
           <h5><?php echo $videoCount ?></h5>
-          <p>Views</p>
+          <p>Videos</p>
         </div>
         <div class="col">
           <h5><?php echo $totalViews ?></h5>
-          <p>Videos</p>
+          <p>Views</p>
         </div>
       </div>
     </div>
