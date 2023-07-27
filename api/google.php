@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Convert the JSON data to an associative array
     $data = json_decode($jsonData, true);
+    print_r($data);
 
     // Validate data (you should implement proper validation based on your requirements)
     $email = $data['email'] ?? '';
