@@ -113,6 +113,69 @@ include 'func.php';
       <!-- Sidebar Ends -->
       <!-- Videos Section -->
       <div class="videos">
+      <!DOCTYPE html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  /* Custom CSS for the circular logo with background image */
+  .user-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the actual background image URL */
+    background-size: cover;
+  }
+  .user-logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+</style>
+</head>
+<body>
+<div class="container-fluid mt-5">
+  <div class="card">
+    <div class="card-body text-center">
+      <!-- Circular logo with background image -->
+      <div class="user-logo mx-auto mb-4">
+        <!-- Replace 'logo.png' with the actual logo image URL -->
+        <img src="logo.png" alt="Logo">
+      </div>
+
+      <!-- User Name -->
+      <h4 class="card-title">John Doe</h4>
+
+      <!-- Website -->
+      <p class="card-text"><a href="https://www.example.com" target="_blank">www.example.com</a></p>
+
+      <!-- Follow button (you can replace '#' with the follow action URL) -->
+      <button class="btn btn-primary mb-3" onclick="followUser('#')">Follow</button>
+
+      <!-- Row with number of followers, views, and videos -->
+      <div class="row text-center">
+        <div class="col">
+          <h5>100</h5>
+          <p>Followers</p>
+        </div>
+        <div class="col">
+          <h5>500</h5>
+          <p>Views</p>
+        </div>
+        <div class="col">
+          <h5>50</h5>
+          <p>Videos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
         <h1>Videos From <?php echo getUser($_GET['id'])[0]->name ; ?></h1>
 
         <div class="videos__container">
