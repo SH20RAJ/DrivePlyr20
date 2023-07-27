@@ -125,8 +125,7 @@ include 'func.php';
 
         <div class="videos__container">
         <?php
-        
-        include 'conn.php';
+include 'conn.php';
 // Sanitize the search query to prevent SQL injection
 $searchQuery = $_GET['q'];
 $searchQuery = '%' . $searchQuery . '%';
@@ -150,9 +149,9 @@ $stmt->execute();
 // Fetch the results into an array
 $searchResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if (true) {
+if (count($searchResults) > 0) {
     // Loop through each video and generate the table rows
-    while ($row = $searchResults) {
+    foreach ($searchResults as $row) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
@@ -188,9 +187,10 @@ if (true) {
 ';
     }
 } else {
-    echo '<tr><td colspan="6">No videos found.</td></tr>';
+    echo '<p>No videos found.</p>';
 }
 ?>
+
 
 
         </div>
