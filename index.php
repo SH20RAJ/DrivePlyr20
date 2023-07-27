@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'func.php';
 ?>
 <html lang="en">
