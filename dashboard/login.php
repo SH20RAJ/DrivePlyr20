@@ -136,7 +136,7 @@
               <span class="btn-inner--icon">
                 <i class="fas fa-shopping-cart mr-2"></i>
               </span>
-              <span class="nav-link-inner--text">Upgrade to PRO</span>
+              <span class="nav-link-inner--text">Home</span>
             </a>
           </li>
         </ul>
