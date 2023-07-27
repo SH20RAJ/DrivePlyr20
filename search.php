@@ -16,7 +16,7 @@ include 'func.php';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
-    <title>DrivePlyr</title>
+    <title><?php echo $_GET['q'] ?> - Search - DrivePlyr</title>
     <style>
 
     </style>
