@@ -1,54 +1,61 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
+// Define the cache name
+const cacheName = 'your-app-cache-v1';
 
-const CACHE = "pwabuilder-offline-page";
+// List of assets to cache
+const assetsToCache = [
+  '/*',
+  '/index.php',
+];
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-});
-
-self.addEventListener('install', async (event) => {
+// Install event: Cache the essential assets
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
+    caches.open(cacheName)
+      .then(cache => cache.addAll(assetsToCache))
+      .then(() => self.skipWaiting())
   );
 });
 
-if (workbox.navigationPreload.isSupported()) {
-  workbox.navigationPreload.enable();
-}
+// Activate event: Clean up old caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames.filter(name => name !== cacheName)
+            .map(name => caches.delete(name))
+        );
+      })
+      .then(() => self.clients.claim())
+  );
+});
 
-workbox.routing.registerRoute(
-  new RegExp('/*'),
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: CACHE
-  })
-);
-
+// Fetch event: Serve assets from cache, and update cache if necessary
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
-
-        if (preloadResp) {
-          return preloadResp;
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        if (response) {
+          return response;
         }
 
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
+        // Clone the request because it can only be consumed once
+        const fetchRequest = event.request.clone();
 
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
-      }
-    })());
-  }
+        return fetch(fetchRequest)
+          .then(response => {
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response because it can only be consumed once
+            const responseToCache = response.clone();
+
+            caches.open(cacheName)
+              .then(cache => cache.put(event.request, responseToCache));
+
+            return response;
+          });
+      })
+  );
 });

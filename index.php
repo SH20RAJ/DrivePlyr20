@@ -19,19 +19,21 @@ include 'func.php';
     </style>
 <meta name="theme-color" content="#007bff">
 <link rel="manifest" href="manifest.json">
-    <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then((registration) => {
-          console.log('ServiceWorker registration successful with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.log('ServiceWorker registration failed:', error);
+<script>
+    // Check if the browser supports the beforeinstallprompt event
+    if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
+      window.addEventListener('load', () => {
+        // Wait for the beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (event) => {
+          // Prevent the default "Add to Home Screen" prompt
+          event.preventDefault();
+
+          // Automatically show the "Add to Home Screen" prompt on page load
+          event.prompt();
         });
-    });
-  }
-</script>
+      });
+    }
+  </script>
 
   </head>
   <body>
