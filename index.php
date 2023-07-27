@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'func.php';
+$n = $_SESSION['username'];
 ?>
 <html lang="en">
   <head>
@@ -37,7 +38,7 @@ include 'func.php';
   </script>
   </head>
   <body>
-  <?php if (!isset($_SESSION['username']): ?>
+  <?php if (!isset($n): ?>
 
 
       <script src="https://accounts.google.com/gsi/client" async defer></script>
