@@ -137,13 +137,13 @@ include 'func.php';
 </style>
 </head>
 <body>
-<div class="container-fluid mt-5">
+<div class="container-fluid">
   <div class="card">
     <div class="card-body text-center">
       <!-- Circular logo with background image -->
       <div class="user-logo mx-auto mb-4">
         <!-- Replace 'logo.png' with the actual logo image URL -->
-        <img src="logo.png" alt="Logo">
+        <img src="https://i.imgur.com/n5MBy0m.jpg" alt="Logo">
       </div>
 
       <!-- User Name -->
