@@ -107,8 +107,7 @@
       // For example, you can use jQuery AJAX to send the form data to a server-side script.
     });
   </script>
-</body>
-</html>
+
 
       <!-- Footer -->
       <?php include 'footer.php' ?>
