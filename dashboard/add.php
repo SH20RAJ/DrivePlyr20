@@ -65,59 +65,63 @@ function isDriveLink(url) {
               </div>
             </div>
             <div class="card-body">
-              <form class="needs-validation" action="api/upload.php" method="post" enctype="multipart/form-data">
-                <h6 class="heading-small text-muted mb-6">Video information <a 
-                href="https://driveplyr.hashnode.dev/upload-new-video" target="_blank">How to Upload</a> </h6>
-                <div class="pl-lg-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-url" data-toggle="tooltip" data-original-title="Direct Link, Archive.org Link, Google Drive, Mediafire and others">Video URL <a target="_blank" href="https://driveplyr.hashnode.dev/supported-links">Supported Links</a></label>
-                        <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
-                        <div class="invalid-feedback">
-                          Please enter a valid video URL.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-hosting">Hosting</label>
-                        <input id="input-hosting" class="form-control" name="hosting" readonly placeholder="Do not edit">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-title">Title</label>
-                        <input type="text" id="input-title" class="form-control" placeholder="Title" name="title" value="" required>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-description">Description</label>
-                        <textarea rows="1" class="form-control" placeholder="Description" name="description" required></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-allow-download">Allow download</label>
-                        <input type="checkbox" id="input-allow-download" class="form-control" name="allow_download" value="1">
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-poster">Poster URL - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/image-uploader">Get Image Link</a></label>
-                        <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="my-4"></hr>
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Upload</button>
-              </form>
+            <form class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
+  <h6 class="heading-small text-muted mb-6">Update User Information</h6>
+  <div class="pl-lg-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-username">User Name</label>
+          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="" type="text" required>
+          <div class="invalid-feedback">
+            Please enter a valid user name.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">Email</label>
+          <input type="email" id="input-email" class="form-control" placeholder="Email" name="email" value="" required>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label class="form-control-label" for="input-password">Password</label>
+          <input type="password" id="input-password" class="form-control" placeholder="Password" name="password" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-icon-url">Icon URL</label>
+          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="iconUrl" value="" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-description">Description</label>
+          <textarea rows="3" class="form-control" placeholder="Description" name="description" required></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-website">Website</label>
+          <input type="url" id="input-website" class="form-control" placeholder="Website" name="website" value="" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4"></hr>
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
+</form>
+
             </div>
           </div>
         </div>
