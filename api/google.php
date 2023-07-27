@@ -1,11 +1,19 @@
 <?php
 session_start();
 require_once '../conn.php'; // Adjust the path to conn.php based on its location
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get the JSON data sent from the client-side
+    $jsonData = file_get_contents('php://input');
 
-// Sample data for testing
-$email = $_POST['email'];
-$fullName = $_POST['fullName'];
-$profilePicture = $_POST['profilePicture'];
+    // Convert the JSON data to an associative array
+    $data = json_decode($jsonData, true);
+
+    // Validate data (you should implement proper validation based on your requirements)
+    $email = $data['email'] ?? '';
+    $fullName = $data['fullName'] ?? '';
+    $profilePicture = $data['profilePicture'] ?? '';
+}
 
 // Validate data (you should implement proper validation based on your requirements)
 
