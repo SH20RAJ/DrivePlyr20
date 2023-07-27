@@ -144,47 +144,48 @@ die();*/
   <h3>Popular Videos</h3>
   <div class="list-group">
   <?php
-// Retrieve the video list from the database
-$user = $_SESSION['id'];
 // Assuming you have already established a database connection
 // Replace 'your_table_name' with the actual table name
 
-// Your PHP variables containing the video information// Replace with the actual video ID
+// Retrieve the video list from the database
+$user = $_SESSION['id'];
+
+// Your PHP variables containing the video information
+$video_id = $id; // Replace with the actual video ID
 $video_title = $videoTitle; // Replace with the actual video title
 $video_description = $videoDescription; // Replace with the actual video description
 $video_user = $userid; // Replace with the actual video user
 
 // Prepare the SQL query with placeholders for the variables
 $sql = "SELECT *
-        FROM videos
-        WHERE  (
-            title LIKE CONCAT('%', :video_title, '%')
-            OR description LIKE CONCAT('%', :video_description, '%')
+        FROM your_table_name
+        WHERE id <> $video_id
+        AND user = '$video_user'
+        AND (
+            title LIKE CONCAT('%', '$video_title', '%')
+            OR description LIKE CONCAT('%', '$video_description', '%')
         )
         LIMIT 10";
 
-// Prepare the statement
-$stmt = $conn->prepare($sql);
-
-
-$stmt->bindParam(':video_title', $video_title, PDO::PARAM_STR);
-$stmt->bindParam(':video_description', $video_description, PDO::PARAM_STR);
-
 // Execute the query
-$stmt->execute();
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result === false) {
+    // If there's an error, display the error message
+    echo "Error executing query: " . $conn->error;
+    exit; // Exit the script to prevent further execution
+}
 
 // Fetch the results into an array
-$relatedVideos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$relatedVideos = $result->fetch_all(MYSQLI_ASSOC);
 
 // Now you have the related videos in the $relatedVideos array
 // You can use this data to display the related videos on your website
 
-$result = $relatedVideos;
-
-print_r($result);
-if (count($result) > 0) {
+if (count($relatedVideos) > 0) {
     // Loop through each video and generate the HTML for related video thumbnails
-    foreach ($result as $row) {
+    foreach ($relatedVideos as $row) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
@@ -205,7 +206,7 @@ if (count($result) > 0) {
 }
 
 // Uncomment and execute the update query to increment views count
-$query = 'UPDATE videos SET views = views + 1 WHERE id = ' . $video_id;
+$query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 //$result = $conn->query($query);
 ?>
 
