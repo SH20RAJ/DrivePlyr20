@@ -44,6 +44,7 @@ if ($user) {
 
     // Convert the avatar URL to remove the "=s96-c" part
     $profilePicture = preg_replace('/=s\d+-c$/', '', $profilePicture);
+    
 
     // Insert the data into the 'users' table
     $insertQuery = "INSERT INTO users (name, username, email, avatar, date, last_online_date, ip, source) VALUES (?, ?, ?, ?, NOW(), NOW(), ?, ?)";
