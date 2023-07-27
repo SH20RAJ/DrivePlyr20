@@ -267,45 +267,11 @@ echo $html;
 
 
 include 'tracker.php';
+
+include 'api/ref.php';
+
+
 ?>
-
-  <script>
-    // Function to extract the "ref" parameter from the URL
-    function extractRefAndPostToAPI() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const refParam = urlParams.get("ref");
-
-      // Check if the "ref" parameter is present in the URL
-      if (refParam) {
-        // Post the "ref" parameter to the API
-        const apiUrl = "api/ref.php";
-        const postData = { ref: refParam };
-
-        fetch(apiUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(postData),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Ref posted to API:", data);
-          })
-          .catch((error) => {
-            console.error("Error posting ref to API:", error);
-          });
-
-        // Remove the "?ref" parameter from the URL (history.pushState method)
-        const urlWithoutRef = window.location.href.replace("?ref=" + refParam, "");
-        window.history.pushState({}, document.title, urlWithoutRef);
-      }
-    }
-
-    // Call the function when the page loads
-    window.onload = extractRefAndPostToAPI;
-  </script>
-
 
     <!-- Main Body Ends -->
   </body>
