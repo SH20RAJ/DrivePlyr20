@@ -176,7 +176,7 @@ include 'func.php';
 
 
 
-        <h1>Videos From <?php echo getUser($_GET['id'])[0]->name ; ?></h1>
+        <h4>Videos From <?php echo getUser($_GET['id'])[0]->name ; ?></h4>
 
         <div class="videos__container">
         <?php
