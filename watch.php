@@ -165,6 +165,7 @@ $sql = "SELECT *
             title LIKE CONCAT('%', '$video_title', '%')
             OR description LIKE CONCAT('%', '$video_description', '%')
         )
+        ORDER BY (user = '$video_user') DESC
         LIMIT 10";
 
 // Execute the query
