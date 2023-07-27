@@ -1,5 +1,8 @@
 <?php
 // ref.php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 
 // Check if the "ref" parameter is provided in the URL
 if (isset($_GET['ref'])) {
@@ -8,7 +11,6 @@ if (isset($_GET['ref'])) {
 
     // Get user IP address
     $userIP = $_SERVER['REMOTE_ADDR'];
-
     // Get current timestamp
     $timestamp = time();
 
@@ -19,18 +21,6 @@ if (isset($_GET['ref'])) {
     // SQL query to insert data into the 'ref' table
     echo $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
 
-    if ($conn->query($sql)) {
-        // Data inserted successfully
-        echo "Data recorded successfully!";
-    } else {
-        // Error in inserting data
-        echo "Error recording data: " . $conn->error;
-    }
-
-    // Close the database connection
-    $conn->close();
-} else {
-    // If the "ref" parameter is not provided, display an error message
-    echo "No 'ref' parameter provided.";
+    $conn->query($sql)
 }
 ?>
