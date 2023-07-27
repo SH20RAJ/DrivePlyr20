@@ -126,19 +126,33 @@ include 'func.php';
         <div class="videos__container">
         <?php
         
-        
-        // Example usage:
-        $viewsCount = 1000;
-
         include 'conn.php';
-// Retrieve the video list from the database
-$user = $_SESSION['id'];
-$sql = "SELECT * FROM videos ORDER BY RAND() LIMIT 200";
-$result = $conn->query($sql);
+// Sanitize the search query to prevent SQL injection
+$searchQuery = $_GET['q'];
+$searchQuery = '%' . $searchQuery . '%';
 
-if ($result->num_rows > 0) {
+// Prepare the SQL query with placeholders for the search query
+$sql = "SELECT *
+        FROM videos
+        WHERE title LIKE :search_query
+        OR description LIKE :search_query
+        LIMIT 10";
+
+// Prepare the statement
+$stmt = $conn->prepare($sql);
+
+// Bind the search query to the placeholder in the query
+$stmt->bindParam(':search_query', $searchQuery, PDO::PARAM_STR);
+
+// Execute the query
+$stmt->execute();
+
+// Fetch the results into an array
+$searchResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (true) {
     // Loop through each video and generate the table rows
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $searchResults) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
@@ -285,7 +299,7 @@ include 'api/ref.php';
         var newURL = currentURL.split('?')[0];
 
         // Update the browser URL without reloading the page
-        window.history.replaceState({}, document.title, newURL);
+       // window.history.replaceState({}, document.title, newURL);
       }
     }
 
