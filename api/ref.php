@@ -17,7 +17,7 @@ if (isset($_GET['ref'])) {
 
 
     // SQL query to insert data into the 'ref' table
-    $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
+    echo $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
 
     if ($conn->query($sql)) {
         // Data inserted successfully
