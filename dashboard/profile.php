@@ -25,14 +25,14 @@
                         <!-- Circular logo with background image -->
                         <div class="user-logo mx-auto mb-4">
                           <!-- Replace 'logo.png' with the actual logo image URL -->
-                          <img src="logo.png" alt="Logo">
+                          <img src="https://i.imgur.com/n5MBy0m.jpg" alt="Logo">
                         </div>
 
                         <!-- User Name -->
                         <h4 class="card-title">John Doe</h4>
 
                         <!-- Website -->
-                        <p class="card-text"><a href="https://www.example.com" target="_blank">www.example.com</a></p>
+                        <p class="card-text"><a href="https://appspages.online" target="_blank">www.appspages.online</a></p>
 
                         <!-- Follow button (you can replace '#' with the follow action URL) -->
                         <button class="btn btn-primary mb-3" onclick="followUser('#')">Follow</button>
