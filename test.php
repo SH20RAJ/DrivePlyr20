@@ -33,7 +33,7 @@
           console.log('Profile Picture: ' + profilePicture);
           // Perform further actions with the user details as needed
           // Now, let's post the data to the server using fetch
-          const url = 'api/google.php'; // Replace this with the correct endpoint URL
+          const url = 'api/test.php'; // Replace this with the correct endpoint URL
           const data = {
             email: email,
             fullName: fullName,
