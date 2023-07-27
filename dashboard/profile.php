@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $name = $userDetails['name'];
             $username = $userDetails['username'] ;
             $email = $userDetails['email'];
-            $avatar = $userDetails['email'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
+            $avatar = $userDetails['avatar'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
         } else {
             echo "User not found.";
         }
