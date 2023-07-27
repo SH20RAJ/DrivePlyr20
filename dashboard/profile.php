@@ -95,16 +95,22 @@
       </div>
       <div class="col-lg-6">
         <div class="form-group">
+          <label class="form-control-label" for="input-name">Name</label>
+          <input type="text" id="input-name" class="form-control" placeholder="Name" name="name" value="" required>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
           <label class="form-control-label" for="input-password">Password</label>
-          <input type="password" id="input-password" class="form-control" placeholder="Password" name="password" required>
+          <input type="password" id="input-password" class="form-control" placeholder="password" name="password" required>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="form-group">
-          <label class="form-control-label" for="input-icon-url">Icon URL</label>
-          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="iconUrl" value="" required>
+          <label class="form-control-label" for="input-icon-url">Avatar</label>
+          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="avatar" value="" required>
         </div>
       </div>
     </div>
