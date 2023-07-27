@@ -3,9 +3,9 @@ session_start();
 require_once '../conn.php'; // Adjust the path to conn.php based on its location
 
 // Sample data for testing
-$email = 'test@gmail.com';
-$fullName = 'John Doe';
-$profilePicture = 'https://example.com/avatar.jpg';
+$email = $_POST['email'];
+$fullName = $_POST['fullName'];
+$profilePicture = $_POST['profilePicture'];
 
 // Validate data (you should implement proper validation based on your requirements)
 
