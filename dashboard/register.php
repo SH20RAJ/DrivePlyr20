@@ -1,10 +1,10 @@
 
   <?php 
   session_start();
-  if(isset($_SESSION['id'])){
-    header('Location: ../dashboard/');
-    exit;
-  }
+  // if(isset($_SESSION['id'])){
+  //   header('Location: ../dashboard/');
+  //   exit;
+  // }
   include 'head.php' 
   
   ?>
