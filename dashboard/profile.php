@@ -5,7 +5,48 @@
 
   <?php 
   include 'head.php';
-  ?>
+
+include '../conn.php'; // Replace with the file containing your database connection code
+
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+        // Validate and sanitize the ID (you should implement this)
+
+        // Prepare the SQL query
+        $sql = "SELECT * FROM users WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+
+        // Execute the query
+        $stmt->execute();
+
+        // Get the result
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            // Fetch user details
+            $userDetails = $result->fetch_assoc();
+            $name = $userDetails['name'];
+            $username = $userDetails['username'] ;
+            $email = $userDetails['email'];
+            $avatar = $userDetails['avatar'] || 'https://i.imgur.com/n5MBy0m.jpg';
+        } else {
+            echo "User not found.";
+        }
+
+        // Close the statement and database connection
+        $stmt->close();
+        $conn->close();
+    } else {
+        echo "Invalid request: No user ID provided.";
+    }
+} else {
+    echo "Invalid request method.";
+}
+?>
+
 </head>
 <body>
   <!-- Sidenav -->
@@ -25,11 +66,11 @@
                         <!-- Circular logo with background image -->
                         <div class="user-logo mx-auto mb-4">
                           <!-- Replace 'logo.png' with the actual logo image URL -->
-                          <img src="https://i.imgur.com/n5MBy0m.jpg" alt="Logo">
+                          <img src="<?php echo $avatar ?>" alt="Logo">
                         </div>
 
                         <!-- User Name -->
-                        <h4 class="card-title">John Doe</h4>
+                        <h4 class="card-title"><?php echo $name ?></h4>
 
                         <!-- Website -->
                         <p class="card-text"><a href="https://appspages.online" target="_blank">www.appspages.online</a></p>
@@ -72,14 +113,14 @@
               </div>
             </div>
             <div class="card-body">
-            <form class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
+            <form id="userupdate" class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
   <h6 class="heading-small text-muted mb-6">Update User Information</h6>
   <div class="pl-lg-4">
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
           <label class="form-control-label" for="input-username">User Name</label>
-          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="" type="text" required>
+          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="<?php echo $username ?>" type="text" required>
           <div class="invalid-feedback">
             Please enter a valid user name.
           </div>
@@ -90,13 +131,13 @@
       <div class="col-lg-6">
         <div class="form-group">
           <label class="form-control-label" for="input-email">Email</label>
-          <input type="email" id="input-email" class="form-control" placeholder="Email" name="email" value="" required>
+          <input type="email" id="input-email" class="form-control" placeholder="Email" name="email" value="<?php echo $email ?>" required>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
           <label class="form-control-label" for="input-name">Name</label>
-          <input type="text" id="input-name" class="form-control" placeholder="Name" name="name" value="" required>
+          <input type="text" id="input-name" class="form-control" placeholder="Name" name="name" value="<?php echo $name ?>" required>
         </div>
       </div>
       <div class="col-lg-6">
@@ -110,7 +151,7 @@
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-icon-url">Avatar</label>
-          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="avatar" value="" required>
+          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="avatar" value="<?php echo $avatar ?>" required>
         </div>
       </div>
     </div>
@@ -134,6 +175,35 @@
   <hr class="my-4"></hr>
   <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
 </form>
+
+
+<script>
+    document.getElementById("userupdate").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Replace "your_api_endpoint" with the actual API endpoint URL
+        const apiUrl = "./api/userupdate.php";
+
+        fetch(apiUrl, {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the API response here, if needed
+            console.log(data);
+            alert("User data updated successfully.");
+        })
+        .catch(error => {
+            // Handle errors here, if any
+            console.error("Error updating user data:", error);
+            alert("Error updating user data.");
+        });
+    });
+</script>
 
             </div>
           </div>
