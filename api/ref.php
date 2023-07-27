@@ -4,16 +4,16 @@
 // Check if the "ref" parameter is provided in the URL
 if (isset($_GET['ref'])) {
     // Retrieve the "ref" parameter value
-    $refValue = $_GET['ref'];
+    echo $refValue = $_GET['ref'];
 
     // Get user IP address
-    $userIP = $_SERVER['REMOTE_ADDR'];
+   echo  $userIP = $_SERVER['REMOTE_ADDR'];
 
     // Get current timestamp
-    $timestamp = time();
+   echo  $timestamp = time();
 
     // Get user agent (browser) details
-    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    echo $userAgent = $_SERVER['HTTP_USER_AGENT'];
 
     // Check the connection
     if ($conn->connect_error) {
@@ -21,7 +21,7 @@ if (isset($_GET['ref'])) {
     }
 
     // SQL query to insert data into the 'ref' table
-    $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
+    echo $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
 
     if ($conn->query($sql) === TRUE) {
         // Data inserted successfully
