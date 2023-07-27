@@ -285,7 +285,7 @@ include 'api/ref.php';
         var newURL = currentURL.split('?')[0];
 
         // Update the browser URL without reloading the page
-        window.history.replaceState({}, document.title, newURL);
+       // window.history.replaceState({}, document.title, newURL);
       }
     }
 
