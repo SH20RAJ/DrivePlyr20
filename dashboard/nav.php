@@ -26,7 +26,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="add.php">
-                <i class="ni ni-circle-08 text-yellow"></i>
+                <i class="ni ni-atom text-yellow"></i>
                 <span class="nav-link-text">Add</span>
               </a>
             </li>
@@ -42,6 +42,12 @@
                 <span class="nav-link-text">FAQs</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">
+                <i class="ni ni-key-25 text-info"></i>
+                <span class="nav-link-text">Login</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="icons.php">
                 <i class="ni ni-planet text-orange"></i>
@@ -54,12 +60,7 @@
                 <span class="nav-link-text">Google</span>
               </a>
             </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="register.php">
                 <i class="ni ni-circle-08 text-pink"></i>
