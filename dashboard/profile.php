@@ -6,36 +6,6 @@
   <?php 
   include 'head.php';
   ?>
-  <script>
-    function extractDriveId(url) {
-      // Regular expression pattern to extract Google Drive ID from URL
-      var pattern = /\/d\/([a-zA-Z0-9_-]+)\//;
-      var matches = url.match(pattern);
-      if (matches && matches.length >= 2) {
-        return matches[1];
-      }
-      return null;
-}
-function isDriveLink(url) {
-  return /^https?:\/\/drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+\/view($|\?|\#)/.test(url);
-}
-
-    function checkVideoURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      let videoURL = urlParams.get('url');
-      
-      if (isDriveLink(videoURL)) {
-          document.getElementById('preview').poster = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
-          document.getElementById('input-poster').value = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
-        }
-      videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?url='+videoURL;
-
-      if (videoURL) {
-        document.getElementById('preview').src = videoURL2;
-        document.getElementById('input-url').value = videoURL;
-      }
-    }
-  </script>
 </head>
 <body>
   <!-- Sidenav -->
@@ -48,9 +18,7 @@ function isDriveLink(url) {
     <div class="container-fluid mt-6">
       <div class="row">
         <div class="col-xl-4 order-xl-2">
-          <video id="preview" width="100%" height="" controls>
-            <source src="https://driveplyr.appspages.online/dashboard/api/video.php?url=" type="video/mp4">
-          </video>
+          Card Here
         </div>
         <div class="col-xl-8 order-xl-1">
           <div class="card">
