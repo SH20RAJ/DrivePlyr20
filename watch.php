@@ -171,12 +171,6 @@ $sql = "(SELECT *, 1 as priority
         UNION
         (SELECT *, 0 as priority
          FROM videos
-         WHERE id <> $video_id
-         AND user <> '$video_user'
-         AND (
-             title LIKE CONCAT('%', '$video_title', '%')
-             OR description LIKE CONCAT('%', '$video_description', '%')
-         )
          LIMIT 10)
         ORDER BY priority DESC, RAND()
         LIMIT 10";
