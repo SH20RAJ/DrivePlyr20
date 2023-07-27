@@ -154,7 +154,7 @@ $video_user = $userid; // Replace with the actual video user
 
 // Prepare the SQL query with placeholders for the variables
 $sql = "SELECT id, user, url, poster_url, hosting, date, views, downloads, title, description, allow_download
-        FROM your_table_name
+        FROM videos
         WHERE id <> :video_id
         AND (
             title LIKE CONCAT('%', :video_title, '%')
