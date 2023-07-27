@@ -149,7 +149,7 @@ die();*/
 // Replace 'your_table_name' with the actual table name
 
 // Retrieve the video list from the database
-$user = $_SESSION['id'];
+//$user = $_SESSION['id'];
 
 // Your PHP variables containing the video information
 $video_id = $id; // Replace with the actual video ID
