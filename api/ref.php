@@ -1,6 +1,6 @@
 <?php
 // ref.php
-include '../conn.php';
+//include '../conn.php';
 
 // Check if the "ref" parameter is provided in the URL
 if (isset($_GET['ref'])) {
@@ -21,10 +21,10 @@ if (isset($_GET['ref'])) {
 
     if ($conn->query($sql) === TRUE) {
         // Data inserted successfully
-        echo "Data recorded successfully!";
+       // echo "Data recorded successfully!";
     } else {
         // Error in inserting data
-        echo "Error recording data: " . $conn->error;
+       // echo "Error recording data: " . $conn->error;
     }
 }
 ?>
