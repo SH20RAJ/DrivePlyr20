@@ -159,6 +159,7 @@ $video_user = $userid; // Replace with the actual video user
 
 
 // Prepare the SQL query with placeholders for the variables
+// Prepare the SQL query with placeholders for the variables
 $sql = "(SELECT *, 1 as priority
          FROM videos
          WHERE id <> $video_id
@@ -181,11 +182,19 @@ $sql = "(SELECT *, 1 as priority
          LIMIT 10)
         UNION
         (SELECT *, -1 as priority
-         FROM videos
-         ORDER BY RAND()
-         LIMIT 10)
+         FROM (
+             SELECT *
+             FROM videos
+             WHERE id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user = '$video_user')
+             AND id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user <> '$video_user')
+             ORDER BY RAND()
+             LIMIT 10
+         ) AS random_videos
+         ORDER BY views DESC
+        )
         ORDER BY priority DESC, RAND()
         LIMIT 10";
+
 
 
 // Execute the query
