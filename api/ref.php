@@ -1,8 +1,8 @@
 <?php
 // ref.php
-
+include '../conn.php';
 // Check if the "ref" parameter is provided in the URL
-if (!isset($_GET['ref'])) {
+if (isset($_GET['ref'])) {
     // Retrieve the "ref" parameter value
     $refValue = $_GET['ref'];
 
