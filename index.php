@@ -96,11 +96,11 @@ include 'func.php';
           </div>
           <div class="sidebar__category">
             <i class="material-icons">history</i>
-            <span>History</span>
+            <a href="./search.php?q=driveplyr"><span>Search</span></a>
           </div>
           <div class="sidebar__category">
             <i class="material-icons">play_arrow</i>
-            <span>Your Videos</span>
+            <a href="./dashboard/videos.php"><span>Your Videos</span></a>
           </div>
           <div class="sidebar__category">
             <i class="material-icons">watch_later</i>
