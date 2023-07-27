@@ -1,51 +1,62 @@
-<?php
-
-?>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Integrating Popup Login with Google One Tap API</title>
-    <meta name="google-signin-client_id" content="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com">
-  </head>
-  <body>
-
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <div id="g_id_onload"
-         data-client_id="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com"
-         data-callback="handleCredentialResponse">
-    </div>
-    <div class="g_id_signin" data-type="standard"></div>
- 
+<head>
+    <title>Google Login Form</title>
+</head>
+<body>
+    <h1>Google Login Form</h1>
+    <div id="google-login-button"></div>
     <script>
-      function handleCredentialResponse(response) {
-        if (response.credential) {
-          const credential = response.credential;
-          const jwtToken = credential;
-
-          // Decode and parse the JWT token to access user details
-          const userTokenData = JSON.parse(atob(jwtToken.split('.')[1]));
-
-          // Check if the required user details are available
-          if (userTokenData.email && userTokenData.name) {
-            const email = userTokenData.email;
-            const fullName = userTokenData.name;
-            const profilePicture = userTokenData.picture;
-
-            // Log user details to the console
-            console.log('Email: ' + email);
-            console.log('Full Name: ' + fullName);
-            console.log('Profile Picture: ' + profilePicture);
-            document.write('Full Name: ' + fullName);
-            document.write('Email: ' + email);
-            document.write('Profile Picture: ' + profilePicture);
-            // Perform further actions with the user details as needed
-          } else {
-            console.log('User details not available in the token.');
-          }
-        } else {
-          // Handle the case where no credential is received or user cancels the sign-in
-          console.log('No credential received or user canceled the sign-in.');
+        // Replace YOUR_CLIENT_ID with your actual Google OAuth client ID
+        const CLIENT_ID = '911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com';
+        
+        // Load the Google API client library
+        function loadGoogleApiClient() {
+            const script = document.createElement('script');
+            script.src = 'https://apis.google.com/js/api.js';
+            script.onload = initializeGoogleLogin;
+            document.head.appendChild(script);
         }
-      }
+
+        // Initialize the Google Sign-In client
+        function initializeGoogleLogin() {
+            gapi.load('auth2', () => {
+                gapi.auth2.init({
+                    client_id: CLIENT_ID
+                }).then(() => {
+                    renderGoogleLoginButton();
+                });
+            });
+        }
+
+        // Render the Google login button
+        function renderGoogleLoginButton() {
+            gapi.signin2.render('google-login-button', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'light',
+                'onsuccess': onGoogleLoginSuccess,
+                'onfailure': onGoogleLoginFailure
+            });
+        }
+
+        // Callback function when Google login is successful
+        function onGoogleLoginSuccess(googleUser) {
+            const profile = googleUser.getBasicProfile();
+            console.log('Logged in as: ' + profile.getName());
+            console.log('Email: ' + profile.getEmail());
+            // You can perform further actions here, like sending the user info to the server.
+        }
+
+        // Callback function when Google login fails
+        function onGoogleLoginFailure(error) {
+            console.log('Google login failed:', error);
+        }
+
+        // Load the Google API client library when the page loads
+        window.onload = loadGoogleApiClient;
     </script>
-  </body>
+</body>
 </html>
