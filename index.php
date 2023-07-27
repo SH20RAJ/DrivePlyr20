@@ -39,6 +39,7 @@ include 'func.php';
   <body>
     <?php 
     if(!isset($_SESSION['username'])){
+      echo 'Hii';
       echo `
       <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"
