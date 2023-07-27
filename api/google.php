@@ -45,9 +45,9 @@ if ($user) {
     $profilePicture = preg_replace('/=s\d+-c$/', '', $profilePicture);
 
     // Insert the data into the 'users' table
-    $insertQuery = "INSERT INTO users (name, username, email, avatar, date, last_online_date, ip) VALUES (?, ?, ?, ?, NOW(), NOW(), ?)";
+    $insertQuery = "INSERT INTO users (name, username, email, avatar, date, last_online_date, ip) VALUES (?, ?, ?, ?, NOW(), NOW(), ?, ?)";
     $stmt = $conn->prepare($insertQuery);
-    $stmt->bind_param('sssss', $fullName, $username, $email, $profilePicture, $_SERVER['REMOTE_ADDR']); // Using REMOTE_ADDR to get user's IP
+    $stmt->bind_param('ssssss', $fullName, $username, $email, $profilePicture, $_SERVER['REMOTE_ADDR'], 'google'); // Using REMOTE_ADDR to get user's IP
 
     if ($stmt->execute()) {
         // Data insertion successful
