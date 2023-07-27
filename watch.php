@@ -157,8 +157,7 @@ $video_title = $videoTitle; // Replace with the actual video title
 $video_description = $videoDescription; // Replace with the actual video description
 $video_user = $userid; // Replace with the actual video user
 
-// Prepare the SQL query with placeholders for the variables
-// Prepare the SQL query with placeholders for the variables
+
 $sql = "(SELECT *, 1 as priority
          FROM videos
          WHERE id <> $video_id
@@ -171,6 +170,13 @@ $sql = "(SELECT *, 1 as priority
         UNION
         (SELECT *, 0 as priority
          FROM videos
+         WHERE id <> $video_id
+         AND user <> '$video_user'
+         AND id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user = '$video_user')
+         AND (
+             title LIKE CONCAT('%', '$video_title', '%')
+             OR description LIKE CONCAT('%', '$video_description', '%')
+         )
          LIMIT 10)
         ORDER BY priority DESC, RAND()
         LIMIT 10";
