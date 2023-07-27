@@ -68,8 +68,8 @@ die();*/
       <a class="navbar-brand" href="../../">DrivePlyr</a>
 
       <!-- Responsive Search Bar -->
-      <form id="search" class="form-inline ml-auto">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form id="search" action="../../seach.php" class="form-inline ml-auto">
+        <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
 
