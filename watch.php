@@ -155,9 +155,7 @@ $video_user = $userid; // Replace with the actual video user
 // Prepare the SQL query with placeholders for the variables
 $sql = "SELECT *
         FROM videos
-        WHERE id <> :video_id
-        AND user = :video_user
-        AND (
+        WHERE  (
             title LIKE CONCAT('%', :video_title, '%')
             OR description LIKE CONCAT('%', :video_description, '%')
         )
@@ -166,9 +164,7 @@ $sql = "SELECT *
 // Prepare the statement
 $stmt = $conn->prepare($sql);
 
-// Bind the PHP variables to the placeholders in the query
-$stmt->bindParam(':video_id', $video_id, PDO::PARAM_INT);
-$stmt->bindParam(':video_user', $video_user, PDO::PARAM_INT);
+
 $stmt->bindParam(':video_title', $video_title, PDO::PARAM_STR);
 $stmt->bindParam(':video_description', $video_description, PDO::PARAM_STR);
 
