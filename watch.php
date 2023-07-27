@@ -153,7 +153,7 @@ $video_description = $videoDescription; // Replace with the actual video descrip
 $video_user = $userid; // Replace with the actual video user
 
 // Prepare the SQL query with placeholders for the variables
-$sql = "SELECT id, user, url, poster_url, hosting, date, views, downloads, title, description, allow_download
+$sql = "SELECT *
         FROM videos
         WHERE id <> :video_id
         AND (
