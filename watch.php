@@ -318,10 +318,10 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
   <i class="fab fa-twitter fa-lg"></i>
 </a>
 
-<!-- Google -->
+<!-- Google
 <a style="color: #dd4b39;" href="#!" role="button" onclick="shareToGoogle(); return false;">
   <i class="fab fa-google fa-lg"></i>
-</a>
+</a> -->
 
 <!-- Instagram -->
 <a style="color: #ac2bac;" href="#!" role="button" onclick="shareToInstagram(); return false;">
