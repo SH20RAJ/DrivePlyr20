@@ -159,7 +159,7 @@ $video_user = $userid; // Replace with the actual video user
 
 // Prepare the SQL query with placeholders for the variables
 $sql = "SELECT *
-        FROM your_table_name
+        FROM videos
         WHERE id <> $video_id
         AND user = '$video_user'
         AND (
