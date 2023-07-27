@@ -26,10 +26,16 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="add.php">
-                <i class="ni ni-single-02 text-yellow"></i>
+                <i class="ni ni-circle-08 text-yellow"></i>
                 <span class="nav-link-text">Add</span>
               </a>
-            </li>  
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Profile</span>
+              </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="new.php">
                 <i class="ni ni-planet text-orange"></i>
