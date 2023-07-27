@@ -1,7 +1,9 @@
 <?php
 session_start();
+
+// Check if the user is logged in (session is set)
+$isLoggedIn = isset($_SESSION['id']);
 include 'func.php';
-$n = $_SESSION['username'];
 ?>
 <html lang="en">
   <head>
@@ -38,7 +40,7 @@ $n = $_SESSION['username'];
   </script>
   </head>
   <body>
-  <?php if (!isset($n): ?>
+  <?php if (!isset($isLoggedIn): ?>
 
 
       <script src="https://accounts.google.com/gsi/client" async defer></script>
