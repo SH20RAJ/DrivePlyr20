@@ -15,10 +15,6 @@ if (isset($_GET['ref'])) {
     // Get user agent (browser) details
     $userAgent = $_SERVER['HTTP_USER_AGENT'];
 
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
 
     // SQL query to insert data into the 'ref' table
     $sql = "INSERT INTO ref (ref_value, user_ip, timestamp, user_agent) VALUES ('$refValue', '$userIP', '$timestamp', '$userAgent')";
