@@ -189,7 +189,7 @@ include 'func.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
 $uploader = $_GET['id'];
-$sql = "SELECT * FROM videos where user = $uploader";
+$sql = "SELECT * FROM videos where user = $uploader order by id desc";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
