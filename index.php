@@ -2,7 +2,7 @@
 session_start();
 
 // Check if the user is logged in (session is set)
-$isLoggedIn = isset($_SESSION['id']);
+$isLoggedIn = isset($_SESSION['username']);
 include 'func.php';
 ?>
 <html lang="en">
@@ -41,6 +41,8 @@ include 'func.php';
   </head>
   <body>
   <?php 
+
+
   $html = <<<HTML
       <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"
@@ -104,8 +106,9 @@ include 'func.php';
   </script>
 HTML;
 
+
 if($isLoggedIn){
-echo $html ;
+//echo $html ;
 } else {
   echo 'bxcs';
 }
