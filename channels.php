@@ -147,10 +147,10 @@ include 'func.php';
       </div>
 
       <!-- User Name -->
-      <h4 class="card-title">John Doe</h4>
+      <h4 class="card-title"><?php echo getUser($_GET['id'])[0]->name ; ?></h4>
 
       <!-- Website -->
-      <p class="card-text"><a href="https://www.example.com" target="_blank">www.example.com</a></p>
+      <p class="card-text"><a href="https://appspages.online" target="_blank">www.appspages.online</a></p>
 
       <!-- Follow button (you can replace '#' with the follow action URL) -->
       <button class="btn btn-primary mb-3" onclick="followUser('#')">Follow</button>
