@@ -268,7 +268,7 @@ echo $html;
 
 include 'tracker.php';
 
-include 'api/ref.php';
+//include 'api/ref.php';
 
 
 ?>
