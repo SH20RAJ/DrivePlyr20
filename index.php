@@ -19,6 +19,7 @@ include 'func.php';
     </style>
 <meta name="theme-color" content="#007bff">
 <link rel="manifest" href="manifest.json">
+
 <script>
     // Check if the browser supports the beforeinstallprompt event
     if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
@@ -34,7 +35,6 @@ include 'func.php';
       });
     }
   </script>
-
   </head>
   <body>
     <!-- Header Starts -->
