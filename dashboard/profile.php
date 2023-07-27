@@ -48,26 +48,6 @@ function isDriveLink(url) {
     <div class="container-fluid mt-6">
       <div class="row">
         <div class="col-xl-4 order-xl-2">
-              <style>
-                  /* Custom CSS for the circular logo with background image */
-                  .user-logo {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-                    background-color: #f2f2f2;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    overflow: hidden;
-                    background-image: url('background.jpg'); /* Replace 'background.jpg' with the actual background image URL */
-                    background-size: cover;
-                  }
-                  .user-logo img {
-                    max-width: 100%;
-                    max-height: 100%;
-                  }
-                </style>
-
                   <div class="card">
                     <div class="card-body text-center">
                       <!-- Circular logo with background image -->
@@ -197,5 +177,24 @@ function isDriveLink(url) {
       checkVideoURL();
     });
   </script>
+                <style>
+                  /* Custom CSS for the circular logo with background image */
+                  .user-logo {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background-color: #f2f2f2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    background-image: url('background.jpg'); /* Replace 'background.jpg' with the actual background image URL */
+                    background-size: cover;
+                  }
+                  .user-logo img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                </style>
 </body>
 </html>
