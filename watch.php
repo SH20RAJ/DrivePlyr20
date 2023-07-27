@@ -203,7 +203,7 @@ if (count($result) > 0) {
 } else {
     echo '<p>No videos found.</p>';
 }
-?>
+
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
 //$result = $conn->query($query);   
 
