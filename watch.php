@@ -143,6 +143,7 @@ die();*/
 <div class="col-md-4">
   <h3>Popular Videos</h3>
   <div class="list-group">
+ 
   <?php
 // Assuming you have already established a database connection
 // Replace 'your_table_name' with the actual table name
@@ -209,6 +210,7 @@ if (count($relatedVideos) > 0) {
 $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 //$result = $conn->query($query);
 ?>
+
 
     
     <!-- Add more related videos here -->
