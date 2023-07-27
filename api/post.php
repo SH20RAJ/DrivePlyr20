@@ -15,12 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // or using it for user authentication
 
     // Log the received data
-    file_put_contents('received_data.txt', print_r($data, true));
+    print_r($data, true);
 
     // Send a response to the client
-    echo json_encode(array('success' => true, 'message' => 'Data received successfully.'));
 } else {
     // Invalid request method
-    echo json_encode(array('success' => false, 'message' => 'Invalid request method.'));
 }
 ?>
