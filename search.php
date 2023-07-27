@@ -54,9 +54,9 @@ include 'func.php';
       </div>
 
       <div class="header__search">
-        <form action="">
-          <input type="text" placeholder="Search" />
-          <button><i class="material-icons">search</i></button>
+      <form action="search.php">
+          <input name="q" type="text" placeholder="Search" value="<?php echo $_GET['q'] ?>"/>
+          <button type="submit"><i class="material-icons">search</i></button>
         </form>
       </div>
 
