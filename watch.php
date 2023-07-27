@@ -271,7 +271,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
   <!-- ... (previous social media icons) ... -->
 
   <!-- Copy Code Button -->
-  <button onclick="copyCodeToClipboard()">Copy Code</button>
+  <button class="btn btn-success" onclick="copyCodeToClipboard()">Copy Code</button>
 </center>
 
 <pre>
