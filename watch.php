@@ -276,53 +276,70 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 
 <center>
-  <!-- Telegram -->
-  <a style="color: #ac2bac;" href="javascript:void(0);" onclick="shareOnTelegram()" role="button">
-    <i class="fab fa-telegram fa-lg"></i>
-  </a>
 
-  <!-- Facebook -->
-  <a style="color: #3b5998;" href="javascript:void(0);" onclick="shareOnFacebook()" role="button">
-    <i class="fab fa-facebook-f fa-lg"></i>
-  </a>
+<!-- Telegram -->
+<a style="color: #ac2bac;" href="#!" role="button" onclick="shareToTelegram(); return false;">
+  <i class="fab fa-telegram fa-lg"></i>
+</a>
 
-  <!-- Twitter -->
-  <a style="color: #55acee;" href="javascript:void(0);" onclick="shareOnTwitter()" role="button">
-    <i class="fab fa-twitter fa-lg"></i>
-  </a>
+<!-- Facebook -->
+<a style="color: #3b5998;" href="#!" role="button" onclick="shareToFacebook(); return false;">
+  <i class="fab fa-facebook-f fa-lg"></i>
+</a>
 
-  <!-- Google -->
-  <a style="color: #dd4b39;" href="javascript:void(0);" onclick="shareOnGoogle()" role="button">
-    <i class="fab fa-google fa-lg"></i>
-  </a>
+<!-- Twitter -->
+<a style="color: #55acee;" href="#!" role="button" onclick="shareToTwitter(); return false;">
+  <i class="fab fa-twitter fa-lg"></i>
+</a>
 
-  <!-- Instagram -->
-  <a style="color: #ac2bac;" href="javascript:void(0);" onclick="shareOnInstagram()" role="button">
-    <i class="fab fa-instagram fa-lg"></i>
-  </a>
-</center>
+<!-- Google -->
+<a style="color: #dd4b39;" href="#!" role="button" onclick="shareToGoogle(); return false;">
+  <i class="fab fa-google fa-lg"></i>
+</a>
+
+<!-- Instagram -->
+<a style="color: #ac2bac;" href="#!" role="button" onclick="shareToInstagram(); return false;">
+  <i class="fab fa-instagram fa-lg"></i>
+</a>
 
 <script>
-  function shareOnTelegram() {
-    shareOnSocialMedia('https://telegram.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title));
+  function shareToTelegram() {
+    shareToSocialMedia('https://telegram.me/share/', getCurrentURLAndTitle());
   }
 
-  function shareOnFacebook() {
-    shareOnSocialMedia('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+  function shareToFacebook() {
+    shareToSocialMedia('https://www.facebook.com/sharer/sharer.php', getCurrentURLAndTitle());
   }
 
-  function shareOnTwitter() {
-    shareOnSocialMedia('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title));
+  function shareToTwitter() {
+    shareToSocialMedia('https://twitter.com/intent/tweet', getCurrentURLAndTitle());
   }
 
-  function shareOnGoogle() {
-    shareOnSocialMedia('https://plus.google.com/share?url=' + encodeURIComponent(window.location.href));
+  function shareToGoogle() {
+    shareToSocialMedia('https://plus.google.com/share', getCurrentURLAndTitle());
   }
 
-  function shareOnInstagram() {
-    shareOnSocial}
+  function shareToInstagram() {
+    shareToSocialMedia('https://www.instagram.com/share/url', getCurrentURLAndTitle());
+  }
 
-    </script>
+  function getCurrentURLAndTitle() {
+    return {
+      url: window.location.href,
+      title: document.title
+    };
+  }
+
+  function shareToSocialMedia(url, data) {
+    var params = Object.keys(data).map(function (key) {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+    }).join('&');
+
+    window.open(url + '?' + params, 'Share', 'width=600,height=400');
+  }
+</script>
+</center>
+
         </div>
 
         <!-- Modal footer -->
