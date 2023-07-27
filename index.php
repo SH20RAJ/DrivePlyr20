@@ -17,9 +17,8 @@ include 'func.php';
     <style>
 
     </style>
-<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#007bff">
-
+<link rel="manifest" href="manifest.json">
     <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
