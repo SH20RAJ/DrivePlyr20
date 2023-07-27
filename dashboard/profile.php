@@ -1,11 +1,42 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
-<?php include 'head.php' ?>
-</head>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdVlx0nAAAAADK-GzZf-wC3NDc1HEpb5mTrVoth"></script>
 
+  <?php 
+  include 'head.php';
+  ?>
+  <script>
+    function extractDriveId(url) {
+      // Regular expression pattern to extract Google Drive ID from URL
+      var pattern = /\/d\/([a-zA-Z0-9_-]+)\//;
+      var matches = url.match(pattern);
+      if (matches && matches.length >= 2) {
+        return matches[1];
+      }
+      return null;
+}
+function isDriveLink(url) {
+  return /^https?:\/\/drive\.google\.com\/file\/d\/[a-zA-Z0-9_-]+\/view($|\?|\#)/.test(url);
+}
+
+    function checkVideoURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let videoURL = urlParams.get('url');
+      
+      if (isDriveLink(videoURL)) {
+          document.getElementById('preview').poster = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
+          document.getElementById('input-poster').value = 'https://lh3.googleusercontent.com/d/'+extractDriveId(videoURL);
+        }
+      videoURL2 = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?url='+videoURL;
+
+      if (videoURL) {
+        document.getElementById('preview').src = videoURL2;
+        document.getElementById('input-url').value = videoURL;
+      }
+    }
+  </script>
+</head>
 <body>
   <!-- Sidenav -->
   <?php include 'nav.php' ?>
@@ -13,102 +44,88 @@
   <div class="main-content" id="panel">
     <!-- Topnav -->
     <?php include 'topnav.php' ?>
-    <!-- Header -->
-    <!-- Header -->
-    <div class="header bg-primary pb-6">
-      <div class="container-fluid">
-        <div class="header-body">
-          <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Google maps</h6>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Maps</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Google maps</li>
-                </ol>
-              </nav>
+    <!-- Page content -->
+    <div class="container-fluid mt-6">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2">
+          <video id="preview" width="100%" height="" controls>
+            <source src="https://driveplyr.appspages.online/dashboard/api/video.php?url=" type="video/mp4">
+          </video>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Edit profile</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <button onclick="document.getElementById('preview').src = document.getElementById('input-url').value ;" class="btn btn-sm btn-primary">Preview</button>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-            </div>
+            <div class="card-body">
+            <form class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
+  <h6 class="heading-small text-muted mb-6">Update User Information</h6>
+  <div class="pl-lg-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-username">User Name</label>
+          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="" type="text" required>
+          <div class="invalid-feedback">
+            Please enter a valid user name.
           </div>
         </div>
       </div>
     </div>
-    <!-- Page content -->
-    <div class="container-fluid mt--6">
-    <!DOCTYPE html>
-<html>
-<head>
-  <title>Update User Information</title>
-  <!-- Add the Bootstrap CSS link here -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-  <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h2 class="mb-4">Update User Information</h2>
-        <form id="updateForm">
-          <!-- User Name -->
-          <div class="form-group">
-            <label for="username">User Name</label>
-            <input type="text" class="form-control" id="username" name="username" required>
-          </div>
-
-          <!-- Email -->
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-
-          <!-- Password -->
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" required>
-          </div>
-
-          <!-- Icon URL -->
-          <div class="form-group">
-            <label for="iconUrl">Icon URL</label>
-            <input type="url" class="form-control" id="iconUrl" name="iconUrl" required>
-          </div>
-
-          <!-- Description -->
-          <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-          </div>
-
-          <!-- Website -->
-          <div class="form-group">
-            <label for="website">Website</label>
-            <input type="url" class="form-control" id="website" name="website" required>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Update</button>
-        </form>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">Email</label>
+          <input type="email" id="input-email" class="form-control" placeholder="Email" name="email" value="" required>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label class="form-control-label" for="input-password">Password</label>
+          <input type="password" id="input-password" class="form-control" placeholder="Password" name="password" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-icon-url">Icon URL</label>
+          <input type="url" id="input-icon-url" class="form-control" placeholder="Icon URL" name="iconUrl" value="" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-description">Description</label>
+          <textarea rows="3" class="form-control" placeholder="Description" name="description" required></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label class="form-control-label" for="input-website">Website</label>
+          <input type="url" id="input-website" class="form-control" placeholder="Website" name="website" value="" required>
+        </div>
       </div>
     </div>
   </div>
+  <hr class="my-4"></hr>
+  <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
+</form>
 
-  <!-- Add the Bootstrap JS and jQuery scripts here -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-    // Handle form submission
-    $("#updateForm").submit(function(event) {
-      event.preventDefault();
-      // Add your update logic here using JavaScript or AJAX to send the data to the server.
-      // For example, you can use jQuery AJAX to send the form data to a server-side script.
-    });
-  </script>
-
-
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Footer -->
       <?php include 'footer.php' ?>
     </div>
@@ -120,10 +137,12 @@
   <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/js-cookie/js.cookie.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-  <!-- Optional JS -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <!-- Argon JS -->
   <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/js/argon.js?v=1.2.0"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      checkVideoURL();
+    });
+  </script>
 </body>
-
 </html>
