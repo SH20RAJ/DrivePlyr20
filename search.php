@@ -126,47 +126,41 @@ include 'func.php';
         <div class="videos__container">
         <?php
 include 'conn.php';
+
 // Sanitize the search query to prevent SQL injection
-echo $searchQuery = $_GET['q'];
+$searchQuery = $_GET['q'];
 $searchQuery = '%' . $searchQuery . '%';
 
 // Prepare the SQL query with placeholders for the search query
 $sql = "SELECT *
         FROM videos
-        WHERE title LIKE :search_query
-        OR description LIKE :search_query
+        WHERE title LIKE '$searchQuery'
+        OR description LIKE '$searchQuery'
         LIMIT 10";
 
-// Prepare the statement
-$stmt = $conn->prepare($sql);
-
-// Bind the search query to the placeholder in the query
-$stmt->bindParam(':search_query', $searchQuery, PDO::PARAM_STR);
-
 // Execute the query
-$stmt->execute();
+$result = mysqli_query($conn, $sql);
 
-// Fetch the results into an array
-$searchResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-if (count($searchResults) > 0) {
-    // Loop through each video and generate the table rows
-    foreach ($searchResults as $row) {
+// Check if the query was successful and has results
+if ($result && mysqli_num_rows($result) > 0) {
+    // Loop through each video and generate the HTML for related video thumbnails
+    while ($row = mysqli_fetch_assoc($result)) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
         $videoPosterURL = $row['poster_url'] ?: 'https://driveplyr.appspages.online/dashboard/api/Image_not_available.png';
-        $videoStatus = 'Public';//$row['status'];
+        $videoStatus = 'Public'; //$row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
-        $videoScore = '100%';//$row['progress'];
+        $videoScore = '100%'; //$row['progress'];
         $userid = $row['user'];
 
-        echo '          <!-- Single Video starts -->
+        echo '
+        <!-- Single Video starts -->
         <div class="video">
           <div class="video__thumbnail">
-          <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-          <img src="'.$videoPosterURL.'" alt="" />
-          </a>
+            <a href="watch/' . $videoId . '/' . generateSlug($videoTitle) . '">
+              <img src="' . $videoPosterURL . '" alt="" />
+            </a>
           </div>
           <div class="video__details">
             <div class="author">
@@ -174,17 +168,16 @@ if (count($searchResults) > 0) {
             </div>
             <div class="title">
               <h3>
-              <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-                '.$videoTitle.'
-              </a>
-                </h3>
-              <a href="channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
-              <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
+                <a href="watch/' . $videoId . '/' . generateSlug($videoTitle) . '">
+                  ' . $videoTitle . '
+                </a>
+              </h3>
+              <a href="channel/' . $userid . '">' . getUser($userid)[0]->name . '</a>
+              <span>' . formatViewsCount($videoViews) . ' Views • ' . convertToRelativeTime($row['date']) . '</span>
             </div>
           </div>
         </div>
-        <!-- Single Video Ends -->
-';
+        <!-- Single Video Ends -->';
     }
 } else {
     echo '<p>No videos found.</p>';
