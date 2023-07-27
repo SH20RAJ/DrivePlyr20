@@ -45,7 +45,7 @@
             <li class="nav-item">
               <a class="nav-link" href="logout.php">
                 <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
+                <span class="nav-link-text">Logout</span>
               </a>
             </li>
             <!-- <li class="nav-item">
