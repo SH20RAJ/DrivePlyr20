@@ -274,28 +274,55 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 </pre>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
 <center>
-<!-- Facebook -->
-<a style="color: #3b5998;" href="#!" role="button"
-  ><i class="fab fa-facebook-f fa-lg"></i
-></a>
+  <!-- Telegram -->
+  <a style="color: #ac2bac;" href="javascript:void(0);" onclick="shareOnTelegram()" role="button">
+    <i class="fab fa-telegram fa-lg"></i>
+  </a>
 
-<!-- Twitter -->
-<a style="color: #55acee;" href="#!" role="button"
-  ><i class="fab fa-twitter fa-lg"></i
-></a>
+  <!-- Facebook -->
+  <a style="color: #3b5998;" href="javascript:void(0);" onclick="shareOnFacebook()" role="button">
+    <i class="fab fa-facebook-f fa-lg"></i>
+  </a>
 
-<!-- Google -->
-<a style="color: #dd4b39;" href="#!" role="button"
-  ><i class="fab fa-google fa-lg"></i
-></a>
+  <!-- Twitter -->
+  <a style="color: #55acee;" href="javascript:void(0);" onclick="shareOnTwitter()" role="button">
+    <i class="fab fa-twitter fa-lg"></i>
+  </a>
 
-<!-- Instagram -->
-<a style="color: #ac2bac;" href="#!" role="button"
-  ><i class="fab fa-instagram fa-lg"></i
-></a>
+  <!-- Google -->
+  <a style="color: #dd4b39;" href="javascript:void(0);" onclick="shareOnGoogle()" role="button">
+    <i class="fab fa-google fa-lg"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a style="color: #ac2bac;" href="javascript:void(0);" onclick="shareOnInstagram()" role="button">
+    <i class="fab fa-instagram fa-lg"></i>
+  </a>
 </center>
 
+<script>
+  function shareOnTelegram() {
+    shareOnSocialMedia('https://telegram.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title));
+  }
+
+  function shareOnFacebook() {
+    shareOnSocialMedia('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+  }
+
+  function shareOnTwitter() {
+    shareOnSocialMedia('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title));
+  }
+
+  function shareOnGoogle() {
+    shareOnSocialMedia('https://plus.google.com/share?url=' + encodeURIComponent(window.location.href));
+  }
+
+  function shareOnInstagram() {
+    shareOnSocial}
+
+    </script>
         </div>
 
         <!-- Modal footer -->
