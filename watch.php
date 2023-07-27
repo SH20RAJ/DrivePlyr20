@@ -156,6 +156,7 @@ $video_user = $userid; // Replace with the actual video user
 $sql = "SELECT *
         FROM videos
         WHERE id <> :video_id
+        AND user = :video_user
         AND (
             title LIKE CONCAT('%', :video_title, '%')
             OR description LIKE CONCAT('%', :video_description, '%')
@@ -167,9 +168,9 @@ $stmt = $conn->prepare($sql);
 
 // Bind the PHP variables to the placeholders in the query
 $stmt->bindParam(':video_id', $video_id, PDO::PARAM_INT);
+$stmt->bindParam(':video_user', $video_user, PDO::PARAM_INT);
 $stmt->bindParam(':video_title', $video_title, PDO::PARAM_STR);
 $stmt->bindParam(':video_description', $video_description, PDO::PARAM_STR);
-$stmt->bindParam(':video_user', $video_user, PDO::PARAM_STR);
 
 // Execute the query
 $stmt->execute();
@@ -204,11 +205,10 @@ if (count($result) > 0) {
     echo '<p>No videos found.</p>';
 }
 
-$query = 'UPDATE videos SET views = views + 1 WHERE id = '. $id .'';
-//$result = $conn->query($query);   
-
+// Uncomment and execute the update query to increment views count
+$query = 'UPDATE videos SET views = views + 1 WHERE id = ' . $video_id;
+//$result = $conn->query($query);
 ?>
-
 
     
     <!-- Add more related videos here -->
