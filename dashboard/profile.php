@@ -39,7 +39,77 @@
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
-      
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Update User Information</title>
+  <!-- Add the Bootstrap CSS link here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="mb-4">Update User Information</h2>
+        <form id="updateForm">
+          <!-- User Name -->
+          <div class="form-group">
+            <label for="username">User Name</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+
+          <!-- Icon URL -->
+          <div class="form-group">
+            <label for="iconUrl">Icon URL</label>
+            <input type="url" class="form-control" id="iconUrl" name="iconUrl" required>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+          </div>
+
+          <!-- Website -->
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" class="form-control" id="website" name="website" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add the Bootstrap JS and jQuery scripts here -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Handle form submission
+    $("#updateForm").submit(function(event) {
+      event.preventDefault();
+      // Add your update logic here using JavaScript or AJAX to send the data to the server.
+      // For example, you can use jQuery AJAX to send the form data to a server-side script.
+    });
+  </script>
+</body>
+</html>
+
       <!-- Footer -->
       <?php include 'footer.php' ?>
     </div>
