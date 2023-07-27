@@ -162,11 +162,11 @@ include 'func.php';
           <p>Followers</p>
         </div>
         <div class="col">
-          <h5>500</h5>
+          <h5><?php echo getUser($_GET['id'])[0]->name ; ?></h5>
           <p>Views</p>
         </div>
         <div class="col">
-          <h5>50</h5>
+          <h5><?php echo getUser($_GET['id'])[0]->name ; ?></h5>
           <p>Videos</p>
         </div>
       </div>
