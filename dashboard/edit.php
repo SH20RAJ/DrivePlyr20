@@ -135,7 +135,7 @@ die();*/
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-poster">Poster URL</label>
+                                            <label class="form-control-label" for="input-poster">Poster URL - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/image-uploader">Get Image Link</a></label>
                                             <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="<?php echo $videoPosterURL; ?>">
                                         </div>
                                     </div>
