@@ -31,10 +31,6 @@
           console.log('Email: ' + email);
           console.log('Full Name: ' + fullName);
           console.log('Profile Picture: ' + profilePicture);
-          document.write('Full Name: ' + fullName);
-          document.write('Email: ' + email);
-          document.write('Profile Picture: ' + profilePicture);
-          
           // Perform further actions with the user details as needed
           // Now, let's post the data to the server using fetch
           const url = 'api/google.php'; // Replace this with the correct endpoint URL
