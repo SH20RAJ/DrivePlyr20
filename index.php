@@ -278,7 +278,7 @@ include 'tracker.php';
       // Check if the "ref" parameter is present in the URL
       if (refParam) {
         // Post the "ref" parameter to the API
-        const apiUrl = "https://example-api.com/post-ref";
+        const apiUrl = "api/ref.php";
         const postData = { ref: refParam };
 
         fetch(apiUrl, {
