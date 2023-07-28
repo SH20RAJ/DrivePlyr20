@@ -96,7 +96,10 @@ die();*/
               <button class="btn btn-sm btn-outline-danger">Messege</button>
             </div>
           </div>
-        <p><?php echo $videoDescription ?></p>
+          
+          <script id="dsq-count-scr" src="//driveplyr.disqus.com/count.js" async></script>
+          
+          <p><?php echo $videoDescription ?></p>
 <?php echo $views ?> Views
                 <!-- Additional Features -->
                  <div class="mt-4">
