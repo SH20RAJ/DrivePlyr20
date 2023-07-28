@@ -34,6 +34,7 @@ if ($user) {
     $_SESSION['name'] = $user['name'];
 
     echo json_encode(array('success' => true, 'message' => 'User logged in successfully.'));
+    $data['Type'] = 'User Login';
 } else {
     // User does not exist, insert the data into the 'users' table
 
@@ -57,9 +58,11 @@ $stmt->bind_param('sssss', $fullName, $username, $email, $profilePicture, $_SERV
         $_SESSION['name'] = $fullName;
 
         echo json_encode(array('success' => true, 'message' => 'New user registered and logged in.'));
+        $data['Type'] = 'New User Login';
     } else {
         // Data insertion failed
         echo json_encode(array('success' => false, 'message' => 'Failed to add data to database.'));
+        $data['Type'] = 'Failed to insert into db';
     }
 }
 //<?php
