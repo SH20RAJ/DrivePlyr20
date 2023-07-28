@@ -79,7 +79,7 @@ die();*/
       <!-- Video Player Column -->
       <div class="col-md-8">
         <div class="embed-responsive embed-responsive-16by9 nomp">
-          <div class='sticky' id="driveplyr<?php echo $id ?>"></div>
+          <div class='sticky' id="myHeader driveplyr<?php echo $id ?>"></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
@@ -388,6 +388,20 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     window.open(url + '?' + params, 'Share', 'width=600,height=400');
   }
 </script>
+    <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+    </script>
 </center>
 
         </div>
