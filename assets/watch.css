@@ -6,10 +6,11 @@ h1, h2, h3, h4, h5, h6 {
   .list-group-item,.col-md-4 ,col-md-8{
     padding:1px;
   }
+    .nomp { margin : 0px ; padding : 0px ;}
 }
 @media (max-width: 600px) {
     #search {
-        width:200px;
+        width:100%;
     }
     .hideonmobile { display:none;}
 }
