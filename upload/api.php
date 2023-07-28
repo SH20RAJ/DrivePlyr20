@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Create the release using GitHub API
         $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
         $releaseData = [
-            'tag_name' => 'v1.0.0', // Replace this with your desired release tag/version
-            'name' => 'Release v1.0.0', // Replace this with your desired release name
+            'tag_name' => 'v1.ef0.0', // Replace this with your desired release tag/version
+            'name' => 'Releaseefw v1.0.0', // Replace this with your desired release name
             'body' => 'Release notes and description go here.', // Replace this with your desired release description
             'draft' => false,
             'prerelease' => false,
