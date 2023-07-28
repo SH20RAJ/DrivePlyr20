@@ -22,6 +22,19 @@ function generateSlug($string) {
 }
 
 
+function youtubeLikeDescription($text) {
+    // Convert URLs to clickable links
+    $text = preg_replace('/\b(?:https?|ftp):\/\/\S+\b/', '<a href="$0" target="_blank">$0</a>', $text);
+
+    // Markdown support: bold, italic, and code blocks
+    $text = preg_replace('/(\*\*|__)(.*?)\1/', '<strong>$2</strong>', $text);
+    $text = preg_replace('/(\*|_)(.*?)\1/', '<em>$2</em>', $text);
+    $text = preg_replace('/`([^`\n]+)`/', '<code>$1</code>', $text);
+
+    // Additional Markdown support can be added here as needed
+
+    return $text;
+}
 
 
 function convertToRelativeTime($dateString) {

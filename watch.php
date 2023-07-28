@@ -97,7 +97,7 @@ die();*/
             </div>
           </div>
 
-          <p><?php echo $videoDescription ?></p>
+          <p><?php echo youtubeLikeDescription($videoDescription) ?></p>
 <?php echo $views ?> Views
                 <!-- Additional Features -->
                  <div class="mt-4">

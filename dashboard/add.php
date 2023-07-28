@@ -98,7 +98,7 @@ function isDriveLink(url) {
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-description"  data-toggle="tooltip" 
-                        data-original-title="Helpful for SEO of Video">Description</label>
+                        data-original-title="Helpful for SEO of Video - Markdown Support">Description</label>
                         <textarea rows="1" class="form-control" placeholder="Description" name="description" required></textarea>
                       </div>
                     </div>
