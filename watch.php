@@ -54,14 +54,12 @@ die();*/
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/watch.css">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="assets/watch2.css">
+
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
 </head>
 <body>
-  <style>
-    h1, h2, h3, h4, h5, h6 {
-    text-transform: none;
-}
-    </style>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -272,14 +270,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     <!-- Add more related videos here -->
   </div>
 </div>
-<style>
-    .list-group-item {border: none;} 
-    @media (max-width:500px){
-      .list-group-item,.col-md-4 {
-        padding:1px;
-      }
-    }
-  </style>
+
     </div>
   </div>
 
@@ -411,13 +402,6 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     </div>
   </div>
 </div>
-  <style>
-        @media (max-width: 600px) {
-            #search {
-                width:200px;
-            }
-        }
-    </style>
     <!-- Include Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
