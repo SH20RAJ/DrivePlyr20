@@ -96,7 +96,22 @@ die();*/
               <button class="btn btn-sm btn-outline-danger">Messege</button>
             </div>
           </div>
-          <div id="disqus_thread"></div>
+
+          <p><?php echo $videoDescription ?></p>
+<?php echo $views ?> Views
+                <!-- Additional Features -->
+                 <div class="mt-4">
+                  <!-- <button class="btn btn-success">Like</button>
+                  <button class="btn btn-danger">Dislike</button>
+                  <button class="btn btn-info">Download</button> -->
+                  <!-- Button to trigger the modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
+                 <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
+                </div>
+
+        <!-- Comment Section -->
+        <div class="mt-4">                <!-- ShareThis BEGIN <div class="sharethis-inline-reaction-buttons"></div> ShareThis END -->
+        <div id="disqus_thread"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -117,21 +132,6 @@ die();*/
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
           <script id="dsq-count-scr" src="//driveplyr.disqus.com/count.js" async></script>
           
-          <p><?php echo $videoDescription ?></p>
-<?php echo $views ?> Views
-                <!-- Additional Features -->
-                 <div class="mt-4">
-                  <!-- <button class="btn btn-success">Like</button>
-                  <button class="btn btn-danger">Dislike</button>
-                  <button class="btn btn-info">Download</button> -->
-                  <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
-                 <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
-                </div>
-
-        <!-- Comment Section -->
-        <div class="mt-4">                <!-- ShareThis BEGIN <div class="sharethis-inline-reaction-buttons"></div> ShareThis END -->
-
           <!-- <h4>Comments</h4>
           Sample comment 
           <div class="media">
@@ -162,7 +162,7 @@ die();*/
       <!-- Related Videos and Additional Features Column -->
     <!-- Related Videos and Additional Features Column -->
 <div class="col-md-4">
-  <h3>Popular Videos</h3>
+  <h3>Related Videos</h3>
   <div class="list-group">
  
   <?php
