@@ -107,6 +107,14 @@ die();*/
                   <!-- Button to trigger the modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
                  <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
+<?php
+if($videoAllowDownload){
+
+    
+echo '<a href="driveplyr.appspages.online/api/download.php?url='.$videoURL.'"> <button class="btn btn-danger">Download</button></a>
+                     ' ;}
+    ?>
+    
                 </div>
 
         <!-- Comment Section -->
