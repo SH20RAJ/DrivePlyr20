@@ -122,7 +122,7 @@ include 'func.php';
       <!-- Videos Section -->
       <div class="videos">
      <center>
-      <div class="header__search">
+      <div class="">
       <form action="search.php">
           <input name="q" type="text" placeholder="Search" value="<?php echo $_GET['q'] ?>"/>
           <button type="submit"><i class="material-icons">search</i></button>
