@@ -401,7 +401,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
   <style>
         @media (max-width: 600px) {
             #search {
-                width:"60%";
+                width:200px;
             }
         }
     </style>
