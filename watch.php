@@ -130,10 +130,10 @@ die();*/
                 </div>
 
         <!-- Comment Section -->
-        <div class="mt-4">                <!-- ShareThis BEGIN --><div class="sharethis-inline-reaction-buttons"></div><!-- ShareThis END -->
+        <div class="mt-4">                <!-- ShareThis BEGIN <div class="sharethis-inline-reaction-buttons"></div> ShareThis END -->
 
-          <h4>Comments</h4>
-          <!-- Sample comment -->
+          <!-- <h4>Comments</h4>
+          Sample comment 
           <div class="media">
             <img src="http://aninex.com/images/srvc/web_de_icon.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
@@ -142,7 +142,7 @@ die();*/
               <button class="btn btn-sm btn-outline-success mr-2">Like</button>
               <button class="btn btn-sm btn-outline-danger">Dislike</button>
             </div>
-          </div>
+          </div>-->
           <!-- Add more comments here -->
 
           <!-- Comment Input Section -->
