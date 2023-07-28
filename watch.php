@@ -62,7 +62,7 @@ die();*/
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="../../">DrivePlyr</a>
+      <a class="navbar-brand hideonmobile" href="../../">DrivePlyr</a>
 
       <!-- Responsive Search Bar -->
       <form id="search" action="../../search.php" class="form-inline ml-auto">
@@ -78,7 +78,7 @@ die();*/
     <div class="row">
       <!-- Video Player Column -->
       <div class="col-md-8">
-        <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive embed-responsive-16by9 nomp">
           <div class='driveplyr' id="driveplyr<?php echo $id ?>"></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
