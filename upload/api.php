@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
