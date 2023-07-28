@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
@@ -11,12 +11,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = file_get_contents($file['tmp_name']);
     $base64Content = base64_encode($content);
 
+    // Generate a unique tag name based on the current timestamp and a random string
+    $timestamp = time();
+    $randomString = bin2hex(random_bytes(4));
+    $tag = "v1.0.0-{$timestamp}-{$randomString}";
+
     // Create the release using GitHub Releases API
     $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
     $releaseData = [
-        'tag_name' => 'v1.0.0', // Replace this with your desired release tag/version
+        'tag_name' => $tag,
         'target_commitish' => 'main', // Replace this with your desired branch
-        'name' => 'Release v1.0.0', // Replace this with your desired release name
+        'name' => "Release {$tag}", // Use the unique tag name in the release name
         'body' => 'Release notes and description go here.', // Replace this with your desired release description
         'draft' => false,
         'prerelease' => false,
@@ -27,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
         "Content-Type: application/json",
         "Authorization: token {$token}",
+        "User-Agent: My-GitHub-App", // Replace this with your application's name or identifier
     ]);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($releaseData));
@@ -49,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             "Content-Type: application/octet-stream",
             "Authorization: token {$token}",
+            "User-Agent: My-GitHub-App", // Replace this with your application's name or identifier
         ]);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
