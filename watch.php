@@ -175,7 +175,7 @@ die();*/
 // Your PHP variables containing the video information
 $video_id = $id; // Replace with the actual video ID
 $video_title = $videoTitle; // Replace with the actual video title
-$video_description = $videoDescription; // Replace with the actual video description
+$video_description = mysql_real_escape_string($videoDescription); // Replace with the actual video description
 $video_user = $userid; // Replace with the actual video user
 
 
