@@ -1,50 +1,36 @@
 <?php
+$token = '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';
+$repositoryOwner = 'sh20raj';
+$repositoryName = 'cdns20';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $accessToken = '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';
-    $repositoryOwner = 'jokes4ush';
-    $repositoryName = 'music';
+    $name = $_POST['name'];
+    $file = $_FILES['file'];
 
-    $releaseData = array(
-        'tag_name' => 'v1.0.0'.uniqid(), // Replace with your desired tag/version
-        'name' => 'Release Name', // Replace with your desired release name
-        'body' => 'Release description goes here', // Replace with your desired release description
-        'draft' => false,
-        'prerelease' => false
-    );
+    // Prepare the file data for GitHub API upload
+    $content = file_get_contents($file['tmp_name']);
+    $base64Content = base64_encode($content);
 
-    // Step 1: Create the release
-    $ch = curl_init("https://api.github.com/repos/$repositoryOwner/$repositoryName/releases");
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($releaseData));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Authorization: token ' . $accessToken,
-        'User-Agent: YourApp' // Replace with your app's name or identifier
-    ));
+    // Create the file in the GitHub repository using GitHub API
+    $url = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/contents/{$file['name']}";
+    $data = [
+        'message' => 'Upload file via API',
+        'content' => $base64Content,
+    ];
 
-    $result = curl_exec($ch);
-    curl_close($ch);
+    $options = [
+        'http' => [
+            'header'  => "Content-type: application/json\r\nAuthorization: token {$token}",
+            'method'  => 'PUT',
+            'content' => json_encode($data),
+        ],
+    ];
 
-    $releaseData = json_decode($result, true);
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
 
-    // Step 2: Upload the selected file as a release asset
-    $releaseId = $releaseData['id']; // Get the release ID from the previous step
-    $assetFilename = $_FILES['file']['name']; // Get the filename of the uploaded file
-
-    $ch = curl_init("https://uploads.github.com/repos/$repositoryOwner/$repositoryName/releases/$releaseId/assets?name=$assetFilename");
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents($_FILES['file']['tmp_name']));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Authorization: token ' . $accessToken,
-        'Content-Type: application/octet-stream',
-        'User-Agent: YourApp' // Replace with your app's name or identifier
-    ));
-
-    $result = curl_exec($ch);
-    print_r($result);
-    curl_close($ch);
-
-    // You can add additional error handling and success messages here
+    // Return the GitHub API response
+    header('Content-Type: application/json');
+    echo $result;
 }
 ?>
