@@ -29,8 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $context = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
 
-    // Return the GitHub API response
-    header('Content-Type: application/json');
-    echo $result;
+    // Decode the JSON response
+    $response = json_decode($result, true);
+
+    // Check if the upload was successful
+    if (isset($response['content']['download_url'])) {
+        $downloadUrl = $response['content']['download_url'];
+
+        // Return the JSON response with download URL
+        header('Content-Type: application/json');
+        echo json_encode(['success' => true, 'download_url' => $downloadUrl]);
+    } else {
+        // Return the JSON response with the error message
+        header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'error' => 'File upload failed.']);
+    }
 }
 ?>
