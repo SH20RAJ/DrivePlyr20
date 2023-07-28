@@ -152,7 +152,7 @@ if ($result->num_rows > 0) {
         <div class="video">
           <div class="video__thumbnail">
           <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-          <img loading ="lazy" src="'.$videoPosterURL.'" alt="" />
+          <img loading ="lazy" src="'.$videoPosterURL.'" alt="'.$videoTitle.'" />
           </a>
           </div>
           <div class="video__details">
