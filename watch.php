@@ -111,7 +111,7 @@ die();*/
 if($videoAllowDownload){
 
     
-echo '<a href="driveplyr.appspages.online/api/download.php?url='.$videoURL.'"> <button class="btn btn-danger">Download</button></a>
+echo '<a href="https://driveplyr.appspages.online/api/download.php?url='.$videoURL.'"> <button class="btn btn-danger">Download</button></a>
                      ' ;}
     ?>
     
