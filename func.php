@@ -31,10 +31,14 @@ function youtubeLikeDescription($text) {
     $text = preg_replace('/(\*|_)(.*?)\1/', '<em>$2</em>', $text);
     $text = preg_replace('/`([^`\n]+)`/', '<code>$1</code>', $text);
 
+    // Add support for line breaks
+    $text = nl2br($text);
+
     // Additional Markdown support can be added here as needed
 
     return $text;
 }
+
 
 
 function convertToRelativeTime($dateString) {
