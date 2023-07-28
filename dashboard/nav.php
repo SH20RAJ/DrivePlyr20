@@ -48,13 +48,13 @@
                 <span class="nav-link-text">Logout</span>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="icons.php">
+             <li class="nav-item">
+              <a class="nav-link" href="#BETA">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
+                <span class="nav-link-text">SopDrive</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link" href="map.php">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Google</span>
