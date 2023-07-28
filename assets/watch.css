@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list-group-item {border: none;} 
 @media (max-width:500px){
-  .list-group-item,.col-md-4 {
+  .list-group-item,.col-md-4 ,col-md-8{
     padding:1px;
   }
 }
