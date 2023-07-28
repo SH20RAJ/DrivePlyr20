@@ -145,7 +145,7 @@ die();*/
           </div>-->
           <!-- Add more comments here -->
 
-          <!-- Comment Input Section -->
+          <!-- Comment Input Section 
           <div class="mt-4">
             <h4>Leave a Comment</h4>
             <div class="form-group">
@@ -155,7 +155,7 @@ die();*/
               <textarea class="form-control" rows="3" placeholder="Your comment"></textarea>
             </div>
             <button class="btn btn-primary">Submit</button>
-          </div>
+          </div>-->
         </div>
       </div>
 
