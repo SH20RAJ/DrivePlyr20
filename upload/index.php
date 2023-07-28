@@ -1,58 +1,64 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $accessToken = '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';
+    $repositoryOwner = 'jokes4ush';
+    $repositoryName = 'music';
+
+    $releaseData = array(
+        'tag_name' => 'v1.0.0'.uniqid(), // Replace with your desired tag/version
+        'name' => 'Release Name', // Replace with your desired release name
+        'body' => 'Release description goes here', // Replace with your desired release description
+        'draft' => false,
+        'prerelease' => false
+    );
+
+    // Step 1: Create the release
+    $ch = curl_init("https://api.github.com/repos/$repositoryOwner/$repositoryName/releases");
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($releaseData));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Authorization: token ' . $accessToken,
+        'User-Agent: YourApp' // Replace with your app's name or identifier
+    ));
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $releaseData = json_decode($result, true);
+
+    // Step 2: Upload the selected file as a release asset
+    $releaseId = $releaseData['id']; // Get the release ID from the previous step
+    $assetFilename = $_FILES['file']['name']; // Get the filename of the uploaded file
+
+    $ch = curl_init("https://uploads.github.com/repos/$repositoryOwner/$repositoryName/releases/$releaseId/assets?name=$assetFilename");
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents($_FILES['file']['tmp_name']));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Authorization: token ' . $accessToken,
+        'Content-Type: application/octet-stream',
+        'User-Agent: YourApp' // Replace with your app's name or identifier
+    ));
+
+    $result = curl_exec($ch);
+    print_r($result);
+    curl_close($ch);
+
+    // You can add additional error handling and success messages here
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upload to GitHub Releases</title>
+    <title>Upload File to GitHub Releases</title>
 </head>
 <body>
-    <h2>Upload to GitHub Releases</h2>
-    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" id="fileInput" name="fileToUpload" />
-        <input type="submit" value="Upload" />
+    <h1>Upload a File to GitHub Releases</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <button type="submit">Upload</button>
     </form>
-    <div id="progressBarContainer" style="display: none;">
-        <progress id="progressBar" max="100"></progress>
-        <span id="progressPercentage">0%</span>
-    </div>
-    <div id="responseContainer"></div>
-
-    <script>
-        document.getElementById('uploadForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const fileInput = document.getElementById('fileInput');
-            if (fileInput.files.length === 0) {
-                alert('Please select a file to upload.');
-                return;
-            }
-            const file = fileInput.files[0];
-            const formData = new FormData();
-            formData.append('fileToUpload', file);
-
-            // Generate a unique tag name using the current timestamp
-            const tagName = 'v' + Date.now();
-
-            formData.append('tagName', tagName);
-
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'upload.php', true);
-
-            xhr.upload.addEventListener('progress', function (event) {
-                const progressBar = document.getElementById('progressBar');
-                const progressPercentage = document.getElementById('progressPercentage');
-                const progress = Math.round((event.loaded / event.total) * 100);
-                progressBar.value = progress;
-                progressPercentage.innerHTML = `${progress}%`;
-            });
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    const responseContainer = document.getElementById('responseContainer');
-                    responseContainer.innerHTML = xhr.responseText;
-                }
-            };
-
-            xhr.send(formData);
-            document.getElementById('progressBarContainer').style.display = 'block';
-        });
-    </script>
 </body>
 </html>
