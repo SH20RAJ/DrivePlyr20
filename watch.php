@@ -272,7 +272,14 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     <!-- Add more related videos here -->
   </div>
 </div>
-<style>.list-group-item {border: none;}</style>
+<style>.list-group-item {border: none;} 
+@media (max-width:500px){
+  ..list-group-item {
+    padding:0;
+  }
+}
+
+</style>
     </div>
   </div>
 
