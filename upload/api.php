@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
