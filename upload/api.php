@@ -7,94 +7,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $file = $_FILES['file'];
 
-    // Prepare the file data for GitHub API upload
+    // Prepare the file data for GitHub release upload
     $content = file_get_contents($file['tmp_name']);
     $base64Content = base64_encode($content);
 
-    // Create the file in the GitHub repository using GitHub API
-    $fileUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/contents/{$file['name']}";
-    $data = [
-        'message' => 'Upload file via API',
-        'content' => $base64Content,
+    // Create the release using GitHub Releases API
+    $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
+    $releaseData = [
+        'tag_name' => 'v'.time(), // Replace this with your desired release tag/version
+        'target_commitish' => 'main', // Replace this with your desired branch
+        'name' => 'Release v1.0.0'.time(), // Replace this with your desired release name
+        'body' => 'Release notes and description go here.', // Replace this with your desired release description
+        'draft' => false,
+        'prerelease' => false,
     ];
 
     $options = [
         'http' => [
             'header'  => "Content-type: application/json\r\nAuthorization: token {$token}",
-            'method'  => 'PUT',
-            'content' => json_encode($data),
+            'method'  => 'POST',
+            'content' => json_encode($releaseData),
         ],
     ];
 
     $context = stream_context_create($options);
-    $fileResult = file_get_contents($fileUrl, false, $context);
+    $releaseResult = file_get_contents($releaseUrl, false, $context);
 
-    // Decode the JSON response
-    $fileResponse = json_decode($fileResult, true);
+    // Decode the JSON response for the release creation
+    $releaseResponse = json_decode($releaseResult, true);
 
-    // Check if the file upload was successful
-    if (isset($fileResponse['content']['download_url'])) {
-        $fileDownloadUrl = $fileResponse['content']['download_url'];
+    // Check if the release creation was successful
+    if (isset($releaseResponse['id'])) {
+        // Upload the asset (file) to the release using GitHub Releases API
+        $uploadUrl = $releaseResponse['upload_url'];
+        $uploadUrl = str_replace('{?name}', "?name={$file['name']}", $uploadUrl);
 
-        // Create the release using GitHub API
-        $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
-        $releaseData = [
-            'tag_name' => 'v1.ef0.0', // Replace this with your desired release tag/version
-            'name' => 'Releaseefw v1.0.0', // Replace this with your desired release name
-            'body' => 'Release notes and description go here.', // Replace this with your desired release description
-            'draft' => false,
-            'prerelease' => false,
+        $uploadData = [
+            'name' => $file['name'],
         ];
 
         $options = [
             'http' => [
-                'header'  => "Content-type: application/json\r\nAuthorization: token {$token}",
+                'header'  => "Content-type: application/octet-stream\r\nAuthorization: token {$token}",
                 'method'  => 'POST',
-                'content' => json_encode($releaseData),
+                'content' => $content,
             ],
         ];
 
         $context = stream_context_create($options);
-        $releaseResult = file_get_contents($releaseUrl, false, $context);
+        $uploadResult = file_get_contents($uploadUrl, false, $context);
 
-        // Decode the JSON response for the release creation
-        $releaseResponse = json_decode($releaseResult, true);
+        // Decode the JSON response for the asset upload
+        $uploadResponse = json_decode($uploadResult, true);
 
-        // Check if the release creation was successful
-        if (isset($releaseResponse['id'])) {
-            // Attach the uploaded file to the release using GitHub API
-            $uploadUrl = $releaseResponse['upload_url'];
-            $uploadUrl = str_replace('{?name,label}', "?name={$file['name']}", $uploadUrl);
-
-            $uploadData = [
-                'name' => $file['name'],
-                'label' => 'Uploaded File',
-            ];
-
-            $options = [
-                'http' => [
-                    'header'  => "Content-type: application/octet-stream\r\nAuthorization: token {$token}",
-                    'method'  => 'POST',
-                    'content' => $content,
-                ],
-            ];
-
-            $context = stream_context_create($options);
-            $uploadResult = file_get_contents($uploadUrl, false, $context);
-
+        // Check if the asset upload was successful
+        if (isset($uploadResponse['browser_download_url'])) {
             // Return the JSON response with the release details
             header('Content-Type: application/json');
-            echo $uploadResult;
+            echo json_encode(['success' => true, 'release_url' => $releaseResponse['html_url']]);
         } else {
-            // Return the JSON response with the error message for release creation
+            // Return the JSON response with the error message for asset upload
             header('Content-Type: application/json');
-            echo json_encode(['success' => false, 'error' => 'Release creation failed.']);
+            echo json_encode(['success' => false, 'error' => 'Asset upload failed.']);
         }
     } else {
-        // Return the JSON response with the error message for file upload
+        // Return the JSON response with the error message for release creation
         header('Content-Type: application/json');
-        echo json_encode(['success' => false, 'error' => 'File upload failed.']);
+        echo json_encode(['success' => false, 'error' => 'Release creation failed.']);
     }
 }
 ?>
-
