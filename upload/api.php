@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
@@ -62,18 +62,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Check if the asset upload was successful
         if ($uploadInfo['http_code'] === 201 && isset($uploadResponse['browser_download_url'])) {
-            // Return the JSON response with the release details
+            // Return the JSON response with the release details and asset upload response
             header('Content-Type: application/json');
-            echo json_encode(['success' => true, 'release_url' => $releaseResponse['html_url']]);
+            echo json_encode(['success' => true, 'release' => $releaseResponse, 'asset_upload' => $uploadResponse]);
         } else {
-            // Return the JSON response with the error message for asset upload
+            // Return the JSON response with the asset upload error
             header('Content-Type: application/json');
-            echo json_encode(['success' => false, 'error' => 'Asset upload failed.']);
+            echo $uploadResult;
         }
     } else {
-        // Return the JSON response with the error message for release creation
+        // Return the JSON response with the release creation error
         header('Content-Type: application/json');
-        echo json_encode(['success' => false, 'error' => 'Release creation failed.']);
+        echo $releaseResult;
     }
 }
 ?>
