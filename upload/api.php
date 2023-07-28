@@ -29,10 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $context = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
 
-    print_r($result);
     // Decode the JSON response
     $response = json_decode($result, true);
 
-    
+    // Print the JSON response in a readable format
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_PRETTY_PRINT);
 }
 ?>
