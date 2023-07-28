@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
@@ -14,54 +14,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Create the release using GitHub Releases API
     $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
     $releaseData = [
-        'tag_name' => 'v'.time(), // Replace this with your desired release tag/version
+        'tag_name' => 'v1.0.0', // Replace this with your desired release tag/version
         'target_commitish' => 'main', // Replace this with your desired branch
-        'name' => 'Release v1.0.0'.time(), // Replace this with your desired release name
+        'name' => 'Release v1.0.0', // Replace this with your desired release name
         'body' => 'Release notes and description go here.', // Replace this with your desired release description
         'draft' => false,
         'prerelease' => false,
     ];
 
-    $options = [
-        'http' => [
-            'header'  => "Content-type: application/json\r\nAuthorization: token {$token}",
-            'method'  => 'POST',
-            'content' => json_encode($releaseData),
-        ],
-    ];
+    $ch = curl_init($releaseUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json",
+        "Authorization: token {$token}",
+    ]);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($releaseData));
 
-    $context = stream_context_create($options);
-    $releaseResult = file_get_contents($releaseUrl, false, $context);
+    $releaseResult = curl_exec($ch);
+    $releaseInfo = curl_getinfo($ch);
+    curl_close($ch);
 
     // Decode the JSON response for the release creation
     $releaseResponse = json_decode($releaseResult, true);
 
     // Check if the release creation was successful
-    if (isset($releaseResponse['id'])) {
+    if ($releaseInfo['http_code'] === 201 && isset($releaseResponse['id'])) {
         // Upload the asset (file) to the release using GitHub Releases API
         $uploadUrl = $releaseResponse['upload_url'];
         $uploadUrl = str_replace('{?name}', "?name={$file['name']}", $uploadUrl);
 
-        $uploadData = [
-            'name' => $file['name'],
-        ];
+        $ch = curl_init($uploadUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Content-Type: application/octet-stream",
+            "Authorization: token {$token}",
+        ]);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
 
-        $options = [
-            'http' => [
-                'header'  => "Content-type: application/octet-stream\r\nAuthorization: token {$token}",
-                'method'  => 'POST',
-                'content' => $content,
-            ],
-        ];
-
-        $context = stream_context_create($options);
-        $uploadResult = file_get_contents($uploadUrl, false, $context);
+        $uploadResult = curl_exec($ch);
+        $uploadInfo = curl_getinfo($ch);
+        curl_close($ch);
 
         // Decode the JSON response for the asset upload
         $uploadResponse = json_decode($uploadResult, true);
 
         // Check if the asset upload was successful
-        if (isset($uploadResponse['browser_download_url'])) {
+        if ($uploadInfo['http_code'] === 201 && isset($uploadResponse['browser_download_url'])) {
             // Return the JSON response with the release details
             header('Content-Type: application/json');
             echo json_encode(['success' => true, 'release_url' => $releaseResponse['html_url']]);
