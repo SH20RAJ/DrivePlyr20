@@ -26,10 +26,21 @@ function youtubeLikeDescription($text) {
     // Convert URLs to clickable links
     $text = preg_replace('/\b(?:https?|ftp):\/\/\S+\b/', '<a href="$0" target="_blank">$0</a>', $text);
 
-    // Markdown support: bold, italic, and code blocks
+    // Markdown support: bold, italic, code blocks, headers, and lists
     $text = preg_replace('/(\*\*|__)(.*?)\1/', '<strong>$2</strong>', $text);
     $text = preg_replace('/(\*|_)(.*?)\1/', '<em>$2</em>', $text);
     $text = preg_replace('/`([^`\n]+)`/', '<code>$1</code>', $text);
+
+    // Headers (h1 to h6)
+    $text = preg_replace('/^#{1,6}\s+(.*?)$/m', '<h$1>$2</h$1>', $text);
+
+    // Unordered lists
+    $text = preg_replace('/^\*\s+(.*?)$/m', '<li>$1</li>', $text);
+    $text = '<ul>' . preg_replace('/<\/li><li>/', '</li><li>', $text) . '</ul>';
+
+    // Ordered lists
+    $text = preg_replace('/^\d+\.\s+(.*?)$/m', '<li>$1</li>', $text);
+    $text = '<ol>' . preg_replace('/<\/li><li>/', '</li><li>', $text) . '</ol>';
 
     // Add support for line breaks
     $text = nl2br($text);
@@ -38,6 +49,7 @@ function youtubeLikeDescription($text) {
 
     return $text;
 }
+
 
 
 
