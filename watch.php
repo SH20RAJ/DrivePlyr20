@@ -85,7 +85,7 @@ die();*/
           <div id="driveplyr<?php echo $id ?>"></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
-        <h3 class="mt-3"><?php echo $videoTitle ?></h3>
+        <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
         <!-- Sample comment -->
         <div class="media">
             <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
@@ -98,7 +98,7 @@ die();*/
           </div>
 
           <p><?php echo youtubeLikeDescription($videoDescription) ?></p>
-<?php echo $views ?> Views
+
                 <!-- Additional Features -->
                  <div class="mt-4">
                   <!-- <button class="btn btn-success">Like</button>
