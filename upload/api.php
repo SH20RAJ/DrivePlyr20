@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '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';
 $repositoryOwner = 'sh20raj';
 $repositoryName = 'cdns20';
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Generate a unique tag name based on the current timestamp and a random string
     $timestamp = time();
     $randomString = bin2hex(random_bytes(4));
-    $tag = "v1.0.0-{$timestamp}-{$randomString}";
+    $tag = "v1-{$timestamp}-{$randomString}";
 
     // Create the release using GitHub Releases API
     $releaseUrl = "https://api.github.com/repos/{$repositoryOwner}/{$repositoryName}/releases";
