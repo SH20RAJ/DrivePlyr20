@@ -1,6 +1,32 @@
 <?php
 session_start();
 include '../conn.php';
+include 'func.php';
+
+// User ID for which you want to count videos and views
+$userID = $_SESSION['id'];
+
+// Prepare the SQL query to count videos and total views for the specified user
+$sql = "SELECT COUNT(*) AS videoCount, SUM(views) AS totalViews FROM videos WHERE user = $userID";
+
+// Execute the query and get the result
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result === false) {
+    die("Error: " . $conn->error);
+}
+
+// Fetch the row from the result
+$row = $result->fetch_assoc();
+
+// Get the number of videos and total views for the specified user
+$videoCount = $row['videoCount'];
+$totalViews = $row['totalViews'];
+
+$logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar : 'https://i.imgur.com/n5MBy0m.jpg';
+
+
 
 if(!isset($_SESSION['name'])){
   header('Location: login.php');
@@ -88,8 +114,8 @@ $num_users = $num_users['num_users'];
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $num_users ?></span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Videos</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $videoCount ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
