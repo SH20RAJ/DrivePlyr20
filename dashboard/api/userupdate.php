@@ -9,8 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"];
     $email = $_POST["email"];
     $avatar = $_POST["avatar"];
+    $website= $_POST["website"];
+    $description= $_POST["description"];
 
-    $id = $_GET['id'];
+    $id = $_SESSION['id'];
 
     // Validate and sanitize the data (you should implement this)
 
@@ -32,9 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $checkStmt->close();
 
     // Update data in the database
-    $sql = "UPDATE users SET name=?, username=?, password=?, email=?, avatar=? WHERE id=?";
+    $sql = "UPDATE users SET name=?, username=?, password=?, email=?, avatar=?, description=?, website=? WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssi", $name, $username, $password, $email, $avatar, $id);
+    $stmt->bind_param("sssssssi", $name, $username, $password, $email, $avatar, $description, $website, $id);
+    
 
     // Assuming you have an 'id' parameter to identify the user to be updated
     // $id = 1; // No need for this line, as we already retrieved the ID from $_GET['id']
