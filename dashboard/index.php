@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../conn.php';
-include 'func.php';
+include '../func.php';
 
 // User ID for which you want to count videos and views
 $userID = $_SESSION['id'];
