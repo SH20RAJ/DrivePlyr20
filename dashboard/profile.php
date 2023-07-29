@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             // Fetch user details
             $userDetails = $result->fetch_assoc();
             $name = $userDetails['name'];
-            $username = $userDetails['username'] ;
+            echo $username = $userDetails['username'] ;
             $email = $userDetails['email'];
             $avatar = $userDetails['avatar'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
         } else {
