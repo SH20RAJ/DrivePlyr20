@@ -322,6 +322,22 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     alert("Code copied to clipboard!");
   }
 </script>
+           <button id="copyButton" class="btn btn-primary">Copy Link</button>
+
+  <!-- Add Bootstrap JS and custom JavaScript -->
+ <script>
+    document.getElementById("copyButton").addEventListener("click", function() {
+      var currentLink = window.location.href;
+      var tempInput = document.createElement("input");
+      tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+      tempInput.value = currentLink;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("Current link copied to clipboard!");
+    });
+  </script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
