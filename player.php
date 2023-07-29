@@ -18,6 +18,7 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
 include 'conn.php';
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $_GET['id'] .'';
 $result = $conn->query($query);   
+echo '<img src="https://iplogger.com/driveplyrplayer" ></img>';
 include 'dashboard/tracker.php';
-echo '<img src="https://iplogger.com/driveplyrplayer" ></img>'
+
 ?>
