@@ -13,10 +13,11 @@ h1, h2, h3, h4, h5, h6 {
         width:100%;
     }
     .hideonmobile { display:none;}
-}
-.sticky iframe {
+    .sticky iframe {
   position: fixed;
   top: 0;
   width: 100%;
     max-height: 30%;
+    }
 }
+
