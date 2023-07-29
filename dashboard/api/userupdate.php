@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 include '../../conn.php';
-
+ echo $id = $_SESSION['id'];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get the form data
     $name = $_POST["name"];
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $website= $_POST["website"];
     $description= $_POST["description"];
 
-    echo $id = $_SESSION['id'];
+   
 
     // Validate and sanitize the data (you should implement this)
 
