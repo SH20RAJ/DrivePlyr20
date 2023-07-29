@@ -63,6 +63,14 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
 
   </head>
   <body>
+
+
+
+
+
+
+
+  
     <!-- Header Starts -->
     <div class="header">
       <div class="header__left">
