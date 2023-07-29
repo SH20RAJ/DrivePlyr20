@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../../conn.php';
- echo $id = $_SESSION['id'];
+$id = $_SESSION['id'];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get the form data
     $name = $_POST["name"];
@@ -41,9 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Assuming you have an 'id' parameter to identify the user to be updated
     // $id = 1; // No need for this line, as we already retrieved the ID from $_GET['id']
-    $stmt->execute();
+  
 
-    if ($stmt->affected_rows > 0) {
+    if (  $stmt->execute() || $stmt->affected_rows > 0) {
         // Successful update
         echo "User data updated successfully.";
     } else {
