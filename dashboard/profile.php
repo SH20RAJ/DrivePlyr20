@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-description">Description</label>
-          <textarea rows="3" class="form-control" placeholder="Description" name="description" required></textarea>
+          <textarea rows="3" class="form-control" placeholder="Description" name="description" required><?php echo $userDetails['description']; ?></textarea>
         </div>
       </div>
     </div>
@@ -168,7 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-website">Website</label>
-          <input type="url" id="input-website" class="form-control" placeholder="Website" name="website" value="" required>
+          <input type="url" id="input-website" class="form-control" placeholder="Website" name="website" value="<?php echo $userDetails['description']; ?>" required>
         </div>
       </div>
     </div>
