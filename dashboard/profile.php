@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             // Fetch user details
             $userDetails = $result->fetch_assoc();
             $name = $userDetails['name'];
-            $username = $userDetails['username'] ;
+            $user_name = $userDetails['username'] ;
             $email = $userDetails['email'];
             $avatar = $userDetails['avatar'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
         } else {
@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-md-12">
         <div class="form-group">
           <label class="form-control-label" for="input-username">User Name</label>
-          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="<?php echo $user_name ?>" type="text" required>
+          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="<?php echo $email ?>" type="text" required>
           <div class="invalid-feedback">
             Please enter a valid user name.
           </div>
