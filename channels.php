@@ -26,6 +26,8 @@ $totalViews = $row['totalViews'];
 
 $logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar : 'https://i.imgur.com/n5MBy0m.jpg';
 $website = isset(getUser($_GET['id'])[0]->website) ? getUser($_GET['id'])[0]->website : 'https://appspages.com';
+#description
+$description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id'])[0]->description : ' ';
 
 ?>
 <html lang="en">
@@ -72,7 +74,7 @@ $website = isset(getUser($_GET['id'])[0]->website) ? getUser($_GET['id'])[0]->we
       </div>
 
       <div class="header__search">
-        <form action="">
+        <form action="../search.php">
           <input type="text" placeholder="Search" />
           <button><i class="material-icons">search</i></button>
         </form>
@@ -178,6 +180,7 @@ $website = isset(getUser($_GET['id'])[0]->website) ? getUser($_GET['id'])[0]->we
       <!-- Website -->
       <p class="card-text"><a href="<?php echo $website ?>" target="_blank">
       <?php echo $website ?></a></p>
+      <p><?php echo $description ?></p>
 
       <!-- Follow button (you can replace '#' with the follow action URL) -->
       <button class="btn btn-primary mb-3" onclick="followUser('#')">Follow</button>
