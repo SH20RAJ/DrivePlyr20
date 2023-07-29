@@ -79,7 +79,8 @@ die();*/
       <!-- Video Player Column -->
       <div class="col-md-8">
         <div class="embed-responsive embed-responsive-16by9 nomp">
-          <div id="driveplyr<?php echo $id ?>"></div>
+
+          <div id="myHeader"><div id="driveplyr<?php echo $id ?>"></div></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
