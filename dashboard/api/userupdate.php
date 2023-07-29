@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $website= $_POST["website"];
     $description= $_POST["description"];
 
-    $id = $_SESSION['id'];
+    echo $id = $_SESSION['id'];
 
     // Validate and sanitize the data (you should implement this)
 
