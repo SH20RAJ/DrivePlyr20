@@ -213,7 +213,7 @@ $num_users = $num_users['num_users'];
               </div>
             </div>
             <div class="card-body">
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/fqBG4j9mXN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLFcP4G5x1z-pidRuHPFtsW9z9oJs4cwpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
         </div>
