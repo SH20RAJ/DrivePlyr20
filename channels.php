@@ -25,7 +25,7 @@ $videoCount = $row['videoCount'];
 $totalViews = $row['totalViews'];
 
 $logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar : 'https://i.imgur.com/n5MBy0m.jpg';
-
+$website = isset(getUser($_GET['id'])[0]->website) ? getUser($_GET['id'])[0]->website : 'https://appspages.com';
 
 ?>
 <html lang="en">
@@ -176,7 +176,8 @@ $logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar
       <h4 class="card-title"><?php echo getUser($_GET['id'])[0]->name ; ?></h4>
 
       <!-- Website -->
-      <p class="card-text"><a href="https://appspages.online" target="_blank">www.appspages.online</a></p>
+      <p class="card-text"><a href="<?php echo $website ?>" target="_blank">
+      <?php echo $website ?></a></p>
 
       <!-- Follow button (you can replace '#' with the follow action URL) -->
       <button class="btn btn-primary mb-3" onclick="followUser('#')">Follow</button>
