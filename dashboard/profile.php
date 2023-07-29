@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-md-12">
         <div class="form-group">
           <label class="form-control-label" for="input-username">User Name</label>
-          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="<?php echo $email ?>" type="text" required>
+          <input id="input-username" class="form-control" placeholder="User Name" name="username" value="<?php echo $userDetails['username'] ?>" type="text" required>
           <div class="invalid-feedback">
             Please enter a valid user name.
           </div>
