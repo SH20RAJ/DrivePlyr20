@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Edit profile</h3>
+                  <h3 class="mb-0">Update Ads Details</h3>
                 </div>
                 <div class="col-4 text-right">
                   <button onclick="document.getElementById('preview').src = document.getElementById('input-url').value ;" class="btn btn-sm btn-primary">Preview</button>
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </div>
             <div class="card-body">
             <form id="userupdate" class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
-  <h6 class="heading-small text-muted mb-6">Update User Information</h6>
+  <h6 class="heading-small text-muted mb-6">100% Revenue is yours</h6>
   <div class="pl-lg-4">
     <div class="row">
       <!-- ... Other fields ... -->
