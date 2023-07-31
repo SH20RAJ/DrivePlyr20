@@ -31,13 +31,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="map.php">
+              <a class="nav-link" href="ads.php">
                 <i class="ni ni-diamond text-primary"></i>
                 <span class="nav-link-text">Ads</span>
               </a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="#BETA">
+              <a class="nav-link" href="sopdrive.php">
                 <i class="ni ni-book-bookmark text-orange"></i>
                 <span class="nav-link-text">SopDrive</span>
               </a>
