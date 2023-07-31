@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-pre-roll-url">Pre-roll URL</label>
-          <input type="url" id="input-pre-roll-url" class="form-control" placeholder="Paste URL here" name="pre_roll_url" value="<?php echo $preRollURL ?>" required>
+          <input type="url" id="input-pre-roll-url" class="form-control" placeholder="Paste URL here" name="pre_roll_url" value="<?php echo $preRollURL ?>" >
         </div>
       </div>
     </div>
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-mid-roll-url">Mid-roll URL</label>
-          <input type="url" id="input-mid-roll-url" class="form-control" placeholder="Paste URL here" name="mid_roll_url" value="<?php echo $midRollURL ?>" required>
+          <input type="url" id="input-mid-roll-url" class="form-control" placeholder="Paste URL here" name="mid_roll_url" value="<?php echo $midRollURL ?>" >
         </div>
       </div>
     </div>
@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-post-roll-url">Post-roll URL</label>
-          <input type="url" id="input-post-roll-url" class="form-control" placeholder="Paste URL here" name="post_roll_url" value="<?php echo $postRollURL ?>" required>
+          <input type="url" id="input-post-roll-url" class="form-control" placeholder="Paste URL here" name="post_roll_url" value="<?php echo $postRollURL ?>" >
         </div>
       </div>
     </div>
@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-12">
         <div class="form-group">
           <label class="form-control-label" for="input-pause-roll-url">On pause-roll URL</label>
-          <input type="url" id="input-pause-roll-url" class="form-control" placeholder="Paste URL here" name="pause_roll_url" value="<?php echo $pauseRollURL ?>" required>
+          <input type="url" id="input-pause-roll-url" class="form-control" placeholder="Paste URL here" name="pause_roll_url" value="<?php echo $pauseRollURL ?>" >
         </div>
       </div>
     </div>
