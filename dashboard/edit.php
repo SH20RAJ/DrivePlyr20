@@ -107,10 +107,10 @@ die();*/
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-hosting">Hosting</label>
-                                            <input id="input-hosting" class="form-control" name="hosting" readonly placeholder="Do not edit" value="<?php echo $videoHosting; ?>">
+                                            <label class="form-control-label" for="input-allow-download">Allow download</label>
+                                            <input type="checkbox" id="input-allow-download" class="form-control" name="monetization" value="1" <?php if ($videoAllowDownload) echo 'checked'; ?>>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
