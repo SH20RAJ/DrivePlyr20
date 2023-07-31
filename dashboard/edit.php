@@ -104,6 +104,7 @@ die();*/
                                                 Please enter a valid video URL.
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
