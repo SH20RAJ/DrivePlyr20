@@ -109,8 +109,8 @@ die();*/
                                 <div class="row">
                                 <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-allow-download">Allow download</label>
-                                            <input type="checkbox" id="input-allow-download" class="form-control" name="monetization" value="1" <?php if ($videoAllowDownload) echo 'checked'; ?>>
+                                            <label class="form-control-label" for="input-allow-monetization">Monetization</label>
+                                            <input type="checkbox" id="input-allow-monetization" class="form-control" name="monetization" value="1" <?php if ($videoAllowDownload) echo 'checked'; ?>>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
