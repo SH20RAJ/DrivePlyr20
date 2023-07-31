@@ -32,13 +32,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="map.php">
-                <i class="ni ni-pin-3 text-primary"></i>
-                <span class="nav-link-text">Google</span>
+                <i class="ni ni-diamond text-primary"></i>
+                <span class="nav-link-text">Ads</span>
               </a>
             </li> 
             <li class="nav-item">
               <a class="nav-link" href="#BETA">
-                <i class="ni ni-planet text-orange"></i>
+                <i class="ni ni-book-bookmark text-orange"></i>
                 <span class="nav-link-text">SopDrive</span>
               </a>
             </li>
