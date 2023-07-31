@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         const formData = new FormData(form);
 
         // Replace "your_api_endpoint" with the actual API endpoint URL
-        const apiUrl = "./api/userupdate.php";
+        const apiUrl = "./api/ads.php";
 
         fetch(apiUrl, {
             method: "POST",
