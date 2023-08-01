@@ -81,7 +81,7 @@ die();*/
         <div class="embed-responsive embed-responsive-16by9 nomp">
 
           <div id="myHeader"><div id="driveplyr<?php echo $id ?>"></div></div>
-<script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
+<script player="fluid" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
         <!-- Sample comment -->
@@ -302,7 +302,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 <pre>
   <code class="language-html">
     &lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
-    &lt;script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
+    &lt;script player="fluid" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
   </code>
 </pre>
 
