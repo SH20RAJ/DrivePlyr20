@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
       <div class="col-lg-6">
         <div class="form-group">
           <label class="form-control-label" for="input-password">Password</label>
-          <input type="password" id="input-password" class="form-control" placeholder="Enter New Password" name="password" required>
+          <input type="password" id="input-password" class="form-control" placeholder="Enter New Password" name="password" >
         </div>
       </div>
     </div>
