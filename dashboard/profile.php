@@ -192,16 +192,16 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             method: "POST",
             body: formData,
         })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             // Handle the API response here, if needed
             console.log(data);
-            alert("User data updated successfully.");
+            alert(data);
         })
         .catch(error => {
             // Handle errors here, if any
-            console.error("Error updating user data:", error);
-            alert("Error updating user data.");
+            console.error(error);
+            alert(error);
         });
     });
 </script>
