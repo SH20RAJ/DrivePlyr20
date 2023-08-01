@@ -36,6 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $user_name = $userDetails['username'] ;
             $email = $userDetails['email'];
             $avatar = $userDetails['avatar'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
+            $preRollURL = userDetails['pre_roll_url']);
+            $midRollURL = userDetails['mid_roll_url']);
+            $postRollURL = userDetails['post_roll_url']);
+            $pauseRollURL = userDetails['pause_roll_url']);
         } else {
             echo "User not found.";
         }
@@ -114,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
               </div>
             </div>
             <div class="card-body">
-            <form id="userupdate" class="needs-validation" action="api/update_user.php" method="post" enctype="multipart/form-data">
+            <form id="userupdate" class="needs-validation" action="" method="post" enctype="multipart/form-data">
   <h6 class="heading-small text-muted mb-6">100% Revenue is yours</h6>
   <div class="pl-lg-4">
     <div class="row">
