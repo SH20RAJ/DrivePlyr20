@@ -162,7 +162,7 @@ die();*/
                                               <option value="cutesu">CuteSu</option>
                                               <option value="xgplayer">XgPlayer</option>
                                               <option value="flowplayer">Flowplayer</option>
-                                              <option value="fluid">Fluidplayer</option>
+                                              <option value="fluid">Fluidplayer {Earn Money}</option>
                                               <option value="flamingo">Flamingo</option>
                                               <option value="redroselite">RedRoseLite</option>
                                               <option value="none">NONE</option>
