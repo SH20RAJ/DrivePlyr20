@@ -33,13 +33,13 @@ $description = sanitizeInput($_POST['description']);
 $allowDownload = isset($_POST['allow_download']) ? 1 : 0;
 $monetization = isset($_POST['monetization']) ? 1 : 0;
 $posterURL = $_POST['poster_url'];
-
+$player = $_POST['player'];
 
 // Extract the user ID from the session
 $userID = $_SESSION['id'];
 
 // Update the video details in the database
-$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, monetization = $monetization, poster_url = '$posterURL' WHERE id = $id AND user = $userID";
+$updateSql = "UPDATE videos SET url = '$url', title = '$title', description = '$description', allow_download = $allowDownload, monetization = $monetization, player = $player poster_url = '$posterURL' WHERE id = $id AND user = $userID";
 
 if ($conn->query($updateSql) === TRUE) {
     // Video details updated successfully
