@@ -181,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             method: "POST",
             body: formData,
         })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             // Handle the API response here, if needed
             console.log(data);
