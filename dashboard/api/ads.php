@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mid_roll_url = '$midRollURL', 
                 post_roll_url = '$postRollURL', 
                 pause_roll_url = '$pauseRollURL' 
-            WHERE user_id = $user_id";
+            WHERE user = $user_id";
 
     if ($conn->query($sql) === TRUE) {
         // Data updated successfully
