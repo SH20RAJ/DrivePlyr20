@@ -34,6 +34,6 @@ include 'conn.php';
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $_GET['id'] .'';
 $result = $conn->query($query);   
 echo '<img src="https://iplogger.com/driveplyrplayer" style="display:none;"></img>';
-include 'dashboard/tracker.php';
+include 'tracker.php';
 
 ?>
