@@ -38,29 +38,38 @@ width="100%" id="video-id">
 		"primaryColor": "blue",
 		"posterImage": ""
 	},
-	"vastOptions": {
+	<?php if( if($monetization)){
+		echo `
+"vastOptions": {
 		"adList": [
 			{
 				"roll": "preRoll",
-				"vastTag": "<?php echo $preRollURL ?>",
+				"vastTag": "{$preRollURL}",
 				"adText": ""
 			},
 			{
 				"roll": "midRoll",
-				"vastTag": "<?php echo $midRollURL ?>",
+				"vastTag": "{$midRollURL}",
 				"adText": ""
 			},
 			{
 				"roll": "postRoll",
-				"vastTag": "<?php echo $postRollURL ?>",
+				"vastTag": "{$postRollURL}",
 				"adText": ""
 			},
 			{
 				"roll": "onPauseRoll",
-				"vastTag": "<?php echo $PauseRollURL ?>",
+				"vastTag": "{$PauseRollURL}",
 				"adText": ""
 			}
 		],
+
+
+
+
+		`;
+	} ?>
+	
 		"adCTAText": false,
 		"adCTATextPosition": ""
 	}
