@@ -1,10 +1,11 @@
 <?php
 session_start();
 include '../../conn.php';
+
 // Function to sanitize input data to prevent SQL injection
 function sanitize_input($data)
 {
-    //global $conn;
+    global $conn;
     return mysqli_real_escape_string($conn, $data);
 }
 
@@ -17,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pauseRollURL = sanitize_input($_POST['pause_roll_url']);
 
     // Update the data in the users table (assuming you have a primary key, such as user_id)
-    $user_id = $_SESSION['id']; // Replace 1 with the actual user_id for whom you want to update the URLs
-   echo $sql = "UPDATE users SET 
+    $user_id = $_SESSION['id']; // Replace 'id' with the actual session key storing the user_id
+    $sql = "UPDATE users SET 
                 pre_roll_url = '$preRollURL', 
                 mid_roll_url = '$midRollURL', 
                 post_roll_url = '$postRollURL', 
