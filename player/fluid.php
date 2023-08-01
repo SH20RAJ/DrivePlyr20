@@ -39,7 +39,7 @@ width="100%" id="video-id">
 		"posterImage": ""
 	},
 	<?php 
-	if($monetization)){
+	if($monetization){
 		echo `
 "vastOptions": {
 		"adList": [
