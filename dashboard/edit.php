@@ -28,6 +28,7 @@ $videoHosting = $row['hosting'];
 $videoTitle = $row['title'];
 $videoDescription = $row['description'];
 $videoAllowDownload = $row['allow_download'];
+$monetization = $row['monetization'];
 $videoPosterURL = $row['poster_url'];
 /*print_r($row);
 die();*/
