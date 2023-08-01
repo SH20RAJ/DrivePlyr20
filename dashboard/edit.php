@@ -111,7 +111,7 @@ die();*/
                                 <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-allow-monetization" data-toggle="tooltip" data-original-title="Monetization is only supported in Fluid Player">Monetization</label>
-                                            <input type="checkbox" id="input-allow-monetization" class="form-control" value="" name="monetization" <?php if ($videoAllowDownload) echo 'checked'; ?>>
+                                            <input type="checkbox" id="input-allow-monetization" class="form-control" value="1" name="monetization" <?php if ($monetization) echo 'checked'; ?>>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

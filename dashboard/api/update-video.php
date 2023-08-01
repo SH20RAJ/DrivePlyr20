@@ -31,6 +31,7 @@ $url = $_POST['url'];
 $title = $_POST['title'];
 $description = sanitizeInput($_POST['description']);
 $allowDownload = isset($_POST['allow_download']) ? 1 : 0;
+$monetization = isset($_POST['monetization']) ? 1 : 0;
 $posterURL = $_POST['poster_url'];
 
 
