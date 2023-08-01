@@ -41,22 +41,22 @@ width="100%" id="video-id">
 		"adList": [
 			{
 				"roll": "preRoll",
-				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=",
+				"vastTag": "<?php echo $preRollURL ?>",
 				"adText": ""
 			},
 			{
 				"roll": "midRoll",
-				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"vastTag": "<?php echo $midRollURL ?>",
 				"adText": ""
 			},
 			{
 				"roll": "postRoll",
-				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"vastTag": "<?php echo $postRollURL ?>",
 				"adText": ""
 			},
 			{
 				"roll": "onPauseRoll",
-				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"vastTag": "<?php echo $PauseRollURL ?>",
 				"adText": ""
 			}
 		],
