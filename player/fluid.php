@@ -63,7 +63,7 @@
                             },
                             {
                                 "roll": "onPauseRoll",
-                                "vastTag": "' . $PauseRollURL . '",
+                                "vastTag": "' . $pauseRollURL . '",
                                 "adText": ""
                             }
                         ],
