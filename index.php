@@ -37,6 +37,14 @@ include 'func.php';
         });
       });
     }
+
+  window.addEventListener('load', () => {
+      window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        event.prompt();
+      });
+    });
+  
   </script>
   </head>
   <body>
