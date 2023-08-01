@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $user_name = $userDetails['username'] ;
             $email = $userDetails['email'];
             $avatar = $userDetails['avatar'] ?: 'https://i.imgur.com/n5MBy0m.jpg';
-            $preRollURL = userDetails['pre_roll_url']);
-            $midRollURL = userDetails['mid_roll_url']);
-            $postRollURL = userDetails['post_roll_url']);
-            $pauseRollURL = userDetails['pause_roll_url']);
+            $preRollURL = $userDetails['pre_roll_url'];
+            $midRollURL = $userDetails['mid_roll_url'];
+            $postRollURL = $userDetails['post_roll_url'];
+            $pauseRollURL = $userDetails['pause_roll_url'];
         } else {
             echo "User not found.";
         }
