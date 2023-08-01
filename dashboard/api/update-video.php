@@ -2,6 +2,11 @@
 session_start();
 include '../../conn.php';
 
+function sanitizeInput($input) {
+    // Use PHP's built-in functions like htmlspecialchars to encode special characters
+    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+}
+
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     echo "Not Allowed";
@@ -24,7 +29,7 @@ if ($result->num_rows === 0) {
 // Get the form data
 $url = $_POST['url'];
 $title = $_POST['title'];
-$description = $_POST['description'];
+$description = sanitizeInput($_POST['description']);
 $allowDownload = isset($_POST['allow_download']) ? 1 : 0;
 $posterURL = $_POST['poster_url'];
 
