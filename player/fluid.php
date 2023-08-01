@@ -26,7 +26,7 @@ width="100%" id="video-id">
 			"height": null,
 			"width": null
 		},
-		"autoPlay": false,
+		"autoPlay": true,
 		"mute": false,
 		"allowTheatre": true,
 		"playPauseAnimation": true,
