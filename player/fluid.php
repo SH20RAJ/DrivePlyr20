@@ -11,6 +11,7 @@
 <video poster="<?php echo $poster_url ?>" 
 width="100%" id="video-id">
 <source src="<?php echo $videourl ?>" type="video/mp4" />
+
 <script>
     var myFP = fluidPlayer(
         'video-id',	{
@@ -18,7 +19,7 @@ width="100%" id="video-id">
 		"controlBar": {
 			"autoHideTimeout": 3,
 			"animated": true,
-			"autoHide": true
+			"autoHide": false
 		},
 		"htmlOnPauseBlock": {
 			"html": null,
@@ -30,16 +31,37 @@ width="100%" id="video-id">
 		"allowTheatre": true,
 		"playPauseAnimation": true,
 		"playbackRateEnabled": true,
-		"allowDownload": false,
+		"allowDownload": true,
 		"playButtonShowing": true,
-		"fillToContainer": false,
+		"fillToContainer": true,
+		"primaryColor": "blue",
 		"posterImage": ""
 	},
 	"vastOptions": {
-		"adList": [],
+		"adList": [
+			{
+				"roll": "preRoll",
+				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=",
+				"adText": ""
+			},
+			{
+				"roll": "midRoll",
+				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"adText": ""
+			},
+			{
+				"roll": "postRoll",
+				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"adText": ""
+			},
+			{
+				"roll": "onPauseRoll",
+				"vastTag": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostoptimizedpodbumper&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=",
+				"adText": ""
+			}
+		],
 		"adCTAText": false,
 		"adCTATextPosition": ""
 	}
-}
-    );
+});
 </script>

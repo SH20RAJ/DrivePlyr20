@@ -11,10 +11,15 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
  $userDetails = getUser($video->user)['0'];
 
- $preRollURL = $userDetails['pre_roll_url'];
+ if($monetization){
+     $preRollURL = $userDetails['pre_roll_url'];
  $midRollURL = $userDetails['mid_roll_url'];
  $postRollURL = $userDetails['post_roll_url'];
  $pauseRollURL = $userDetails['pause_roll_url'];
+ } else {
+    $pauseRollURL = $postRollURL = $midRollURL = $preRollURL = ' ' ;
+ }
+
 
  if(isset($_GET['player'])){
     $player = $_GET['player'];
