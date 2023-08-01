@@ -13,6 +13,7 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
  $userDetails = getUser($video->user)['0'];
 
+ print_r(userDetails);
  if($monetization){
  $preRollURL = $userDetails['pre_roll_url'];
  $midRollURL = $userDetails['mid_roll_url'];
