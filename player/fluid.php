@@ -5,6 +5,7 @@
   body {
     margin : 0;
     padding: 0;
+	overflow: hidden;
   }
 </style>
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
