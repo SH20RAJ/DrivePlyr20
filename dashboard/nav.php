@@ -37,7 +37,7 @@
               </a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="sopdrive.php">
+              <a class="nav-link" href="https://sopdrive.appspages.online/?ref=AppsPages-DrivePlyr">
                 <i class="ni ni-book-bookmark text-orange"></i>
                 <span class="nav-link-text">SopDrive</span>
               </a>
