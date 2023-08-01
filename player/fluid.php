@@ -38,7 +38,8 @@ width="100%" id="video-id">
 		"primaryColor": "blue",
 		"posterImage": ""
 	},
-	<?php if( if($monetization)){
+	<?php 
+	if($monetization)){
 		echo `
 "vastOptions": {
 		"adList": [
