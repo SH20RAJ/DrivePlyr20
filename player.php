@@ -1,5 +1,5 @@
 <?php
-
+include 'func.php';
 $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashboard/api/video.php?id='.$_GET['id']));
 
  $poster_url = $video->poster_url;
@@ -7,7 +7,14 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  $views = $video->views;
  $downloads = $video->downloads;
  $description = $video->description;
+ $monetization = $video->monetization;
  $videourl = 'https://driveplyr.appspages.online/dashboard/api/getvideo.php?id='.$_GET['id'];
+ $userDetails = getUser($video->user)['0'];
+
+ $preRollURL = $userDetails['pre_roll_url'];
+ $midRollURL = $userDetails['mid_roll_url'];
+ $postRollURL = $userDetails['post_roll_url'];
+ $pauseRollURL = $userDetails['pause_roll_url'];
 
  if(isset($_GET['player'])){
     $player = $_GET['player'];

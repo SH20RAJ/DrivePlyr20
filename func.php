@@ -96,7 +96,7 @@ function convertToRelativeTime($dateString) {
         }
 
 
-   function formatViewsCount($views) {
+function formatViewsCount($views) {
             $suffixes = array('', 'k', 'M', 'B', 'T');
             $suffixIndex = 0;
             
@@ -114,7 +114,7 @@ function convertToRelativeTime($dateString) {
             return $formattedViews;
         }
 
-        function getUser($id) {
+function getUser($id) {
             // Use the $id parameter in the API URL
             $api_url = 'https://driveplyr.appspages.online/dashboard/api/user.php?id=' . $id;
             
