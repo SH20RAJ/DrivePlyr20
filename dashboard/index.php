@@ -3,6 +3,9 @@ session_start();
 include '../conn.php';
 include '../func.php';
 
+if(!isset($_SESSION['name'])){
+  header('Location: login.php');
+}
 // User ID for which you want to count videos and views
 $userID = $_SESSION['id'];
 
@@ -28,9 +31,7 @@ $logo = isset(getUser($_GET['id'])[0]->avatar) ? getUser($_GET['id'])[0]->avatar
 
 
 
-if(!isset($_SESSION['name'])){
-  header('Location: login.php');
-}
+
 $user = $_SESSION['id'];
 // Query to calculate the sum of views
 $query = "SELECT SUM(views) AS totalViews FROM videos WHERE user = ". $user;
