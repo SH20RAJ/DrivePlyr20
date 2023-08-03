@@ -1,4 +1,10 @@
 <?php
+// Set headers to allow cross-origin requests
+header("Access-Control-Allow-Origin: https://codexdindia.blogspot.com");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Credentials: true");
+
 session_start();
 require_once '../conn.php'; // Adjust the path to conn.php based on its location
 // Check if the request method is POST
