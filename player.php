@@ -28,7 +28,7 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
     $player = $_GET['player'];
     include 'player/'.$player.'.php';
 } else {
-    include 'player/fluid.php';
+    include 'player/plyr.php';
 }
 include 'conn.php';
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $_GET['id'] .'';
