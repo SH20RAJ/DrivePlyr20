@@ -81,7 +81,7 @@ die();*/
         <div class="embed-responsive embed-responsive-16by9 nomp">
 
           <div id="myHeader"><div style="overflow:hidden;" id="driveplyr<?php echo $id ?>"></div></div>
-<script player="fluid" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
+<script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
         <!-- Sample comment -->
