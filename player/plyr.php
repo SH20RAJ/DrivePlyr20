@@ -1,56 +1,67 @@
-<?php
-function is_youtube_url($url) {
-    return preg_match('/youtube\.com\/watch\?/', $url) || preg_match('/youtu\.be\//', $url);
+
+<link rel="icon" href="drive-logo.png">
+<title><?php echo $title ?></title>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-function get_youtube_embed_code($url) {
-    $videoId = explode('v=', $url)[1];
-    return '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' . $videoId . '" frameborder="0" allowfullscreen></iframe>';
+.plyr  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;
+  z-index: -1;*/
 }
+</style>
+<!-- Docs styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
 
-$controls = [
-    'play-large',
-    'play',
-    'fast-forward',
-    'progress',
-    'current-time',
-    'duration',
-    'mute',
-    'volume',
-    'captions',
-    'settings',
-    'pip',
-    'airplay',
+<!--Add a Simple HTML5 Video tag-->
+<div id="container">
+  <video controls poster="<?php echo $poster_url ?>" id="vid1">
+    <!-- Video files -->
+    <source src="<?php echo $videourl ?>" type="video/mp4" size="576" />
+
+  </video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
+
+<script>
+  var controls =
+[
+    'play-large', // The large play button in the center
+   // 'restart', // Restart playback
+   // 'rewind', // Rewind by the seek time (default 10 seconds)
+    'play', // Play/pause playback
+    'fast-forward', // Fast forward by the seek time (default 10 seconds)
+    'progress', // The progress bar and scrubber for playback and buffering
+    'current-time', // The current time of playback
+    'duration', // The full duration of the media
+    'mute', // Toggle mute
+    'volume', // Volume control
+    'captions', // Toggle captions
+    'settings', // Settings menu
+    'pip', // Picture-in-picture (currently Safari only)
+    'airplay', // Airplay (currently Safari only)
+    <?php if($video->allow_download) { echo "'download'," ; } ?> // Show a download button with a link to either the current source or a custom URL you specify in your options
+    'fullscreen' // Toggle fullscreen
 ];
 
-echo '<link rel="icon" href="drive-logo.png">';
-echo '<title>' . $title . '</title>';
-echo '<style>';
-// Your CSS styles here
-echo '</style>';
-echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />';
+  const player = new Plyr('#vid1',{controls});
+</script>
 
-echo '<div id="container">';
-if (is_youtube_url($videourl)) {
-    echo '<div class="plyr__video-embed" id="player">';
-    echo get_youtube_embed_code($videourl);
-    echo '</div>';
-} else {
-    echo '<video controls poster="' . $poster_url . '" id="vid1">';
-    echo '<source src="' . $videourl . '" type="video/mp4" size="576" />';
-    echo '</video>';
+<style>
+  :root {
+  --plyr-color-main: #e657ff;
+    --plyr-video-control-color  :#e8ffba;
 }
-echo '</div>';
 
-echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>';
-echo '<script>';
-echo 'var controls = ' . json_encode($controls) . ';';
-echo 'const player = new Plyr(' . (is_youtube_url($videourl) ? '\'#player\'' : '\'#vid1\'') . ', { controls });';
-echo '</script>';
-echo '<style>';
-echo ':root {';
-echo '--plyr-color-main: #e657ff;';
-echo '--plyr-video-control-color: #e8ffba;';
-echo '}';
-echo '</style>';
-?>
+</style>
+
+
