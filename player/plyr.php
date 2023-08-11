@@ -18,43 +18,41 @@ html, body {
   z-index: -1;*/
 }
 </style>
-<!-- Docs styles -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
 
-<!--Add a Simple HTML5 Video tag-->
-<div id="container">
-  <video controls poster="<?php echo $poster_url ?>" id="vid1">
-    <!-- Video files -->
-    <source src="<?php echo $videourl ?>" type="video/mp4" size="576" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
 
-  </video>
-</div>
+    <div id="container">
+        <?php
+        if (is_youtube_url($videourl)) {
+            echo '<div class="plyr__video-embed" id="player">';
+            echo get_youtube_embed_code($videourl);
+            echo '</div>';
+        } else {
+            echo '<video controls poster="' . $poster_url . '" id="vid1">';
+            echo '<source src="' . $videourl . '" type="video/mp4" size="576" />';
+            echo '</video>';
+        }
+        ?>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
+    <script>
+        var controls = [
+            // Your existing controls here
+        ];
 
-<script>
-  var controls =
-[
-    'play-large', // The large play button in the center
-   // 'restart', // Restart playback
-   // 'rewind', // Rewind by the seek time (default 10 seconds)
-    'play', // Play/pause playback
-    'fast-forward', // Fast forward by the seek time (default 10 seconds)
-    'progress', // The progress bar and scrubber for playback and buffering
-    'current-time', // The current time of playback
-    'duration', // The full duration of the media
-    'mute', // Toggle mute
-    'volume', // Volume control
-    'captions', // Toggle captions
-    'settings', // Settings menu
-    'pip', // Picture-in-picture (currently Safari only)
-    'airplay', // Airplay (currently Safari only)
-    <?php if($video->allow_download) { echo "'download'," ; } ?> // Show a download button with a link to either the current source or a custom URL you specify in your options
-    'fullscreen' // Toggle fullscreen
-];
+        const player = new Plyr(isYouTubeVideo() ? '#player' : '#vid1', { controls });
 
-  const player = new Plyr('#vid1',{controls});
-</script>
+        function is_youtube_url(url) {
+            return /youtube\.com\/watch\?/.test(url) || /youtu\.be\//.test(url);
+        }
+
+        function get_youtube_embed_code(url) {
+            var videoId = url.split('v=')[1];
+            return '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+        }
+    </script>
+
 
 <style>
   :root {
