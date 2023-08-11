@@ -243,7 +243,7 @@ if (count($relatedVideos) > 0) {
     foreach ($relatedVideos as $row) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
-        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/'.$videoTitle;
+        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/theme=dark/'.$videoTitle;
         $videoStatus = 'Public'; //$row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];

@@ -149,7 +149,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $videoId = $row['id'];
         $videoTitle = $row['title'];
-        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/'.$videoTitle;
+        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/theme=dark/'.$videoTitle;
         $videoStatus = 'Public';//$row['status'];
         $videoViews = $row['views'];
         $videoDownloads = $row['downloads'];
