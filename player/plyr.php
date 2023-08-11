@@ -20,6 +20,11 @@ html, body {
 </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
+    <?php
+function is_youtube_url($url) {
+    return preg_match('/youtube\.com\/watch\?/', $url) || preg_match('/youtu\.be\//', $url);
+}
+?>
 
     <div id="container">
         <?php
