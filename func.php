@@ -122,4 +122,19 @@ function getUser($id) {
             return $api_response = json_decode(file_get_contents($api_url));
         
         }
-        ?>
+
+
+        function is_youtube_link($url) {
+            return preg_match('/youtube\.com\/watch\?/', $url) || preg_match('/youtu\.be\//', $url);
+        }
+        
+        function youtube_link_to_embed($url) {
+            if (is_youtube_link($url)) {
+                $videoId = explode('v=', $url)[1];
+                return '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' . $videoId . '" frameborder="0" allowfullscreen></iframe>';
+            }
+            return ''; // Return empty string if it's not a YouTube link
+        }
+        
+
+?>

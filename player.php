@@ -23,6 +23,9 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
     $pauseRollURL = $postRollURL = $midRollURL = $preRollURL = ' ' ;
  }
 
+ if(is_youtube_link($video->url)){
+    die('YouTube Video')
+ }
 
  if(isset($_GET['player'])){
     $player = $_GET['player'];
