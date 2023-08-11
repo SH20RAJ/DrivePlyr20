@@ -24,8 +24,8 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
  }
 
  if(is_youtube_link($video->url)){
-    die('YouTube Video');
- }
+    echo youtube_link_to_embed($video->url);
+ } else {
 
  if(isset($_GET['player'])){
     $player = $_GET['player'];
@@ -33,6 +33,10 @@ $video = json_decode(file_get_contents('https://driveplyr.appspages.online/dashb
 } else {
     include 'player/plyr.php';
 }
+
+ }
+
+
 include 'conn.php';
 $query = 'UPDATE videos SET views = views + 1 WHERE id = '. $_GET['id'] .'';
 $result = $conn->query($query);   
