@@ -7,9 +7,6 @@ include 'conn.php';
 include 'func.php';
 // Check if the user is logged in
 
-<?php
-include 'conn.php'; // Include your database connection code here
-
 // Assuming you have established a database connection
 
 // Define the playlist ID you want to fetch
