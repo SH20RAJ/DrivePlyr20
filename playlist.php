@@ -7,6 +7,48 @@ include 'conn.php';
 include 'func.php';
 // Check if the user is logged in
 
+<?php
+include 'conn.php'; // Include your database connection code here
+
+// Assuming you have established a database connection
+
+// Define the playlist ID you want to fetch
+$playlistId = 1; // Replace with the actual playlist ID you want to retrieve
+
+// Fetch the playlist details from the database
+$sql = "SELECT * FROM playlists WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $playlistId);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows === 1) {
+    $playlistData = $result->fetch_assoc();
+
+    // Output the playlist details
+    echo "Playlist ID: " . $playlistData['id'] . "<br>";
+    echo "Name: " . $playlistData['name'] . "<br>";
+    echo "Videos: " . $playlistData['videos'] . "<br>"; // You may need to decode this JSON if it contains video details
+    echo "Date of Creation: " . $playlistData['dateofcreation'] . "<br>";
+    echo "Date of Update: " . $playlistData['dateofupdate'] . "<br>";
+    echo "Views: " . $playlistData['views'] . "<br>";
+
+    // If the 'videos' field contains a JSON array, decode it and get the first video ID
+    $videosArray = json_decode($playlistData['videos'], true);
+    if (!empty($videosArray)) {
+        $firstVideoId = $videosArray[0];
+        echo "First Video ID: " . $firstVideoId . "<br>";
+    } else {
+        echo "No videos in the playlist.";
+    }
+} else {
+    echo "Playlist not found";
+}
+
+die();
+
+
+
 // Get the video ID from the URL parameter
 $id = $_GET['id'];
 
