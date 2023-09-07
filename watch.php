@@ -180,7 +180,7 @@ echo '<a href="https://driveplyr.appspages.online/api/download.php?url='.$videoU
 
 // Your PHP variables containing the video information
 $video_id = $id; // Replace with the actual video ID
-$video_title = $conn->real_escape_string($videoTitl)); // Replace with the actual video title
+$video_title = $conn->real_escape_string($videoTitle); // Replace with the actual video title
 $video_description = $conn->real_escape_string($videoDescription); // Replace with the actual video description
 $video_user = $userid; // Replace with the actual video user
 
