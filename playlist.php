@@ -42,12 +42,10 @@ if ($result->num_rows === 1) {
     echo "Playlist not found";
 }
 
-die();
-
 
 
 // Get the video ID from the URL parameter
-$id = $_GET['id'];
+$id = $firstVideoId;
 
 // Fetch the video information from the database
 $sql = "SELECT * FROM videos where id = $id";
