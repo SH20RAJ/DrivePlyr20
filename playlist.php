@@ -21,15 +21,6 @@ $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
     $playlistData = $result->fetch_assoc();
-
-    // Output the playlist details
-    echo "Playlist ID: " . $playlistData['id'] . "<br>";
-    echo "Name: " . $playlistData['name'] . "<br>";
-    echo "Videos: " . $playlistData['videos'] . "<br>"; // You may need to decode this JSON if it contains video details
-    echo "Date of Creation: " . $playlistData['dateofcreation'] . "<br>";
-    echo "Date of Update: " . $playlistData['dateofupdate'] . "<br>";
-    echo "Views: " . $playlistData['views'] . "<br>";
-
     // If the 'videos' field contains a JSON array, decode it and get the first video ID
     $videosArray = json_decode($playlistData['videos'], true);
     if (!empty($videosArray)) {
@@ -208,94 +199,73 @@ echo '<a href="https://driveplyr.appspages.online/api/download.php?url='.$videoU
   <div class="list-group">
  
   <?php
-// Assuming you have already established a database connection
-// Replace 'your_table_name' with the actual table name
+// Assuming you have established a database connection
 
-// Retrieve the video list from the database
-//$user = $_SESSION['id'];
+// Define the playlist ID you want to fetch videos from
+$playlistId = 1; // Replace with the actual playlist ID you want to retrieve
 
-// Your PHP variables containing the video information
-$video_id = $id; // Replace with the actual video ID
-$video_title = $conn->real_escape_string($videoTitle); // Replace with the actual video title
-$video_description = $conn->real_escape_string($videoDescription); // Replace with the actual video description
-$video_user = $userid; // Replace with the actual video user
+// Fetch the playlist videos from the database
+$sql = "SELECT * FROM playlists WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $playlistId);
+$stmt->execute();
+$result = $stmt->get_result();
 
+if ($result->num_rows === 1) {
+    $playlistData = $result->fetch_assoc();
+    $videosArray = json_decode($playlistData['videos'], true);
 
-// Prepare the SQL query with placeholders for the variables
-// Prepare the SQL query with placeholders for the variables
-$sql = "(SELECT *, 1 as priority
-         FROM videos
-         WHERE id <> $video_id
-         AND user = '$video_user'
-         AND (
-             title LIKE CONCAT('%', '$video_title', '%')
-             OR description LIKE CONCAT('%', '$video_description', '%')
-         )
-         LIMIT 10)
-        UNION
-        (SELECT *, 0 as priority
-         FROM videos
-         WHERE id <> $video_id
-         AND user <> '$video_user'
-         AND id NOT IN (SELECT id FROM videos WHERE id <> $video_id AND user = '$video_user')
-         AND (
-             title LIKE CONCAT('%', '$video_title', '%')
-             OR description LIKE CONCAT('%', '$video_description', '%')
-         )
-         LIMIT 10)
-        UNION
-        (SELECT *, -1 as priority
-         FROM (
-             SELECT *
-             FROM videos
-             ORDER BY RAND()
-             LIMIT 10
-         ) AS random_videos
-         ORDER BY views DESC
-        )
-        ORDER BY priority DESC, RAND()
-        LIMIT 10";
+    // Check if there are videos in the playlist
+    if (!empty($videosArray)) {
+        // Prepare a query to fetch video details based on the video IDs in the playlist
+        $videoIds = implode(',', $videosArray);
+        $videoSql = "SELECT * FROM videos WHERE id IN ($videoIds)";
+        $videoResult = $conn->query($videoSql);
 
+        // Check if the query was successful
+        if ($videoResult === false) {
+            // If there's an error, display the error message
+            echo "Error executing query: " . $conn->error;
+            exit; // Exit the script to prevent further execution
+        }
 
+        // Fetch the results into an array
+        $relatedVideos = $videoResult->fetch_all(MYSQLI_ASSOC);
 
-// Execute the query
-$result = $conn->query($sql);
+        // Now you have the related videos in the $relatedVideos array
+        // You can use this data to display the related videos on your website
 
-// Check if the query was successful
-if ($result === false) {
-    // If there's an error, display the error message
-    echo "Error executing query: " . $conn->error;
-    exit; // Exit the script to prevent further execution
-}
+        if (count($relatedVideos) > 0) {
+            // Loop through each video and generate the HTML for related video thumbnails
+            foreach ($relatedVideos as $row) {
+                $videoId = $row['id'];
+                $videoTitle = $row['title'];
+                $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/theme=dark/'.$videoTitle.'.png';
+                $videoStatus = 'Public'; //$row['status'];
+                $videoViews = $row['views'];
+                $videoDownloads = $row['downloads'];
+                $videoScore = '100%'; //$row['progress'];
 
-// Fetch the results into an array
-$relatedVideos = $result->fetch_all(MYSQLI_ASSOC);
-
-// Now you have the related videos in the $relatedVideos array
-// You can use this data to display the related videos on your website
-
-if (count($relatedVideos) > 0) {
-    // Loop through each video and generate the HTML for related video thumbnails
-    foreach ($relatedVideos as $row) {
-        $videoId = $row['id'];
-        $videoTitle = $row['title'];
-        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/theme=dark/'.$videoTitle.'.png';
-        $videoStatus = 'Public'; //$row['status'];
-        $videoViews = $row['views'];
-        $videoDownloads = $row['downloads'];
-        $videoScore = '100%'; //$row['progress'];
-
-        echo '
-        <!-- Sample related video thumbnails -->
-        <a href="../../watch/' . $videoId . '/' . generateSlug($videoTitle) . '" class="list-group-item">
-          <img src="' . $videoPosterURL . '" class="img-fluid rounded" alt="Sample Video 1">
-          <p class="mt-2">' . $videoTitle . '</p>
-        </a>';
+                echo '
+                <!-- Sample related video thumbnails -->
+                <a href="../../watch/' . $videoId . '/' . generateSlug($videoTitle) . '" class="list-group-item">
+                  <img src="' . $videoPosterURL . '" class="img-fluid rounded" alt="' . $videoTitle . '">
+                  <p class="mt-2">' . $videoTitle . '</p>
+                </a>';
+            }
+        } else {
+            echo '<p>No videos found in the playlist.</p>';
+        }
+    } else {
+        echo '<p>The playlist is empty.</p>';
     }
 } else {
-    echo '<p>No videos found.</p>';
+    echo "Playlist not found";
 }
 
+// Close the database connections
+$stmt->close();
+$conn->close();
 // Uncomment and execute the update query to increment views count
 $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 //$result = $conn->query($query);
