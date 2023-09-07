@@ -25,6 +25,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#Testing">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">PlayList</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="add.php">
                 <i class="ni ni-atom text-yellow"></i>
                 <span class="nav-link-text">Upload</span>
