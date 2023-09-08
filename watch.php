@@ -322,7 +322,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     alert("Code copied to clipboard!");
   }
 </script>
-           <button id="copyButton" class="btn btn-primary">Copy Link</button>
+   <center>        <button id="copyButton" class="btn btn-primary">Copy Link</button>
 
   <!-- Add Bootstrap JS and custom JavaScript -->
  <script>
@@ -342,7 +342,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
 
-<center>
+
 
 <!-- Telegram -->
 <a style="color: #ac2bac;" href="#!" role="button" onclick="shareToTelegram(); return false;">
