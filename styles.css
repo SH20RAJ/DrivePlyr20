@@ -81,7 +81,7 @@ body {
 .sidebar {
   height: 100%;
   width: 230px;
-  background-color: white;
+  background-color: black;
   overflow-y: scroll;
 }
 
@@ -114,14 +114,14 @@ body {
 
 hr {
   height: 1px;
-  background-color: #e5e5e5;
+  background-color: #282323;
   border: none;
 }
 
 /* videos */
 
 .videos {
-  background-color: #f9f9f9;
+  background-color: black;
   width: 100%;
   height: 100%;
   padding: 15px 15px;
@@ -183,6 +183,7 @@ span {
   text-decoration: none;
   color: rgb(96, 96, 96);
   font-size: 14px;
+  color: #ddd;
 }
 
 h1 {
