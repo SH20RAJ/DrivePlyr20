@@ -103,7 +103,7 @@ die();*/
                   <button class="btn btn-danger">Dislike</button>
                   <button class="btn btn-info">Download</button> -->
                   <!-- Button to trigger the modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Share</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Embed</button>
                  <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
 <?php
 if($videoAllowDownload){
@@ -297,12 +297,40 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 
   <!-- Copy Code Button -->
   <button class="btn btn-success" onclick="copyCodeToClipboard()">Copy Code</button>
-</center>
+ <br><br><button id="copyButton" class="btn btn-primary">Copy Link</button>
+
+ <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="player">Player - 
+                                                <a target="_blank" rel="nofollow" data-toggle="tooltip" data-original-title="See Example on DrivePlyr Documentation" href="https://driveplyr.hashnode.dev/top-html5-custom-video-players-with-documentation-video">See Examples</a></label>
+                                            <select onchange="document.getElementById('plyredit').value = document.getElementById('player').value" class="form-control" name="player" id="player">
+                                              <option value="plyr">Plyr</option>
+                                              <option value="sopplayer">SopPlayer</option>
+                                              <option value="vlitejs">vLiteJS</option>
+                                              <option value="griffith">griffith</option>
+                                              <option value="videojs">VideoJS</option>
+                                              <option value="jwplayer">JWPlayer</option>
+                                              <option value="mediaelements">Mediaelements</option>
+                                              <option value="clapper">Clapper</option>
+                                              <option value="rainplayer">RainPlayer</option>
+                                              <option value="openplayerjs">OpenPlayerJS</option>
+                                              <option value="kwgplayer">KWGPlayer</option>
+                                              <option value="ckin">Ckin</option>
+                                              <option value="cutesu">CuteSu</option>
+                                              <option value="xgplayer">XgPlayer</option>
+                                              <option value="flowplayer">Flowplayer</option>
+                                              <option value="fluid">Fluidplayer {Earn Money}</option>
+                                              <option value="flamingo">Flamingo</option>
+                                              <option value="redroselite">RedRoseLite</option>
+                                              <option value="none">NONE</option>
+                                            </select>
+                                          </div>
+                                    </div>
 
 <pre>
   <code class="language-html">
     &lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
-    &lt;script player="fluid" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
+    &lt;script player="<span id="plyredit">fluid</span>" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
   </code>
 </pre>
 
@@ -322,7 +350,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
     alert("Code copied to clipboard!");
   }
 </script>
-   <center>        <button id="copyButton" class="btn btn-primary">Copy Link</button>
+   
 
   <!-- Add Bootstrap JS and custom JavaScript -->
  <script>
