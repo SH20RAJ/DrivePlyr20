@@ -56,7 +56,7 @@ include '../conn.php';
                 <thead class="thead-light">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">Video</th>
-                    <th scope="col" class="sort" data-sort="budget">Downloads</th>
+                    <!-- <th scope="col" class="sort" data-sort="budget">Downloads</th> -->
                     <th scope="col" class="sort" data-sort="status">Status</th>
                     <th scope="col">Views</th>
                     <!-- <th scope="col" class="sort" data-sort="completion">Performance</th> -->
@@ -92,9 +92,9 @@ if ($result->num_rows > 0) {
                     </div>
                   </div>
                 </th>
-                <td class="budget">
+                <!--<td class="budget">
                   '.$videoDownloads.'
-                </td>
+                </td>-->
                 <td>
                       <span class="badge badge-dot mr-4">
                         <i class="bg-success"></i>
