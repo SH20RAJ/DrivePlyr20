@@ -45,6 +45,34 @@ include 'func.php';
       });
     });
   
+    // Function to set the theme mode (light or dark)
+function setThemeMode(mode) {
+    document.body.classList.toggle('dark-mode', mode === 'dark');
+    localStorage.setItem('theme', mode);
+}
+
+// Function to toggle the theme mode
+function toggleThemeMode() {
+    const currentMode = localStorage.getItem('theme');
+    const newMode = currentMode === 'dark' ? 'light' : 'dark';
+    setThemeMode(newMode);
+}
+
+// Check if the user's preference is stored in localStorage
+const storedTheme = localStorage.getItem('theme');
+
+if (storedTheme) {
+    setThemeMode(storedTheme);
+} else {
+    // Default to light mode if no preference is stored
+    setThemeMode('light');
+}
+
+// Add an event listener to the toggle button
+const toggleButton = document.getElementById('dark-mode-toggle');
+toggleButton.addEventListener('click', toggleThemeMode);
+
+
   </script>
   </head>
   <body>
@@ -71,7 +99,7 @@ include 'func.php';
       <div class="header__icons">
         <i class="material-icons display-this">search</i>
         <i class="material-icons">videocam</i>
-        <i class="material-icons">apps</i>
+        <i class="material-icons" id="dark-mode-toggle">apps</i>
         <i class="material-icons">notifications</i>
        <a href="./dashboard/"><i class="material-icons display-this">account_circle</i></a>
       </div>

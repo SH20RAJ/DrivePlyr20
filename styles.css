@@ -10,6 +10,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
 /* header */
 
 .material-icons {
