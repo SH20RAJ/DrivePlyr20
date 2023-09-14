@@ -76,8 +76,6 @@ die();*/
   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand hideonmobile" href="../../">DrivePlyr</a>
-
-      <!-- Responsive Search Bar 
       <form id="search" action="../../search.php" class="form-inline ml-auto">
         <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light my-2 my-sm-0 hideonmobile" type="submit">Search</button>
@@ -85,7 +83,7 @@ die();*/
 
       <!-- Add your navigation links here if needed 
     </div>
-  </nav> -->-->
+  </nav> -->
   <!-- Main Content Area -->
   <div class="container mt-4">
     <div class="row">
