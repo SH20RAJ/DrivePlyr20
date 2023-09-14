@@ -1,12 +1,12 @@
 <?php
-        
+session_start(); 
 include "../conn.php";
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
 $uploader = $_GET['id'];
 
 $limit = isset($_GET['limit'])?$limit:20;
-$sql = isset($sql) ? $sql : "SELECT * FROM videos ORDER BY RAND() LIMIT ".$limit."";
+$sql = isset($sql) ? $sql : "SELECT * FROM videos limit 20";//ORDER BY RAND() LIMIT ".$limit."";
 
 $result = $conn->query($sql);
 
