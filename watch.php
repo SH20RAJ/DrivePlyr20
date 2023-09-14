@@ -52,7 +52,8 @@ die();*/
 <meta name="author" content="Shade">
   <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
   <title><?php echo $videoTitle ?> - DrivePlyr</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="../../assets/watch.css">
   <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../assets/watch2.css">
 
