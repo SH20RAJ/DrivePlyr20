@@ -105,8 +105,10 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
       <div class="sidebar">
         <div class="sidebar__categories">
           <div class="sidebar__category">
-            <i class="material-icons">home</i>
-            <a href="../../"><span>Home</span></a>
+            <a href="../../">
+              <i class="material-icons">home</i>
+            <span>Home</span>
+          </a>
           </div>
           <div class="sidebar__category">
             <i class="material-icons">local_fire_department</i>
