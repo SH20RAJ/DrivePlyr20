@@ -83,7 +83,7 @@ die();*/
           <div id="myHeader"><div style="overflow:hidden;" id="driveplyr<?php echo $id ?>"></div></div>
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
-        <h3 class="mt-3"><?php echo $videoTitle ?></h3><br><?php echo $views ?> Views
+        <h3 class="mt-3"><?php echo $videoTitle ?></h3><br> <?php echo formatViewsCount($views).' Views • '.convertToRelativeTime($row['date']) ?>
         <!-- Sample comment -->
         <div class="media">
             <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
