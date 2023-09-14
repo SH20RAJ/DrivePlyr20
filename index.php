@@ -159,12 +159,8 @@ toggleButton.addEventListener('click', toggleThemeMode);
       <div class="videos">
         <h1>Recommended</h1>
 
-        <div class="videos__container">
+        <div class="videos__container" id="vdc">
         <?php
-        
-        
-        // Example usage:
-        $viewsCount = 1000;
 
         include 'conn.php';
 // Retrieve the video list from the database
@@ -328,6 +324,10 @@ include 'api/ref.php';
     // Call the function to remove query strings when the page loads
     window.onload = removeQueryStrings;
   </script>
+
+
+
+<script src="assets/loader.js"></script>
 
     <!-- Main Body Ends -->
   </body>
