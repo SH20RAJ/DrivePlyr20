@@ -56,7 +56,7 @@ die();*/
   <link rel="stylesheet" href="../../assets/watch.css">
   <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../assets/watch2.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.6.0/dist/darkmode-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js"></script>
 
 <script>
 
