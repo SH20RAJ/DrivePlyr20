@@ -56,6 +56,26 @@ die();*/
   <link rel="stylesheet" href="../../assets/watch.css">
   <link rel="stylesheet" media="screen and (max-width: 600px)" href="../../assets/watch2.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.6.0/dist/darkmode-js.min.js"></script>
+
+<script>
+
+  const options = {
+  bottom: '64px', // Position of the switch
+  right: '32px',  // Position of the switch
+  left: 'unset',  // Position of the switch
+  time: '0.3s',   // Transition time
+  mixColor: '#fff', // Color under the switch
+  backgroundColor: '#fff', // Background color
+  buttonColorDark: '#100f2c', // Color of the dark mode switch
+  buttonColorLight: '#fff',   // Color of the light mode switch
+  saveInCookies: true, // Save user's choice in cookies
+  label: '🌓', // Label for the switch (you can use emojis)
+};
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
 </head>
 <body>
