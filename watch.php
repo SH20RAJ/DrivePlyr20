@@ -92,7 +92,7 @@ die();*/
             <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <a href="../../channel/<?php echo $userid ?>"><h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5></a>
-              <!-- <p>Subscribe</p> -->
+              <p>Join 🎁</p>
               
             </div>
           </div>
