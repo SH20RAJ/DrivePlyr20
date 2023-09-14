@@ -170,6 +170,9 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
     max-width: 100%;
     max-height: 100%;
   }
+  video {
+    margine: 2px;
+  }
 </style>
 </head>
 <body>
