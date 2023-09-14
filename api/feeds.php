@@ -1,16 +1,15 @@
 <?php
-session_start(); 
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+session_start();
 
 include "../conn.php";
+include "../func.php";
 // Retrieve the video list from the database
-// $user = $_SESSION['id'];
-// $uploader = $_GET['id'];
+$user = $_SESSION['id'];
+$uploader = $_GET['id'];
 
-// $limit = isset($_GET['limit'])?$limit:20;
-$sql = "SELECT * FROM videos limit 20";//ORDER BY RAND() LIMIT ".$limit."";
+$limit = isset($_GET['limit'])?$limit:20;
+$sql = isset($sql) ? $sql : "SELECT * FROM videos ORDER BY RAND() LIMIT ".$limit."";
 
 $result = $conn->query($sql);
 
