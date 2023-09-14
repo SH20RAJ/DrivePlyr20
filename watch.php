@@ -84,7 +84,7 @@ die();*/
 <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
         </div>
         <h3 class="mt-3"><?php echo $videoTitle ?></h3>
-        <br> 
+        <br>
         <?php echo formatViewsCount($views).' Views • '.convertToRelativeTime($row['date']) ?>
         <br>
         <!-- Sample comment -->
@@ -92,9 +92,8 @@ die();*/
             <img src="https://imgur.com/n5MBy0m.png" width="50px" class="mr-3 rounded-circle" alt="User 1">
             <div class="media-body">
               <a href="../../channel/<?php echo $userid ?>"><h5 class="mt-0"><?php echo getUser($userid)[0]->name ?></h5></a>
-              <p>Subscribe</p>
-              <button class="btn btn-sm btn-outline-success mr-2">Follow</button>
-              <button class="btn btn-sm btn-outline-danger">Messege</button>
+              <!-- <p>Subscribe</p> -->
+              
             </div>
           </div>
 
@@ -106,6 +105,9 @@ die();*/
                   <button class="btn btn-danger">Dislike</button>
                   <button class="btn btn-info">Download</button> -->
                   <!-- Button to trigger the modal -->
+                  <button class="btn btn-sm btn-outline-success mr-2">Follow</button>
+              <button class="btn btn-sm btn-outline-danger">Messege</button>
+              
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Embed</button>
                  <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
 <?php
