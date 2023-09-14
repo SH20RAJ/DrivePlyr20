@@ -289,7 +289,7 @@ $query = 'UPDATE your_table_name SET views = views + 1 WHERE id = ' . $video_id;
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-4">
-    &copy; 2023 DrivePlyr
+   <a href="../../">&copy; 2023 DrivePlyr</a>
   </footer>
     <!-- The Modal -->
     <div class="modal" id="myModal">
