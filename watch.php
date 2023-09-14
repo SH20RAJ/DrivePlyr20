@@ -60,9 +60,9 @@ die();*/
 
 
   <style>
-    *,body,.dark,.list-group a,h3,h5,a,code{
+    *,body,.dark,.list-group a,h3,h5,a,pre code{
       background:black;
-      color:wheat;
+      color:white  !important;
     }
     .st-sticky-share-buttons {
       background:transparent;
