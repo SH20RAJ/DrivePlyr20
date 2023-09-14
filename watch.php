@@ -60,7 +60,7 @@ die();*/
 
 
   <style>
-    *,body,.dark,.list-group a,,h3,a{
+    *,body,.dark,.list-group a,h3,a{
       background:black;
       color:white;
     }
