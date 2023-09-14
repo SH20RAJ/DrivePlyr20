@@ -23,12 +23,21 @@ function fetchAndAddData() {
     return scrollY + windowHeight >= documentHeight - threshold;
   }
   
-  // Add a scroll event listener
-  window.addEventListener('scroll', () => {
+  // Function to handle the scroll event
+  function handleScroll() {
     if (isBottomReached()) {
       fetchAndAddData();
+      // Remove the event listener to prevent multiple calls while loading
+      window.removeEventListener('scroll', handleScroll);
+      // Re-add the event listener after a short delay (adjust this as needed)
+      setTimeout(() => {
+        window.addEventListener('scroll', handleScroll);
+      }, 1000); // 1 second delay before re-adding the event listener
     }
-  });
+  }
+  
+  // Add an initial scroll event listener
+  window.addEventListener('scroll', handleScroll);
   
   // Initial data load
   fetchAndAddData();
