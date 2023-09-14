@@ -250,7 +250,7 @@ if ($result->num_rows > 0) {
           </div>
           <div class="video__details">
             <div class="author">
-              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+              <img src="'.$logo.'" alt="" />
             </div>
             <div class="title">
               <h3>
