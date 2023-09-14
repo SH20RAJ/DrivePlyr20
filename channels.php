@@ -174,7 +174,7 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
 </head>
 <body>
 <div class="container-fluid">
-  <div class="card">
+  <div class="card" style="backgroud:black;color:wheat;">
     <div class="card-body text-center">
       <!-- Circular logo with background image -->
       <div class="user-logo mx-auto mb-4">
