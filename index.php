@@ -169,7 +169,7 @@ toggleButton.addEventListener('click', toggleThemeMode);
         include 'conn.php';
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
-$sql = "SELECT * FROM videos ORDER BY RAND() LIMIT 200";
+$sql = "SELECT * FROM videos ORDER BY RAND() LIMIT 40";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
