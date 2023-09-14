@@ -5,8 +5,8 @@ include "../conn.php";
 $user = $_SESSION['id'];
 $uploader = $_GET['id'];
 
-$limit = isset($limit)?$limit:20;
-$sql = isset($sql) ? $sql : "SELECT * FROM videosORDER BY RAND() LIMIT ".$limit."";
+$limit = isset($_GET['limit']||$limit)?$limit:20;
+$sql = isset($sql) ? $sql : "SELECT * FROM videos ORDER BY RAND() LIMIT ".$limit."";
 
 $result = $conn->query($sql);
 
