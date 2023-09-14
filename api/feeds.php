@@ -10,7 +10,7 @@ include "../conn.php";
 // $uploader = $_GET['id'];
 
 // $limit = isset($_GET['limit'])?$limit:20;
-$sql = isset($sql) ? $sql : "SELECT * FROM videos limit 20";//ORDER BY RAND() LIMIT ".$limit."";
+$sql = "SELECT * FROM videos limit 20";//ORDER BY RAND() LIMIT ".$limit."";
 
 $result = $conn->query($sql);
 
