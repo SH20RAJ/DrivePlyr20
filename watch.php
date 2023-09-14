@@ -102,14 +102,11 @@ die();*/
                 <!-- Additional Features -->
                  <div class="mt-4">
                   <!-- <button class="btn btn-success">Like</button>
-                  <button class="btn btn-danger">Dislike</button>
+                  <button class="btn btn-danger">Dislike/button>
                   <button class="btn btn-info">Download</button> -->
                   <!-- Button to trigger the modal -->
-                  <button class="btn btn-sm btn-outline-success mr-2">Follow</button>
-              <button class="btn btn-sm btn-outline-danger">Messege</button>
-              
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Embed</button>
-                 <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-warning">Report</button></a>
+                  <button class="btn btn-sm btn-outline-success mr-2" data-toggle="modal" data-target="#myModal">Embed</button>
+              <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"> <button class="btn btn-sm btn-outline-danger">Report</button></a>
 <?php
 if($videoAllowDownload){
 
@@ -117,7 +114,7 @@ if($videoAllowDownload){
 echo '<a href="https://driveplyr.appspages.online/api/download.php?url='.$videoURL.'"> <button class="btn btn-danger">Download</button></a>
                      ' ;}
     ?>
-    
+  
                 </div>
 
         <!-- Comment Section -->
