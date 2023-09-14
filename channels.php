@@ -196,15 +196,15 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
       <!-- Row with number of followers, views, and videos -->
       <div class="row text-center">
         <div class="col">
-          <h5>100</h5>
+          <p>100</p>
           <p>Followers</p>
         </div>
         <div class="col">
-          <h5><?php echo $videoCount ?></h5>
+          <p><?php echo $videoCount ?></p>
           <p>Videos</p>
         </div>
         <div class="col">
-          <h5><?php echo $totalViews ?></h5>
+          <p><?php echo $totalViews ?></p>
           <p>Views</p>
         </div>
       </div>
