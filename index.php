@@ -60,7 +60,7 @@ include 'func.php';
         </div>
     </nav>
 
-    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="https://bluredcodes.github.io/video556/img/hero.jpg">
         <form class="d-flex tm-search-form" action="search.php">
             <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success tm-search-btn" type="submit">
@@ -254,7 +254,7 @@ include 'func.php';
 
         function fetchdata(url,limit){
             if(!limit)limit=`40`;
-            if(!url)url = 'https://driveplyr.appspages.online/api/videos.php?limit=' + limit + '?fvgywevfgubg3w';
+            if(!url)url = 'https://driveplyr.appspages.online/api/videos.php?limit=' + limit + '&fvgywevfgubg3w';
         // Fetch JSON data from the URL
         fetch(url)
             .then(response => response.json())
