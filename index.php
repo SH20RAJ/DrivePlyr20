@@ -97,8 +97,8 @@ toggleButton.addEventListener('click', toggleThemeMode);
       </div>
 
       <div class="header__icons">
-        <i class="material-icons display-this">search</i>
-        <i class="material-icons">videocam</i>
+        <a href="music"> <i class="material-icons display-this">search</i>
+        <i class="material-icons">videocam</i></a>
         <i class="material-icons" id="dark-mode-toggle">apps</i>
         <i class="material-icons">notifications</i>
        <a href="./dashboard/"><i class="material-icons display-this">account_circle</i></a>

@@ -1,0 +1,180 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="../logo.png" />
+  <link rel="manifest" href="../manifest.json">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <i onclick="document.querySelector('#list').classList.toggle('show')
+;" class="material-icons">search</i>
+      <span>Now Playing</span>
+
+      <i onclick="document.querySelector('.music-list').classList.toggle('show')
+;" id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="img-area">
+      <img id="songImage" src="../logo.png" alt="...">
+    </div>
+    <div class="song-details">
+      <p id="name"></p>
+      <p id="artist"></p>
+    </div>
+    <div class="progress-area" id="progress-area">
+      <div id="progress-bar" class="progress-bar">
+        <audio id="audioPlayer" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span id="current-time" class="current-time">0:24</span>
+        <span id="max-duration" class="max-duration">3:08</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="looper" class="material-icons" title="Playback shuffled">repeat</i>
+      <i id="prevButton" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i id="playButton" class="material-icons play">pause</i>
+      </div>
+      <i id="nextButton" class="material-icons">skip_next</i>
+      <!-- <i onclick="document.querySelector('.music-list').classList.toggle('show')
+;" id="more-music" class="material-icons">queue_music</i> -->
+      <a id="downloadButton" href="#">
+        <i class="material-icons">download</i>
+      </a>
+    </div>
+    <div class="music-list ">
+      <div class="header">
+        <i class="list material-icons"
+          onclick="fetchSongs(queries[Math.floor(Math.random() * queries.length)],true);">refresh</i>
+
+        <input type="text" id="searchInput" class="form-control" placeholder="Search Songs">
+        <button style="background: transparent;border: 0;" id="searchButton" class="btn btn-primary mt-3"
+          onclick="songs = [];fetchSongs(searchInput.value.trim());">
+          
+          <i onclick="document.querySelector('.music-list').classList.toggle('show')" id="close" class="material-icons">search</i>
+          
+        </button>
+        
+        <i onclick="document.querySelector('.music-list').classList.toggle('show')
+" id="close" class="material-icons">close</i>
+      </div>
+      <ul id="songList"></ul>
+    </div>
+
+<style>
+        /* Styles for the header container */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Style for the search input field */
+#searchInput {
+  flex-grow: 1;
+  margin-right: 10px; 
+  margin-left: 10px;
+  padding: 5px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #e3dee03d ;
+  color: white;
+}
+
+/* Style for the search button */
+#searchButton {
+  margin-right: 10px; /* Add space to the right of the button */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    
+  }
+
+  #searchInput {
+    max-width: 150px;
+  }
+
+  /* Add more specific styles or adjustments for mobile here if needed */
+}
+
+      </style>
+    <div id="list" class="music-list">
+      
+      <div class="header">
+        <i class="list material-icons">queue_music</i>
+
+
+        <input type="text" id="searchInput" class="form-control" placeholder="Search Songs">
+        <button style="background: transparent;border: 0;" id="searchButton" class="btn btn-primary mt-3"
+          onclick="songs = [];fetchSongs(searchInput.value.trim());">
+          
+          <i onclick="document.querySelector('.music-list').classList.toggle('show')" id="close" class="material-icons">search</i>
+          
+        </button>
+
+
+        <i onclick="document.querySelector('#list').classList.toggle('show')
+" id="close" class="material-icons">close</i>
+      </div>
+      <ul id="menu">
+
+        <li>Liked</li>
+        <li>Playlist</li>
+        <li><a href="https://linktr.ee/cxdiin">CXDIIN</a></li>
+      </ul>
+    </div>
+
+
+
+
+  </div>
+  <div class="hidden" style="display: none;">
+    <select id="songSelector" class="form-control mb-3"></select>
+    <button id="searchButton" class="btn btn-primary mt-3">Search</button>
+  </div>
+
+
+  <audio id="preloadAudio" preload="auto" style="display: none;"></audio>
+
+  <script src="2.js"></script>
+
+  <script>
+    // Check if the browser supports the beforeinstallprompt event
+    if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
+      window.addEventListener('load', () => {
+        // Wait for the beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (event) => {
+          // Prevent the default "Add to Home Screen" prompt
+          event.preventDefault();
+
+          // Automatically show the "Add to Home Screen" prompt on page load
+          event.prompt();
+        });
+      });
+    }
+
+    window.addEventListener('load', () => {
+      window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        event.prompt();
+      });
+    });
+
+  </script>
+
+
+</body>
+
+</html>
