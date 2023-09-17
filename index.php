@@ -21,315 +21,274 @@ include 'func.php';
 
     </style>
 <meta name="theme-color" content="#007bff">
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="mainfest.json">
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
 
-<script>
-    // Check if the browser supports the beforeinstallprompt event
-    if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
-      window.addEventListener('load', () => {
-        // Wait for the beforeinstallprompt event
-        window.addEventListener('beforeinstallprompt', (event) => {
-          // Prevent the default "Add to Home Screen" prompt
-          event.preventDefault();
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
 
-          // Automatically show the "Add to Home Screen" prompt on page load
-          event.prompt();
-        });
-      });
-    }
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film mr-2"></i>
+                DrivePlyr
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="music">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="videos.html">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-3" href="../tos.php">About & DMCA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-4" href="mailto:mail@appspages.online">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
 
-  window.addEventListener('load', () => {
-      window.addEventListener('beforeinstallprompt', (event) => {
-        event.preventDefault();
-        event.prompt();
-      });
-    });
-  
-    // Function to set the theme mode (light or dark)
-function setThemeMode(mode) {
-    document.body.classList.toggle('dark-mode', mode === 'dark');
-    localStorage.setItem('theme', mode);
-}
-
-// Function to toggle the theme mode
-function toggleThemeMode() {
-    const currentMode = localStorage.getItem('theme');
-    const newMode = currentMode === 'dark' ? 'light' : 'dark';
-    setThemeMode(newMode);
-}
-
-// Check if the user's preference is stored in localStorage
-const storedTheme = localStorage.getItem('theme');
-
-if (storedTheme) {
-    setThemeMode(storedTheme);
-} else {
-    // Default to light mode if no preference is stored
-    setThemeMode('light');
-}
-
-// Add an event listener to the toggle button
-const toggleButton = document.getElementById('dark-mode-toggle');
-toggleButton.addEventListener('click', toggleThemeMode);
-
-
-  </script>
-  </head>
-  <body>
-
-   
-  
-  
-    <!-- Header Starts -->
-    <div class="header">
-      <div class="header__left">
-        <i id="menu" class="material-icons">menu</i>
-        <img
-          src="https://driveplyr.appspages.online/dp.png"
-          alt=""
-        />
-      </div>
-
-      <div class="header__search">
-        <form action="search.php">
-          <input name="q" type="text" placeholder="Search" />
-          <button type="submit"><i class="material-icons">search</i></button>
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+        <form class="d-flex tm-search-form" action="search.php">
+            <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success tm-search-btn" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
         </form>
-      </div>
-
-      <div class="header__icons">
-        <a href="music"> <i class="material-icons display-this">search</i>
-        <i class="material-icons">videocam</i></a>
-        <i class="material-icons" id="dark-mode-toggle">apps</i>
-        <i class="material-icons">notifications</i>
-       <a href="./dashboard/"><i class="material-icons display-this">account_circle</i></a>
-      </div>
     </div>
-    <!-- Header Ends -->
 
-    <!-- Main Body Starts -->
-    <div class="mainBody">
-      <!-- Sidebar Starts -->
-      <div class="sidebar">
-        <div class="sidebar__categories">
-          <div class="sidebar__category">
-            <i class="material-icons">home</i>
-            <a href="../../"><span>Home</span></a>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">local_fire_department</i>
-            <span>Trending</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">subscriptions</i>
-            <a href="../../sitemaps.php"><span>Sitemaps</span></a>
-          </div>
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary">
+                Videos & Posts
+            </h2>
+            <!-- <div class="col-6 d-flex justify-content-end align-items-center">
+                <form action="" class="tm-text-primary">
+                    Page <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> of 200
+                </form>
+            </div> -->
         </div>
-        <hr />
-        <div class="sidebar__categories">
-          <div class="sidebar__category">
-            <i class="material-icons">library_add_check</i>
-            <span>Library</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">history</i>
-            <a href="./search.php?q=driveplyr"><span>Search</span></a>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">play_arrow</i>
-            <a href="./dashboard/videos.php"><span>Your Videos</span></a>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">watch_later</i>
-            <span>Watch Later</span>
-          </div>
-          <div class="sidebar__category">
-            <i class="material-icons">thumb_up</i>
-            <span>Liked Videos</span>
-          </div>
-          <div class="sidebar__category">
-            <!-- <i class="material-icons">thumb_up</i> -->
-           <a href="tos.php"><span>Terms of Service</span></a> 
-          </div>
-        </div>
-        <hr />
-      </div>
-      <!-- Sidebar Ends -->
-
-      <!-- Videos Section -->
-      <div class="videos">
-        <h1>Recommended</h1>
-
-        <div class="videos__container" id="vdc">
-        <?php
-
-        include 'conn.php';
-// Retrieve the video list from the database
-$user = $_SESSION['id'];
-$sql = "SELECT * FROM videos ORDER BY RAND() LIMIT 40";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Loop through each video and generate the table rows
-    while ($row = $result->fetch_assoc()) {
-        $videoId = $row['id'];
-        $videoTitle = $row['title'];
-        $videoPosterURL = $row['poster_url'] ?: 'https://cdn.statically.io/og/theme=dark/'.$videoTitle.'.png';
-        $videoStatus = 'Public';//$row['status'];
-        $videoViews = $row['views'];
-        $videoDownloads = $row['downloads'];
-        $videoScore = '100%';//$row['progress'];
-        $userid = $row['user'];
-
-        echo '          <!-- Single Video starts -->
-        <div class="video">
-          <div class="video__thumbnail">
-          <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-          <img loading ="lazy" src="'.$videoPosterURL.'" alt="'.$videoTitle.'" />
-          </a>
-          </div>
-          <div class="video__details">
-            <div class="author">
-              <img loading ="lazy" src="http://aninex.com/images/srvc/web_de_icon.png" alt="DrivePlyr" />
+        <div class="row tm-mb-90 tm-gallery" id="VideoList">
+        	<!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-03.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Clocks</h2>
+                        <a href="photo-detail.html">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
             </div>
-            <div class="title">
-              <h3>
-              <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-                '.$videoTitle.'
-              </a>
-                </h3>
-              <a href="channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
-              <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-04.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Plants</h2>
+                        <a href="photo-detail.html">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">14 Oct 2020</span>
+                    <span>16,100 views</span>
+                </div>
             </div>
-          </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-05.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Morning</h2>
+                        <a href="photo-detail.html">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">12 Oct 2020</span>
+                    <span>12,460 views</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-06.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Pinky</h2>
+                        <a href="photo-detail.html">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">10 Oct 2020</span>
+                    <span>11,402 views</span>
+                </div>
+            </div>         -->
+        </div> <!-- row -->
+        <div class="row tm-mb-90">
+            <div class="center col-12 d-flex justify-content-center align-items-center tm-paging-col">
+                
+                
+                <a href="javascript:void(0);" onclick="fetchdata()" class="btn btn-primary tm-btn-next">Load More</a>
+            </div>            
         </div>
-        <!-- Single Video Ends -->
-';
-    }
-} else {
-    echo '<tr><td colspan="6">No videos found.</td></tr>';
-}
-?>
+    </div> <!-- container-fluid, tm-container-content -->
 
-
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">About DrivePlyr</h3>
+                    <p>DrivePlyr is a video sharing platform that allows users to upload, share, and view videos.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
+                    <ul class="tm-footer-links pl-0">
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
+                        <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                        <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                        <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                    <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
+                    <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    Copyright 2020 DrivePlyr Company. All rights reserved.
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    Designed by <a href="https://yotube.com/cxdiin" class="tm-text-gray" rel="sponsored" target="_parent">❤️</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </footer>
+    
+    <script src="js/plugins.js"></script>
     <script>
-        const menu = document.querySelector('#menu');
-console.log(menu);
-const sidebar = document.querySelector('.sidebar');
-console.log(sidebar);
-
-menu.addEventListener('click', function () {
-  sidebar.classList.toggle('show-sidebar');
-});
-
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
     </script>
 
-<?php 
+    <div class="row" id="videoList">
+        <!-- Video items will be added here -->
+    </div>
 
+    <script>
 
-$html = <<<HTML
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-<div id="g_id_onload"
-     data-client_id="911384899570-6qiojk3cl3e47jjorfj9att0l1a8gg59.apps.googleusercontent.com"
-     data-callback="handleCredentialResponse">
-</div>
-<div class="g_id_signin" data-type="standard"></div>
+        function convertToRelativeTime(dateString) {
+            // Convert the date string to a Unix timestamp
+            const timestamp = new Date(dateString).getTime();
+        
+            // Get the current timestamp
+            const now = Date.now();
+        
+            // Calculate the time difference in milliseconds
+            const diff = now - timestamp;
+        
+            // Define time intervals in milliseconds
+            const minute = 60 * 1000;
+            const hour = 60 * minute;
+            const day = 24 * hour;
+            const week = 7 * day;
+            const month = 30 * day;
+            const year = 365 * day;
+        
+            // Format the relative time string based on the time difference
+            if (diff < minute) {
+                return "Just now";
+            } else if (diff < hour) {
+                const minutes = Math.floor(diff / minute);
+                return minutes + " minute" + (minutes > 1 ? "s" : "") + " ago";
+            } else if (diff < day) {
+                const hours = Math.floor(diff / hour);
+                return hours + " hour" + (hours > 1 ? "s" : "") + " ago";
+            } else if (diff < week) {
+                const days = Math.floor(diff / day);
+                return days + " day" + (days > 1 ? "s" : "") + " ago";
+            } else if (diff < month) {
+                const weeks = Math.floor(diff / week);
+                return weeks + " week" + (weeks > 1 ? "s" : "") + " ago";
+            } else if (diff < year) {
+                const months = Math.floor(diff / month);
+                return months + " month" + (months > 1 ? "s" : "") + " ago";
+            } else {
+                const years = Math.floor(diff / year);
+                return years + " year" + (years > 1 ? "s" : "") + " ago";
+            }
+        }
+        
+        function formatViewsCount(views) {
+            const suffixes = ['', 'k', 'M', 'B', 'T'];
+            let suffixIndex = 0;
+        
+            while (views >= 1000 && suffixIndex < suffixes.length - 1) {
+                views /= 1000;
+                suffixIndex++;
+            }
+        
+            // Format the views count to have at most one decimal point
+            const formattedViews = views.toFixed(suffixIndex > 0 ? 1 : 0);
+        
+            // Append the appropriate suffix
+            return formattedViews + suffixes[suffixIndex];
+        }
 
-<script>
-  function handleCredentialResponse(response) {
-    if (response.credential) {
-      const credential = response.credential;
-      const jwtToken = credential;
+        function fetchdata(url,limit){
+            if(!limit)limit=`40`;
+            if(!url)url = 'https://driveplyr.appspages.online/api/videos.php?limit=' + limit + '?fvgywevfgubg3w';
+        // Fetch JSON data from the URL
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const videoList = document.getElementById('VideoList');
 
-      // Decode and parse the JWT token to access user details
-      const userTokenData = JSON.parse(atob(jwtToken.split('.')[1]));
+                // Iterate over the JSON data and create HTML elements for each video
+                data.forEach(video => {
+                    const videoItem = document.createElement('div');
+                    videoItem.className = 'col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5';
+                    if(!video.poster_url)video.poster_url = 'https://cdn.statically.io/og/theme=dark/'+video.title+'.png';
+                    videoItem.innerHTML = `
+                        <figure class="effect-ming tm-video-item">
+                            <img style="height:222px" src="${video.poster_url}" alt="Image" class="img-fluid">
+                            <figcaption class="d-flex align-items-center justify-content-center">
+                                <h2>${video.title}</h2>
+                                <a href="watch/${video.id}">View more</a>
+                            </figcaption>                    
+                        </figure>
+                        <div class="d-flex justify-content-between tm-text-gray">
+                            <span>${video.title} Views</span>
+                            <span class="tm-text-gray-light">${convertToRelativeTime(video.date)}</span>
+                            <span>${video.views} Views</span>
+                        </div>
+                    `;
 
-      console.log(userTokenData)
-      // Check if the required user details are available
-      if (userTokenData.email && userTokenData.name) {
-        const email = userTokenData.email;
-        const fullName = userTokenData.name;
-        const profilePicture = userTokenData.picture;
+                    videoList.appendChild(videoItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            }); 
+        }
 
-        // Log user details to the console
-        console.log('Email: ' + email);
-        console.log('Full Name: ' + fullName);
-        console.log('Profile Picture: ' + profilePicture);
-        // Perform further actions with the user details as needed
-        // Now, let's post the data to the server using fetch
-        const url = 'api/google.php'; // Replace this with the correct endpoint URL
-        const data = {
-          email: email,
-          fullName: fullName,
-          profilePicture: profilePicture
-        };
-
-        fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-          // Handle the response from the server if needed
-          console.log('Server Response:', data);
-        })
-        .catch(error => {
-          console.error('Error posting data:', error);
-        });
-      } else {
-        console.log('User details not available in the token.');
-      }
-    } else {
-      // Handle the case where no credential is received or the user cancels the sign-in
-      console.log('No credential received or user canceled the sign-in.');
-    }
-  }
-</script>
-HTML;
-
-
-if(!$isLoggedIn){
-echo $html;
-}
-
-
-include 'tracker.php';
-
-include 'api/ref.php';
-
-
-?>
-
-<script>
-    // Function to remove query strings from the URL
-    function removeQueryStrings() {
-      // Get the current URL
-      var currentURL = window.location.href;
-
-      // Check if the URL contains any query strings (i.e., '?')
-      if (currentURL.includes('?')) {
-        // Remove the query strings by taking the URL before the '?'
-        var newURL = currentURL.split('?')[0];
-
-        // Update the browser URL without reloading the page
-        window.history.replaceState({}, document.title, newURL);
-      }
-    }
-
-    // Call the function to remove query strings when the page loads
-    window.onload = removeQueryStrings;
-  </script>
-
-
-
-<script src="assets/loader.js"></script>
-
-    <!-- Main Body Ends -->
-  </body>
+        fetchdata();
+       
+    </script>
+</body>
 </html>
