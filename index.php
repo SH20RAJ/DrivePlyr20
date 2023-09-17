@@ -15,7 +15,9 @@ include 'func.php';
     <noscript type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></noscript>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://bluredcodes.github.io/video556/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bluredcodes.github.io/video556/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://bluredcodes.github.io/video556/css/templatemo-style.css">
     <title>DrivePlyr</title>
     <style>
 
