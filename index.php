@@ -79,6 +79,7 @@ toggleButton.addEventListener('click', toggleThemeMode);
 
    
   
+  
     <!-- Header Starts -->
     <div class="header">
       <div class="header__left">
