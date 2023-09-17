@@ -44,11 +44,11 @@ include 'func.php';
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="../dashboard/">Dashboard</a>
+                </li><li class="nav-item">
                     <a class="nav-link nav-link-1 active" aria-current="page" href="music">Music</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="videos.html">Videos</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link nav-link-3" href="../tos.php">About & DMCA</a>
                 </li>
@@ -181,7 +181,7 @@ include 'func.php';
         </div>
     </footer>
     
-    <script src="js/plugins.js"></script>
+    <script src="https://bluredcodes.github.io/video556/js/plugins.js"></script>
     <script>
         $(window).on("load", function() {
             $('body').addClass('loaded');
@@ -290,7 +290,32 @@ include 'func.php';
         }
 
         fetchdata();
+
+        // Check if the browser supports the beforeinstallprompt event
+    if ('serviceWorker' in navigator && 'BeforeInstallPromptEvent' in window) {
+      window.addEventListener('load', () => {
+        // Wait for the beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (event) => {
+          // Prevent the default "Add to Home Screen" prompt
+          event.preventDefault();
+
+          // Automatically show the "Add to Home Screen" prompt on page load
+          event.prompt();
+        });
+      });
+    }
+
+  window.addEventListener('load', () => {
+      window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        event.prompt();
+      });
+    });
+
+
        
     </script>
+
+
 </body>
 </html>
