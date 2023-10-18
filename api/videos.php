@@ -9,8 +9,11 @@ include "../conn.php";
 include "../func.php";
 
 $limit = isset($_GET['limit']) ? $_GET['limit'] : 20; // Set the limit to 20 results
-$sql = isset($_GET['sql']) ? $_GET['sql'] : "SELECT * FROM videos ORDER BY RAND() LIMIT " . $limit;
-
+$sql = isset($_GET['sql']) ? $_GET['sql'] : "SELECT videos.*, users.username
+        FROM videos
+        INNER JOIN users ON videos.userid = users.userid
+        ORDER BY RAND()
+        LIMIT $limit";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
