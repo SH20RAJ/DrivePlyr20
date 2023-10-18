@@ -8,6 +8,7 @@ header("Content-Type: application/json");
 include "../conn.php";
 include "../func.php";
 
+
 $limit = isset($_GET['limit']) ? $_GET['limit'] : 20; // Set the limit to 20 results
 $sql = isset($_GET['sql']) ? $_GET['sql'] : "SELECT videos.*, users.name,users.username
         FROM videos

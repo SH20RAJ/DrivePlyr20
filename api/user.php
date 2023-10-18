@@ -20,6 +20,7 @@ $sql = "SELECT * FROM users where id = $id";
 $result = $conn->query($sql);
 
 if ($result) {
+    
     $data = array();
     
     // Fetch the data and remove the password column
