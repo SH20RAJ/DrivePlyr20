@@ -14,7 +14,7 @@ if (!is_numeric($id)) {
 // Fetch the video information from the database using prepared statements to prevent SQL injection
 $sql = "SELECT videos.*, users.name, users.username
         FROM videos
-        INNER JOIN users ON videos.userid = users.id
+        INNER JOIN users ON videos.user = users.id
         WHERE videos.id = ?";
 
 $stmt = $conn->prepare($sql);
