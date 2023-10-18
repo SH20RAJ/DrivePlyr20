@@ -7,17 +7,15 @@ header("Access-Control-Allow-Origin: *"); // Replace '*' with the specific origi
 // Set content type to JSON
 header("Content-Type: application/json");
 
-// Get the video ID from the URL parameter
-$id = $_GET['id'];
-
-// Check if the ID is valid (you should also validate and sanitize user input)
-if (!is_numeric($id)) {
-    echo "Invalid video ID";
-    exit;
-}
-
+if(isset($_GET['id'])){
+   // Get the video ID from the URL parameter
+$id = $_GET['id']; 
 // Query to select all data from the users table except the password column
 $sql = "SELECT * FROM users where id = $id";
+} else {
+    $sql = "SELECT * FROM users";
+}
+
 $result = $conn->query($sql);
 
 if ($result) {
