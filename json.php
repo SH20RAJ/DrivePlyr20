@@ -1,7 +1,11 @@
 <?php
 include 'conn.php';
 include 'func.php';
+// Allow cross-origin requests
+header("Access-Control-Allow-Origin: *"); // Replace '*' with the specific origin(s) you want to allow
 
+// Set content type to JSON
+header("Content-Type: application/json");
 // Get the video ID from the URL parameter
 $id = $_GET['id'];
 
@@ -34,8 +38,7 @@ $row = $result->fetch_assoc();
 // Encode the data as JSON
 $data = json_encode($row);
 
-// Set the HTTP header to specify JSON content
-header('Content-Type: application/json');
+
 
 // Output the JSON data with indentation for readability
 echo json_encode(json_decode($data), JSON_PRETTY_PRINT);

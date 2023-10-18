@@ -1,9 +1,11 @@
 <?php
 include '../conn.php';
 include '../func.php';
-// Set the HTTP header to specify JSON content
-header('Content-Type: application/json');
+// Allow cross-origin requests
+header("Access-Control-Allow-Origin: *"); // Replace '*' with the specific origin(s) you want to allow
 
+// Set content type to JSON
+header("Content-Type: application/json");
 // Get the video ID from the URL parameter
 $id = $_GET['id'];
 
@@ -27,21 +29,13 @@ if ($result) {
     }
 
     // Encode the data as JSON
-    $jsonResult = json_encode($data, JSON_PRETTY_PRINT);
-
-    // Save JSON to a separate file
-    $jsonFilePath = 'users_data.json';
-    file_put_contents($jsonFilePath, $jsonResult);
-
-    // Close the database connection
-    $conn->close();
-
-    echo "Data has been saved to $jsonFilePath";
-} else {
-    echo "Error executing query: " . $conn->error;
-}
+    $data = json_encode($data, JSON_PRETTY_PRINT);
 
 
+// Set the HTTP header to specify JSON content
+header('Content-Type: application/json');
+
+// Output the JSON data with indentation for readability
+echo json_encode(json_decode($data), JSON_PRETTY_PRINT);
 
 
-?>
