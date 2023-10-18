@@ -55,9 +55,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="new.php">
+              <a class="nav-link" href="https://driveplyrui.sh20raj.repl.co/">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">FAQs</span>
+                <span class="nav-link-text">New Website</span>
               </a>
             </li>
             <li class="nav-item">
